@@ -371,13 +371,14 @@ a {
   backdrop-filter: blur(18px);
   overflow-y: auto;
   color: #ffffff;
+  min-height: 100vh;
 }
 
 .mobileMenuInner {
   max-width: 1120px;
   margin: 0 auto;
   padding: 8px 24px 24px;
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -393,6 +394,7 @@ a {
 .mobileMenuLinks {
   display: flex;
   flex-direction: column;
+  flex: 1;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 20px;
