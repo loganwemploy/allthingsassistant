@@ -35,47 +35,61 @@
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.95);
 }
 
+.mintLogo {
+  left: 4.1%;
+  top: 4.1%;
+  width: 43.3%;
+  height: 13.8%;
+}
+
+.venue {
+  left: 5.1%;
+  top: 23.4%;
+  width: 89.2%;
+  height: 4.8%;
+}
+
 .bershy {
-  left: 38.9%;
-  top: 31.2%;
-  width: 54.7%;
-  height: 6.7%;
+  left: 6%;
+  top: 30.5%;
+  width: 87.8%;
+  height: 7.6%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .creatureCanyon {
-  left: 36.1%;
-  top: 42.1%;
-  width: 58%;
-  height: 7%;
-  clip-path: polygon(4.3% 0, 100% 0, 100% 100%, 0 100%, 0 53%);
+  left: 6%;
+  top: 41.3%;
+  width: 88.2%;
+  height: 8.1%;
+  clip-path: polygon(0 0, 27% 0, 32% 50%, 100% 50%, 100% 100%, 0 100%);
 }
 
 .chuckProphet {
-  left: 29.7%;
-  top: 49.2%;
-  width: 66.7%;
-  height: 19.2%;
+  left: 28.8%;
+  top: 48.8%;
+  width: 67.8%;
+  height: 18.9%;
   clip-path: polygon(
-    7% 46%,
-    14% 31%,
-    22% 35%,
-    27% 18%,
-    35% 24%,
+    8% 46%,
+    14% 30%,
+    22% 34%,
+    27% 17%,
+    35% 23%,
     45% 12%,
-    52% 19%,
+    52% 18%,
     61% 13%,
-    68% 24%,
-    78% 23%,
+    68% 23%,
+    78% 22%,
     79% 35%,
-    88% 40%,
+    88% 39%,
     83% 49%,
     90% 63%,
-    81% 69%,
-    78% 82%,
+    82% 69%,
+    79% 82%,
     69% 78%,
     62% 91%,
-    54% 83%,
+    54% 84%,
     46% 96%,
     39% 82%,
     31% 87%,
@@ -87,27 +101,27 @@
 }
 
 .victorJones {
-  left: 34.1%;
-  top: 69.9%;
-  width: 53.7%;
-  height: 8.1%;
-  clip-path: polygon(4.6% 0, 100% 0, 96.2% 100%, 0 100%);
+  left: 6%;
+  top: 67.9%;
+  width: 82.6%;
+  height: 9.2%;
+  clip-path: polygon(0 0, 27% 0, 27% 15%, 30% 15%, 30.8% 0, 100% 0, 97% 100%, 0 100%);
 }
 
 .cardinalBloom {
-  left: 32%;
-  top: 80.4%;
-  width: 59.6%;
-  height: 7.7%;
+  left: 29.5%;
+  top: 78.8%;
+  width: 62.2%;
+  height: 8.6%;
   clip-path: polygon(4.5% 0, 100% 0, 96.3% 100%, 0 100%);
 }
 
 .wilby {
-  left: 33%;
-  top: 90.7%;
-  width: 30.7%;
-  height: 8%;
-  clip-path: polygon(5.8% 0, 100% 0, 95.2% 100%, 0 100%);
+  left: 6%;
+  top: 89.2%;
+  width: 57.8%;
+  height: 9.4%;
+  clip-path: polygon(0 0, 33% 0, 33% 14%, 37% 14%, 38% 0, 100% 0, 96.5% 100%, 0 100%);
 }
 
 .sxsw {
@@ -132,5 +146,20 @@
 @media (max-width: 700px) {
   .page {
     padding: 20px 10px;
+  }
+
+  .victorJones {
+    top: 67.2%;
+    height: 9.8%;
+  }
+
+  .cardinalBloom {
+    top: 78.1%;
+    height: 9.1%;
+  }
+
+  .wilby {
+    top: 88.5%;
+    height: 10%;
   }
 }

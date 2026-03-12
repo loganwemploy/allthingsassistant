@@ -4,33 +4,43 @@ import styles from "./page.module.css";
 
 const HOTSPOTS = [
   {
-    href: "https://www.minttalentgroup.com/bershy",
-    label: "Open Bershy on MINT Talent Group",
+    href: "https://www.minttalentgroup.com/",
+    label: "Open the MINT Talent Group website",
+    className: styles.mintLogo,
+  },
+  {
+    href: "https://www.google.com/maps/dir/?api=1&destination=615+Red+River+St,+Austin,+TX+78701",
+    label: "Get directions to Swan Dive at 615 Red River St, Austin, TX 78701",
+    className: styles.venue,
+  },
+  {
+    href: "https://schedule.sxsw.com/events/MS64552",
+    label: "Open Bershy on the SXSW schedule",
     className: styles.bershy,
   },
   {
-    href: "https://www.minttalentgroup.com/creature-canyon",
-    label: "Open Creature Canyon on MINT Talent Group",
+    href: "https://schedule.sxsw.com/artists/2238745",
+    label: "Open Creature Canyon on the SXSW schedule",
     className: styles.creatureCanyon,
   },
   {
-    href: "https://www.minttalentgroup.com/chuck-prophet-and-his-cumbia-shoes",
-    label: "Open Chuck Prophet and His Cumbia Shoes on MINT Talent Group",
+    href: "https://schedule.sxsw.com/artists/2242559",
+    label: "Open Chuck Prophet and His Cumbia Shoes on the SXSW schedule",
     className: styles.chuckProphet,
   },
   {
-    href: "https://www.minttalentgroup.com/victor-jones",
-    label: "Open Victor Jones on MINT Talent Group",
+    href: "https://schedule.sxsw.com/artists/2238744",
+    label: "Open Victor Jones on the SXSW schedule",
     className: styles.victorJones,
   },
   {
-    href: "https://www.minttalentgroup.com/cardinal-bloom",
-    label: "Open Cardinal Bloom on MINT Talent Group",
+    href: "https://schedule.sxsw.com/artists/2238746",
+    label: "Open Cardinal Bloom on the SXSW schedule",
     className: styles.cardinalBloom,
   },
   {
-    href: "https://www.minttalentgroup.com/wilby",
-    label: "Open Wilby on MINT Talent Group",
+    href: "https://schedule.sxsw.com/artists/2240070",
+    label: "Open Wilby on the SXSW schedule",
     className: styles.wilby,
   },
   {
