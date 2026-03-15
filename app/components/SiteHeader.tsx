@@ -33,6 +33,13 @@ export function SiteHeader() {
   }, []);
 
   useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
     if (!open) return;
     const onScroll = () => setOpen(false);
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -71,8 +78,9 @@ export function SiteHeader() {
           <button
             className="menuBtn"
             type="button"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={open}
+            aria-controls="mobileMenuPanel"
             onClick={() => setOpen((v) => !v)}
           >
             <span className="menuBtnBars" aria-hidden="true" />
@@ -80,8 +88,14 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {open ? (
-        <div className="mobileMenu" role="dialog" aria-label="Menu">
+      {open && (
+        <div
+          id="mobileMenuPanel"
+          className="mobileMenu"
+          role="dialog"
+          aria-label="Navigation menu"
+          aria-modal="true"
+        >
           <div className="container mobileMenuInner">
             <div className="mobileMenuTop">
               <div className="eyebrow">Navigate</div>
@@ -90,7 +104,7 @@ export function SiteHeader() {
               </button>
             </div>
 
-            <div className="mobileMenuLinks">
+            <nav className="mobileMenuLinks" aria-label="Mobile navigation">
               {nav.map((item) => (
                 <Link
                   key={item.href}
@@ -101,16 +115,14 @@ export function SiteHeader() {
                   {item.label}
                 </Link>
               ))}
-            </div>
+            </nav>
 
             <div className="mobileMenuCta">
               <CTAButton className="btnFull">Book a Discovery Call</CTAButton>
             </div>
           </div>
         </div>
-      ) : null}
-      <div className="thin-divider" />
+      )}
     </header>
   );
 }
-
