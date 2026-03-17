@@ -98,8 +98,8 @@
 
 .title {
   font-family: var(--font-heading);
-  font-size: 48px;
-  letter-spacing: 0;
+  font-size: clamp(2rem, 4.5vw, 48px);
+  letter-spacing: 0.02em;
   color: #1e1d1d;
   text-transform: uppercase;
   position: absolute;
@@ -109,8 +109,8 @@
 
 .subtext {
   font-style: italic;
-  font-size: 20px;
-  letter-spacing: 2px;
+  font-size: clamp(1.1rem, 2vw, 20px);
+  letter-spacing: 0.08em;
   color: #927c67;
   text-transform: lowercase;
   position: absolute;
@@ -151,11 +151,11 @@
 }
 
 .desc {
-  width: 260px;
+  width: 280px;
   font-family: var(--font-body);
-  font-size: 13px;
-  line-height: 1.6;
-  letter-spacing: 1px;
+  font-size: var(--text-base, 1.125rem);
+  line-height: var(--leading-relaxed, 1.65);
+  letter-spacing: 0.02em;
   color: #111;
   position: absolute;
   margin-top: 270px;
@@ -213,13 +213,14 @@
 }
 
 .set {
-  font-size: 14px;
+  font-size: var(--text-eyebrow, 12px);
+  font-weight: 600;
+  letter-spacing: var(--tracking-mid, 0.06em);
   color: #111;
-  letter-spacing: 1px;
   position: absolute;
   margin-top: 178px;
   margin-left: 180px;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .line_a {
@@ -247,7 +248,8 @@
   margin: 80px auto 0;
   width: 800px;
   max-width: 100%;
-  height: 300px;
+  min-height: 300px;
+  height: auto;
   border-right: 1px solid #ccc9c1;
   background-color: #efefeb;
 }
@@ -275,51 +277,110 @@
   margin-left: 450px;
 }
 
+/* Single section: decorative pills + objection content (silver-fox friendly type) */
 .main_menu {
-  width: 500px;
-  position: absolute;
-  height: 300px;
-  margin-top: 40px;
-  margin-left: 140px;
+  display: none;
 }
 
-.w3_bar {
-  width: 400px;
+.one_section {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+  z-index: 1;
 }
 
-.w3_menu {
-  padding-bottom: 5px;
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.75rem;
   border-bottom: 1px solid #ccc9c1;
 }
 
-.w3_button {
-  background-color: #897e65;
+.pill {
+  display: inline-block;
+  padding: 0.4rem 0.85rem;
+  font-size: var(--text-eyebrow, 12px);
+  font-weight: 600;
+  letter-spacing: var(--tracking-mid, 0.06em);
+  text-transform: uppercase;
   color: #efefeb;
-  text-transform: lowercase;
-  font-size: 10px;
-  letter-spacing: 2px;
-  border: 0;
-  padding: 4px 8px 2px 8px;
-  margin-right: 4px;
+  background-color: var(--accent-3, #897e65);
+  border-radius: var(--radius-pill, 999px);
 }
 
-.w3_select {
-  background-color: #a9a585;
+.section_head {
+  margin-bottom: 2rem;
 }
 
-.menu {
-  padding: 10px;
-  height: 100px;
-  width: 380px;
-  border-bottom: 1px solid #a9a585;
-  font-size: 12px;
+.eyebrow {
+  font-size: var(--text-eyebrow, 12px);
+  letter-spacing: var(--tracking-wide, 0.12em);
+  text-transform: uppercase;
+  color: var(--muted, #5d5a56);
+  margin: 0 0 0.5rem;
 }
 
-.menu h2 {
-  font-size: 14px;
-  letter-spacing: 2px;
-  color: #927c67;
-  margin: 0 0 6px;
+.section_title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2, 1.75rem);
+  line-height: 1.25;
+  letter-spacing: var(--tracking-tight, 0.02em);
+  color: #1e1d1d;
+  margin: 0 0 0.75rem;
+}
+
+.section_intro {
+  font-size: var(--text-lead, 1.25rem);
+  line-height: var(--leading-relaxed, 1.65);
+  letter-spacing: 0.01em;
+  color: var(--muted, #5d5a56);
+  margin: 0;
+  max-width: 42ch;
+}
+
+.objections_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.objection_block {
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(169, 165, 133, 0.4);
+}
+
+.objection_block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.objection_label {
+  font-size: var(--text-eyebrow, 12px);
+  letter-spacing: var(--tracking-mid, 0.06em);
+  text-transform: uppercase;
+  color: var(--accent-2, #927c67);
+  margin: 0 0 0.35rem;
+}
+
+.objection_headline {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3, 1.35rem);
+  line-height: 1.3;
+  letter-spacing: var(--tracking-tight, 0.02em);
+  color: #1e1d1d;
+  margin: 0 0 0.6rem;
+}
+
+.objection_body {
+  font-size: var(--text-base, 1.125rem);
+  line-height: var(--leading-relaxed, 1.65);
+  letter-spacing: 0.01em;
+  color: #333;
+  margin: 0;
 }
 
 .imej {
@@ -470,11 +531,17 @@
     height: auto;
   }
 
-  .main_menu {
-    position: relative;
-    width: 100%;
-    margin: -393px auto 0;
-    height: auto;
+  .one_section {
+    padding: 2rem 1.25rem 2.5rem;
+    max-width: 100%;
+  }
+
+  .section_title {
+    font-size: 1.5rem;
+  }
+
+  .objection_headline {
+    font-size: 1.2rem;
   }
 
   .imej {

@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { CTAButton } from "./components/CTAButton";
 import { CollageHero } from "./components/CollageHero";
-import { ObjectionsSections } from "./components/ObjectionsSections";
 import { SceneHero } from "./components/SceneHero";
 import { SiteHeader } from "./components/SiteHeader";
+import { SiteFooter } from "./components/SiteFooter";
 import { BookingCalendar } from "./components/BookingCalendar";
 
 const AKILAH_MAIN =
@@ -19,10 +19,10 @@ export default function Home() {
       <SiteHeader />
       <CollageHero />
       <SceneHero />
-      <ObjectionsSections />
       {/* <Hero /> */}
       {/* <Philosophy /> */}
       <BookingCalendar />
+      <SiteFooter />
     </main>
   );
 }
