@@ -1,0 +1,255 @@
+.root {
+  padding: 56px 0 48px;
+}
+
+.inner {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+  border: 1px solid rgba(180, 178, 172, 0.55);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.72);
+  background-image: radial-gradient(
+    circle at center,
+    rgba(30, 29, 29, 0.055) 1px,
+    transparent 1px
+  );
+  background-size: 16px 16px;
+  overflow: hidden;
+}
+
+.innerContent {
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  padding: 40px 28px 36px;
+  text-align: center;
+  border-bottom: 1px solid rgba(180, 178, 172, 0.45);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px 8px 12px;
+  margin-bottom: 22px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b6965;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(180, 178, 172, 0.5);
+  border-radius: 999px;
+}
+
+.eyebrowIcon {
+  width: 16px;
+  height: 16px;
+  color: #a9a585;
+  flex-shrink: 0;
+}
+
+.headline {
+  margin: 0 0 18px;
+  font-family: var(--font-body);
+  font-size: clamp(1.8rem, 4.2vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #1e1d1d;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accent {
+  color: #a9a585;
+}
+
+.subtitle {
+  margin: 0 auto 26px;
+  max-width: 640px;
+  font-size: 1.12rem;
+  line-height: 1.55;
+  color: #3d3c3a;
+}
+
+.heroCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 28px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #fff;
+  background: #a9a585;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(232, 93, 4, 0.25);
+  transition:
+    background 0.15s ease,
+    transform 0.12s ease;
+}
+
+.heroCta:hover {
+  background: #cf5303;
+  color: #fff;
+}
+
+.heroCta:focus-visible {
+  outline: 3px solid #1e1d1d;
+  outline-offset: 3px;
+}
+
+/* Desktop / tablet: two columns */
+.featuresDesktop {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(180, 178, 172, 0.45);
+}
+
+.featureCol {
+  padding: 32px 36px 36px;
+  border-right: 1px solid rgba(180, 178, 172, 0.45);
+}
+
+.featureCol:last-child {
+  border-right: none;
+}
+
+.featureIcon {
+  width: 22px;
+  height: 22px;
+  color: #8a8884;
+  margin-bottom: 10px;
+}
+
+.featureKicker {
+  margin: 0 0 14px;
+  font-size: 0.86rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8a8884;
+}
+
+.featureLead {
+  margin: 0 0 10px;
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #1e1d1d;
+}
+
+.featureBody {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.6;
+  color: #3d3c3a;
+}
+
+/* Mobile: single stacked block */
+.featuresMobile {
+  display: block;
+  padding: 28px 22px 32px;
+  border-bottom: 1px solid rgba(180, 178, 172, 0.45);
+}
+
+.mobileFeatureBlock {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(180, 178, 172, 0.35);
+}
+
+.mobileFeatureBlock:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+@media (min-width: 768px) {
+  .featuresDesktop {
+    display: grid;
+  }
+
+  .featuresMobile {
+    display: none;
+  }
+
+  .hero {
+    padding: 48px 40px 44px;
+  }
+}
+
+.bottomBar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  padding: 20px 22px 22px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid rgba(180, 178, 172, 0.4);
+}
+
+.brandText {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #1e1d1d;
+}
+
+.orangeCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 14px 24px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #fff;
+  background: #a9a585;
+  border-radius: 999px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.15s ease;
+}
+
+.orangeCta:hover {
+  background: #cf5303;
+  color: #fff;
+}
+
+.orangeCta:focus-visible {
+  outline: 3px solid #1e1d1d;
+  outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .bottomBar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 36px 22px;
+    gap: 20px;
+  }
+
+  .orangeCta {
+    flex: 0 0 auto;
+    min-width: 200px;
+    min-height: 48px;
+  }
+}

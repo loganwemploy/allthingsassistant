@@ -98,7 +98,7 @@
 
 .title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4.5vw, 48px);
+  font-size: clamp(2.2rem, 4.9vw, 52px);
   letter-spacing: 0.02em;
   color: #1e1d1d;
   text-transform: uppercase;
@@ -109,7 +109,7 @@
 
 .subtext {
   font-style: italic;
-  font-size: clamp(1.1rem, 2vw, 20px);
+  font-size: clamp(1.2rem, 2.2vw, 22px);
   letter-spacing: 0.08em;
   color: #927c67;
   text-transform: lowercase;
@@ -174,6 +174,7 @@
   color: #a9a585;
   margin-top: 400px;
   margin-left: -140px;
+  z-index: -1;
 }
 
 .and_nx {

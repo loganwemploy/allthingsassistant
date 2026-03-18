@@ -1,321 +1,543 @@
 {
-    "companies": [
-      {
-        "company_name": "Bronzeville/Black Chicagoan Historical Society",
-        "company_name_citation": "https://bronzevillearchives.com/",
-        "street_address": "4455 S. King Drive, Suite 103",
-        "street_address_citation": "https://bronzevillearchives.com/contact/",
-        "city": "Chicago",
-        "city_citation": "https://bronzevillearchives.com/contact/",
-        "state": "IL",
-        "state_citation": "https://bronzevillearchives.com/contact/",
-        "website_url": "https://bronzevillearchives.com/",
-        "website_url_citation": "https://bronzevillearchives.com/",
-        "yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/364523754",
-        "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/364523754",
-        "crime_rate_score": 8,
-        "crime_rate_score_citation": "https://crimegrade.org/violent-crime-bronzeville-chicago-il/"
+  "organizations": [
+    {
+      "organization_name": "Bronzeville/Black Chicagoan Historical Society",
+      "organization_name_citation": "https://bronzevillearchives.com/",
+      "leader": "",
+      "leader_citation": "https://bronzevillearchives.com/",
+      "street_address": "4455 S. King Drive, Suite 103, Chicago, IL",
+      "street_address_citation": "https://bronzevillearchives.com/contact/",
+      "website_url": "https://bronzevillearchives.com/",
+      "website_url_citation": "https://bronzevillearchives.com/",
+      "awards_summary": {
+        "total_award_amount": 142000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 1,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2023 - 09/30/2026",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "CAMP NAGEELA MIDWEST INC",
-        "company_name_citation": "https://www.campnageelamidwest.org/",
-        "street_address": "5454 Fargo Ave, Suite 102",
-        "street_address_citation": "https://www.campnageelamidwest.org/",
-        "city": "Skokie",
-        "city_citation": "https://www.campnageelamidwest.org/",
-        "state": "IL",
-        "state_citation": "https://www.campnageelamidwest.org/",
-        "website_url": "https://www.campnageelamidwest.org/",
-        "website_url_citation": "https://www.campnageelamidwest.org/",
-        "yearly_revenue": 2789473,
-        "yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/833933288",
-        "net_worth": 966750,
-        "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/833933288",
-        "crime_rate_score": 2,
-        "crime_rate_score_citation": "https://www.neighborhoodscout.com/il/skokie/crime"
+      "latest_yearly_revenue": 0,
+      "latest_yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/364523754",
+      "net_worth": 0,
+      "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/364523754",
+      "neighborhoodscout_crime_rate_score": 8,
+      "neighborhoodscout_crime_rate_score_citation": "https://crimegrade.org/violent-crime-bronzeville-chicago-il/"
+    },
+    {
+      "organization_name": "CAMP NAGEELA MIDWEST INC",
+      "organization_name_citation": "https://www.campnageelamidwest.org/",
+      "leader": "",
+      "leader_citation": "https://www.campnageelamidwest.org/",
+      "street_address": "5454 Fargo Ave, Suite 102, Skokie, IL",
+      "street_address_citation": "https://www.campnageelamidwest.org/",
+      "website_url": "https://www.campnageelamidwest.org/",
+      "website_url_citation": "https://www.campnageelamidwest.org/",
+      "awards_summary": {
+        "total_award_amount": 450000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 3,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2025 - 09/30/2028",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Camp Moshava Wild Rose WI",
-        "company_name_citation": "https://www.moshavawildrose.org/",
-        "street_address": "N3844 County Rd M",
-        "street_address_citation": "https://www.moshavawildrose.org/contact-us/",
-        "city": "Wild Rose",
-        "city_citation": "https://www.moshavawildrose.org/contact-us/",
-        "state": "WI",
-        "state_citation": "https://www.moshavawildrose.org/contact-us/",
-        "website_url": "https://www.moshavawildrose.org/",
-        "website_url_citation": "https://www.moshavawildrose.org/",
-        "yearly_revenue": 2404608,
-        "yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/363874839",
-        "net_worth": 3813140,
-        "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/363874839",
-        "crime_rate_score": 1,
-        "crime_rate_score_citation": "https://www.neighborhoodscout.com/wi/wild-rose/crime"
+      "latest_yearly_revenue": 2789473,
+      "latest_yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/833933288",
+      "net_worth": 966750,
+      "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/833933288",
+      "neighborhoodscout_crime_rate_score": 2,
+      "neighborhoodscout_crime_rate_score_citation": "https://www.neighborhoodscout.com/il/skokie/crime"
+    },
+    {
+      "organization_name": "Camp Moshava Wild Rose WI",
+      "organization_name_citation": "https://www.moshavawildrose.org/",
+      "leader": "",
+      "leader_citation": "https://www.moshavawildrose.org/",
+      "street_address": "N3844 County Rd M, Wild Rose, WI",
+      "street_address_citation": "https://www.moshavawildrose.org/contact-us/",
+      "website_url": "https://www.moshavawildrose.org/",
+      "website_url_citation": "https://www.moshavawildrose.org/",
+      "awards_summary": {
+        "total_award_amount": 150000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 1,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2025 - 09/30/2028",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Center Church Lake County NFP",
-        "company_name_citation": "https://www.centerchurch.live/",
-        "street_address": "858 Technology Way",
-        "street_address_citation": "https://www.centerchurch.live/",
-        "city": "Libertyville",
-        "city_citation": "https://www.centerchurch.live/",
-        "state": "IL",
-        "state_citation": "https://www.centerchurch.live/",
-        "website_url": "https://www.centerchurch.live/",
-        "website_url_citation": "https://www.centerchurch.live/",
-        "yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/861568219",
-        "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/861568219",
-        "crime_rate_score": 1,
-        "crime_rate_score_citation": "https://www.neighborhoodscout.com/il/libertyville/crime"
+      "latest_yearly_revenue": 2404608,
+      "latest_yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/363874839",
+      "net_worth": 3813140,
+      "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/363874839",
+      "neighborhoodscout_crime_rate_score": 1,
+      "neighborhoodscout_crime_rate_score_citation": "https://www.neighborhoodscout.com/wi/wild-rose/crime"
+    },
+    {
+      "organization_name": "Center Church Lake County NFP",
+      "organization_name_citation": "https://www.charitynavigator.org/ein/861568219",
+      "leader": "Mark Larson",
+      "leader_citation": "https://www.centerchurch.live/staff-leadership",
+      "street_address": "858 Technology Way, Libertyville, IL 60048",
+      "street_address_citation": "https://www.centerchurch.live",
+      "website_url": "https://www.centerchurch.live",
+      "website_url_citation": "https://www.centerchurch.live",
+      "awards_summary": {
+        "total_award_amount": 0,
+        "total_award_amount_citation": "https://www.taxexemptworld.com/organizations/libertyville-il-illinois.asp",
+        "award_count": 0,
+        "award_count_citation": "https://www.taxexemptworld.com/organizations/libertyville-il-illinois.asp",
+        "all_award_date_ranges": []
       },
-      {
-        "company_name": "Center on Halsted",
-        "company_name_citation": "https://www.centeronhalsted.org/",
-        "street_address": "3656 N Halsted St",
-        "street_address_citation": "https://www.centeronhalsted.org/contact.html",
-        "city": "Chicago",
-        "city_citation": "https://www.centeronhalsted.org/contact.html",
-        "state": "IL",
-        "state_citation": "https://www.centeronhalsted.org/contact.html",
-        "website_url": "https://www.centeronhalsted.org/",
-        "website_url_citation": "https://www.centeronhalsted.org/",
-        "yearly_revenue": 7150000,
-        "yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/510178807",
-        "net_worth": 19800000,
-        "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/510178807",
-        "crime_rate_score": 3,
-        "crime_rate_score_citation": "https://www.doorprofit.com/crime-map/city/chicago-IL/neighborhood/lake-view/"
+      "latest_yearly_revenue": 0,
+      "latest_yearly_revenue_citation": "https://www.taxexemptworld.com/organizations/libertyville-il-illinois.asp",
+      "net_worth": 0,
+      "net_worth_citation": "https://www.taxexemptworld.com/organizations/libertyville-il-illinois.asp",
+      "neighborhoodscout_crime_rate_score": 8,
+      "neighborhoodscout_crime_rate_score_citation": "https://www.neighborhoodscout.com/il/libertyville"
+    },
+    {
+      "organization_name": "Center on Halsted",
+      "organization_name_citation": "https://www.centeronhalsted.org",
+      "leader": "Joli Robinson",
+      "leader_citation": "https://www.dsgco.com/placed_leaders/joli-robinson/",
+      "street_address": "3656 N Halsted St, Chicago, IL 60613",
+      "street_address_citation": "https://www.centeronhalsted.org",
+      "website_url": "https://www.centeronhalsted.org",
+      "website_url_citation": "https://www.centeronhalsted.org",
+      "awards_summary": {
+        "total_award_amount": 1186248,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx?CSFA=658",
+        "award_count": 3,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx?CSFA=658",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2020 - 09/30/2025",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx?CSFA=1771"
+          },
+          {
+            "value": "07/01/2025 - 06/30/2026",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx?CSFA=658"
+          },
+          {
+            "value": "07/01/2025 - 06/30/2026",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx?CSFA=658"
+          }
+        ]
       },
-      {
-        "company_name": "Chabad of Oak Park",
-        "company_name_citation": "https://www.oakparkjewish.org/",
-        "street_address": "711 South Blvd, Suite 5",
-        "street_address_citation": "https://www.oakparkjewish.org/templates/articlecco_cdo/aid/657853/jewish/About-Us.htm",
-        "city": "Oak Park",
-        "city_citation": "https://www.oakparkjewish.org/templates/articlecco_cdo/aid/657853/jewish/About-Us.htm",
-        "state": "IL",
-        "state_citation": "https://www.oakparkjewish.org/templates/articlecco_cdo/aid/657853/jewish/About-Us.htm",
-        "website_url": "https://www.oakparkjewish.org/",
-        "website_url_citation": "https://www.oakparkjewish.org/",
-        "yearly_revenue_citation": "https://www.oakparkjewish.org/",
-        "net_worth_citation": "https://www.oakparkjewish.org/",
-        "crime_rate_score": 4,
-        "crime_rate_score_citation": "https://www.neighborhoodscout.com/il/oak-park/crime"
+      "latest_yearly_revenue": 8705302,
+      "latest_yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/510178807",
+      "net_worth": 20227755,
+      "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/510178807",
+      "neighborhoodscout_crime_rate_score": 1,
+      "neighborhoodscout_crime_rate_score_citation": "https://crimegrade.org/safest-places-in-60613/"
+    },
+    {
+      "organization_name": "Chabad of Oak Park",
+      "organization_name_citation": "https://www.oakparkjewish.org/",
+      "leader": "",
+      "leader_citation": "https://www.oakparkjewish.org/",
+      "street_address": "711 South Blvd, Suite 5, Oak Park, IL",
+      "street_address_citation": "https://www.oakparkjewish.org/templates/articlecco_cdo/aid/657853/jewish/About-Us.htm",
+      "website_url": "https://www.oakparkjewish.org/",
+      "website_url_citation": "https://www.oakparkjewish.org/",
+      "awards_summary": {
+        "total_award_amount": 150000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 1,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2023 - 09/30/2026",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Chain of Lakes Community Bible Church",
-        "company_name_citation": "https://chainoflakescommunity.church/",
-        "street_address": "43 W Grass Lake Rd",
-        "street_address_citation": "https://chainoflakescommunity.church/",
-        "city": "Lake Villa",
-        "city_citation": "https://chainoflakescommunity.church/",
-        "state": "IL",
-        "state_citation": "https://chainoflakescommunity.church/",
-        "website_url": "https://chainoflakescommunity.church/",
-        "website_url_citation": "https://chainoflakescommunity.church/",
-        "yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/363428889",
-        "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/363428889",
-        "crime_rate_score": 2,
-        "crime_rate_score_citation": "https://www.niche.com/places-to-live/lake-villa-lake-il/crime-safety/"
+      "latest_yearly_revenue": 0,
+      "latest_yearly_revenue_citation": "https://www.oakparkjewish.org/",
+      "net_worth": 0,
+      "net_worth_citation": "https://www.oakparkjewish.org/",
+      "neighborhoodscout_crime_rate_score": 4,
+      "neighborhoodscout_crime_rate_score_citation": "https://www.neighborhoodscout.com/il/oak-park/crime"
+    },
+    {
+      "organization_name": "Chain of Lakes Community Bible Church",
+      "organization_name_citation": "https://chainoflakescommunity.church/",
+      "leader": "",
+      "leader_citation": "https://chainoflakescommunity.church/",
+      "street_address": "43 W Grass Lake Rd, Lake Villa, IL",
+      "street_address_citation": "https://chainoflakescommunity.church/",
+      "website_url": "https://chainoflakescommunity.church/",
+      "website_url_citation": "https://chainoflakescommunity.church/",
+      "awards_summary": {
+        "total_award_amount": 23338,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 2,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2025 - 09/30/2028",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Cheder Lubavitch hebrew Day School",
-        "company_name_citation": "http://clhds.com/",
-        "street_address": "5201 Howard St",
-        "street_address_citation": "http://clhds.com/",
-        "city": "Skokie",
-        "city_citation": "http://clhds.com/",
-        "state": "IL",
-        "state_citation": "http://clhds.com/",
-        "website_url": "http://clhds.com/",
-        "website_url_citation": "http://clhds.com/",
-        "yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/363332947",
-        "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/363332947",
-        "crime_rate_score": 2,
-        "crime_rate_score_citation": "https://www.neighborhoodscout.com/il/skokie/crime"
+      "latest_yearly_revenue": 0,
+      "latest_yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/363428889",
+      "net_worth": 0,
+      "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/363428889",
+      "neighborhoodscout_crime_rate_score": 2,
+      "neighborhoodscout_crime_rate_score_citation": "https://www.niche.com/places-to-live/lake-villa-lake-il/crime-safety/"
+    },
+    {
+      "organization_name": "Cheder Lubavitch hebrew Day School",
+      "organization_name_citation": "http://clhds.com/",
+      "leader": "",
+      "leader_citation": "http://clhds.com/",
+      "street_address": "5201 Howard St, Skokie, IL",
+      "street_address_citation": "http://clhds.com/",
+      "website_url": "http://clhds.com/",
+      "website_url_citation": "http://clhds.com/",
+      "awards_summary": {
+        "total_award_amount": 150000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 1,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2023 - 09/30/2026",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Chesed L'Avrohom Nachlas David",
-        "company_name_citation": "https://www.juf.org/",
-        "street_address": "6350 N Troy St",
-        "street_address_citation": "https://chicityclerk.s3.us-west-2.amazonaws.com/s3fs-public/document_uploads/journals-proceedings/1988/060888.pdf",
-        "city": "Chicago",
-        "city_citation": "https://chicityclerk.s3.us-west-2.amazonaws.com/s3fs-public/document_uploads/journals-proceedings/1988/060888.pdf",
-        "state": "IL",
-        "state_citation": "https://chicityclerk.s3.us-west-2.amazonaws.com/s3fs-public/document_uploads/journals-proceedings/1988/060888.pdf",
-        "website_url_citation": "https://www.juf.org/",
-        "yearly_revenue_citation": "https://www.juf.org/",
-        "net_worth_citation": "https://www.juf.org/",
-        "crime_rate_score": 4,
-        "crime_rate_score_citation": "https://crimegrade.org/violent-crime-chicago-il/"
+      "latest_yearly_revenue": 0,
+      "latest_yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/363332947",
+      "net_worth": 0,
+      "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/363332947",
+      "neighborhoodscout_crime_rate_score": 2,
+      "neighborhoodscout_crime_rate_score_citation": "https://www.neighborhoodscout.com/il/skokie/crime"
+    },
+    {
+      "organization_name": "Chesed L'Avrohom Nachlas David",
+      "organization_name_citation": "https://www.juf.org/",
+      "leader": "",
+      "leader_citation": "https://www.juf.org/",
+      "street_address": "6350 N Troy St, Chicago, IL",
+      "street_address_citation": "https://chicityclerk.s3.us-west-2.amazonaws.com/s3fs-public/document_uploads/journals-proceedings/1988/060888.pdf",
+      "website_url": "https://www.juf.org/",
+      "website_url_citation": "https://www.juf.org/",
+      "awards_summary": {
+        "total_award_amount": 234000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 2,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2023 - 09/30/2026",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "ASSYIAN NATIONAL COUNCIL OF ILLINOIS",
-        "company_name_citation": "https://ancil.org/",
-        "street_address": "2450 W Peterson Ave",
-        "street_address_citation": "https://members.skokiechamber.org/list/member/assyrian-national-council-of-illinois-13108",
-        "city": "Chicago",
-        "city_citation": "https://members.skokiechamber.org/list/member/assyrian-national-council-of-illinois-13108",
-        "state": "IL",
-        "state_citation": "https://members.skokiechamber.org/list/member/assyrian-national-council-of-illinois-13108",
-        "website_url": "https://ancil.org/",
-        "website_url_citation": "https://ancil.org/",
-        "yearly_revenue": 29900000,
-        "yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/363458487",
-        "net_worth": 20000000,
-        "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/363458487",
-        "crime_rate_score": 4,
-        "crime_rate_score_citation": "Estimated based on West Rogers Park, Chicago crime statistics"
+      "latest_yearly_revenue": 0,
+      "latest_yearly_revenue_citation": "https://www.juf.org/",
+      "net_worth": 0,
+      "net_worth_citation": "https://www.juf.org/",
+      "neighborhoodscout_crime_rate_score": 4,
+      "neighborhoodscout_crime_rate_score_citation": "https://crimegrade.org/violent-crime-chicago-il/"
+    },
+    {
+      "organization_name": "ASSYIAN NATIONAL COUNCIL OF ILLINOIS",
+      "organization_name_citation": "https://ancil.org/",
+      "leader": "",
+      "leader_citation": "https://ancil.org/",
+      "street_address": "2450 W Peterson Ave, Chicago, IL",
+      "street_address_citation": "https://members.skokiechamber.org/list/member/assyrian-national-council-of-illinois-13108",
+      "website_url": "https://ancil.org/",
+      "website_url_citation": "https://ancil.org/",
+      "awards_summary": {
+        "total_award_amount": 321750,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 3,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2025 - 09/30/2028",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Agudath Israel of Illinois",
-        "company_name_citation": "https://agudathisrael-il.org/",
-        "street_address": "3542 W Devon Ave",
-        "street_address_citation": "https://www.causeiq.com/organizations/agudath-israel-of-illinois,363529801/",
-        "city": "Chicago",
-        "city_citation": "https://www.causeiq.com/organizations/agudath-israel-of-illinois,363529801/",
-        "state": "IL",
-        "state_citation": "https://www.causeiq.com/organizations/agudath-israel-of-illinois,363529801/",
-        "website_url": "https://agudathisrael-il.org/",
-        "website_url_citation": "https://agudathisrael-il.org/",
-        "yearly_revenue": 8708328,
-        "yearly_revenue_citation": "https://www.causeiq.com/organizations/agudath-israel-of-illinois,363529801/",
-        "net_worth": 19278183,
-        "net_worth_citation": "https://www.causeiq.com/organizations/agudath-israel-of-illinois,363529801/",
-        "crime_rate_score": 4,
-        "crime_rate_score_citation": "Estimated based on West Rogers Park, Chicago crime statistics"
+      "latest_yearly_revenue": 29900000,
+      "latest_yearly_revenue_citation": "https://projects.propublica.org/nonprofits/organizations/363458487",
+      "net_worth": 20000000,
+      "net_worth_citation": "https://projects.propublica.org/nonprofits/organizations/363458487",
+      "neighborhoodscout_crime_rate_score": 4,
+      "neighborhoodscout_crime_rate_score_citation": "Estimated based on West Rogers Park, Chicago crime statistics"
+    },
+    {
+      "organization_name": "Agudath Israel of Illinois",
+      "organization_name_citation": "https://agudathisrael-il.org/",
+      "leader": "",
+      "leader_citation": "https://agudathisrael-il.org/",
+      "street_address": "3542 W Devon Ave, Chicago, IL",
+      "street_address_citation": "https://www.causeiq.com/organizations/agudath-israel-of-illinois,363529801/",
+      "website_url": "https://agudathisrael-il.org/",
+      "website_url_citation": "https://agudathisrael-il.org/",
+      "awards_summary": {
+        "total_award_amount": 150000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 1,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2023 - 09/30/2026",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "All Saints Academy Catholic School",
-        "company_name_citation": "https://asabreese.org/",
-        "street_address": "201 W 5th St",
-        "street_address_citation": "https://asabreese.org/",
-        "city": "Breese",
-        "city_citation": "https://asabreese.org/",
-        "state": "IL",
-        "state_citation": "https://asabreese.org/",
-        "website_url": "https://asabreese.org/",
-        "website_url_citation": "https://asabreese.org/",
-        "yearly_revenue_citation": "https://asabreese.org/",
-        "net_worth_citation": "https://asabreese.org/",
-        "crime_rate_score": 1,
-        "crime_rate_score_citation": "Estimated based on Breese, IL crime statistics"
+      "latest_yearly_revenue": 8708328,
+      "latest_yearly_revenue_citation": "https://www.causeiq.com/organizations/agudath-israel-of-illinois,363529801/",
+      "net_worth": 19278183,
+      "net_worth_citation": "https://www.causeiq.com/organizations/agudath-israel-of-illinois,363529801/",
+      "neighborhoodscout_crime_rate_score": 4,
+      "neighborhoodscout_crime_rate_score_citation": "Estimated based on West Rogers Park, Chicago crime statistics"
+    },
+    {
+      "organization_name": "All Saints Academy Catholic School",
+      "organization_name_citation": "https://asabreese.org/",
+      "leader": "",
+      "leader_citation": "https://asabreese.org/",
+      "street_address": "201 W 5th St, Breese, IL",
+      "street_address_citation": "https://asabreese.org/",
+      "website_url": "https://asabreese.org/",
+      "website_url_citation": "https://asabreese.org/",
+      "awards_summary": {
+        "total_award_amount": 267000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 2,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2023 - 09/30/2026",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Alleman High School",
-        "company_name_citation": "https://www.allemanhighschool.org/",
-        "street_address": "1103 40th St",
-        "street_address_citation": "https://www.allemanhighschool.org/",
-        "city": "Rock Island",
-        "city_citation": "https://www.allemanhighschool.org/",
-        "state": "IL",
-        "state_citation": "https://www.allemanhighschool.org/",
-        "website_url": "https://www.allemanhighschool.org/",
-        "website_url_citation": "https://www.allemanhighschool.org/",
-        "yearly_revenue_citation": "https://www.allemanhighschool.org/",
-        "net_worth_citation": "https://www.allemanhighschool.org/",
-        "crime_rate_score": 6,
-        "crime_rate_score_citation": "Estimated based on Rock Island, IL crime statistics"
+      "latest_yearly_revenue": 0,
+      "latest_yearly_revenue_citation": "https://asabreese.org/",
+      "net_worth": 0,
+      "net_worth_citation": "https://asabreese.org/",
+      "neighborhoodscout_crime_rate_score": 1,
+      "neighborhoodscout_crime_rate_score_citation": "Estimated based on Breese, IL crime statistics"
+    },
+    {
+      "organization_name": "Alleman High School",
+      "organization_name_citation": "https://www.allemanhighschool.org/",
+      "leader": "",
+      "leader_citation": "https://www.allemanhighschool.org/",
+      "street_address": "1103 40th St, Rock Island, IL",
+      "street_address_citation": "https://www.allemanhighschool.org/",
+      "website_url": "https://www.allemanhighschool.org/",
+      "website_url_citation": "https://www.allemanhighschool.org/",
+      "awards_summary": {
+        "total_award_amount": 150000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 1,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2023 - 09/30/2026",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Anshe Emet Synagogue",
-        "company_name_citation": "https://www.ansheemet.org/",
-        "street_address": "3751 N Broadway",
-        "street_address_citation": "https://www.ansheemet.org/",
-        "city": "Chicago",
-        "city_citation": "https://www.ansheemet.org/",
-        "state": "IL",
-        "state_citation": "https://www.ansheemet.org/",
-        "website_url": "https://www.ansheemet.org/",
-        "website_url_citation": "https://www.ansheemet.org/",
-        "yearly_revenue_citation": "https://www.ansheemet.org/",
-        "net_worth_citation": "https://www.ansheemet.org/",
-        "crime_rate_score": 3,
-        "crime_rate_score_citation": "Estimated based on Lakeview, Chicago crime statistics"
+      "latest_yearly_revenue": 0,
+      "latest_yearly_revenue_citation": "https://www.allemanhighschool.org/",
+      "net_worth": 0,
+      "net_worth_citation": "https://www.allemanhighschool.org/",
+      "neighborhoodscout_crime_rate_score": 6,
+      "neighborhoodscout_crime_rate_score_citation": "Estimated based on Rock Island, IL crime statistics"
+    },
+    {
+      "organization_name": "Anshe Emet Synagogue",
+      "organization_name_citation": "https://www.ansheemet.org/",
+      "leader": "",
+      "leader_citation": "https://www.ansheemet.org/",
+      "street_address": "3751 N Broadway, Chicago, IL",
+      "street_address_citation": "https://www.ansheemet.org/",
+      "website_url": "https://www.ansheemet.org/",
+      "website_url_citation": "https://www.ansheemet.org/",
+      "awards_summary": {
+        "total_award_amount": 300000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 2,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2023 - 09/30/2026",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          },
+          {
+            "value": "10/01/2025 - 09/30/2028",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Anshe Sholom B'nai Israel Congregation",
-        "company_name_citation": "https://www.asbi.org/",
-        "street_address": "540 W Melrose St",
-        "street_address_citation": "https://www.asbi.org/",
-        "city": "Chicago",
-        "city_citation": "https://www.asbi.org/",
-        "state": "IL",
-        "state_citation": "https://www.asbi.org/",
-        "website_url": "https://www.asbi.org/",
-        "website_url_citation": "https://www.asbi.org/",
-        "yearly_revenue": 5000000,
-        "yearly_revenue_citation": "https://www.zoominfo.com/c/anshe-sholom-bnai-israel-congregation/345651956",
-        "net_worth_citation": "https://www.asbi.org/",
-        "crime_rate_score": 3,
-        "crime_rate_score_citation": "Estimated based on Lakeview, Chicago crime statistics"
+      "latest_yearly_revenue": 0,
+      "latest_yearly_revenue_citation": "https://www.ansheemet.org/",
+      "net_worth": 0,
+      "net_worth_citation": "https://www.ansheemet.org/",
+      "neighborhoodscout_crime_rate_score": 3,
+      "neighborhoodscout_crime_rate_score_citation": "Estimated based on Lakeview, Chicago crime statistics"
+    },
+    {
+      "organization_name": "Anshe Sholom B'nai Israel Congregation",
+      "organization_name_citation": "https://www.asbi.org/",
+      "leader": "",
+      "leader_citation": "https://www.asbi.org/",
+      "street_address": "540 W Melrose St, Chicago, IL",
+      "street_address_citation": "https://www.asbi.org/",
+      "website_url": "https://www.asbi.org/",
+      "website_url_citation": "https://www.asbi.org/",
+      "awards_summary": {
+        "total_award_amount": 148500,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 1,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2023 - 09/30/2026",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Apostolics of Salem",
-        "company_name_citation": "https://apostolics.org/",
-        "street_address": "1900 N Broadway",
-        "street_address_citation": "https://apostolics.org/",
-        "city": "Salem",
-        "city_citation": "https://apostolics.org/",
-        "state": "IL",
-        "state_citation": "https://apostolics.org/",
-        "website_url": "https://apostolics.org/",
-        "website_url_citation": "https://apostolics.org/",
-        "yearly_revenue_citation": "https://apostolics.org/",
-        "net_worth_citation": "https://apostolics.org/",
-        "crime_rate_score": 4,
-        "crime_rate_score_citation": "Estimated based on Salem, IL crime statistics"
+      "latest_yearly_revenue": 5000000,
+      "latest_yearly_revenue_citation": "https://www.zoominfo.com/c/anshe-sholom-bnai-israel-congregation/345651956",
+      "net_worth": 0,
+      "net_worth_citation": "https://www.asbi.org/",
+      "neighborhoodscout_crime_rate_score": 3,
+      "neighborhoodscout_crime_rate_score_citation": "Estimated based on Lakeview, Chicago crime statistics"
+    },
+    {
+      "organization_name": "Apostolics of Salem",
+      "organization_name_citation": "https://apostolics.org/",
+      "leader": "",
+      "leader_citation": "https://apostolics.org/",
+      "street_address": "1900 N Broadway, Salem, IL",
+      "street_address_citation": "https://apostolics.org/",
+      "website_url": "https://apostolics.org/",
+      "website_url_citation": "https://apostolics.org/",
+      "awards_summary": {
+        "total_award_amount": 150000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 1,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2025 - 09/30/2028",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Aqsa School",
-        "company_name_citation": "https://aqsaschool.org/",
-        "street_address": "7361 W 92nd St",
-        "street_address_citation": "https://aqsaschool.org/",
-        "city": "Bridgeview",
-        "city_citation": "https://aqsaschool.org/",
-        "state": "IL",
-        "state_citation": "https://aqsaschool.org/",
-        "website_url": "https://aqsaschool.org/",
-        "website_url_citation": "https://aqsaschool.org/",
-        "yearly_revenue": 2400000,
-        "yearly_revenue_citation": "Estimated from 2022 financials",
-        "net_worth_citation": "https://aqsaschool.org/",
-        "crime_rate_score": 4,
-        "crime_rate_score_citation": "Estimated based on Bridgeview, IL crime statistics"
+      "latest_yearly_revenue": 0,
+      "latest_yearly_revenue_citation": "https://apostolics.org/",
+      "net_worth": 0,
+      "net_worth_citation": "https://apostolics.org/",
+      "neighborhoodscout_crime_rate_score": 4,
+      "neighborhoodscout_crime_rate_score_citation": "Estimated based on Salem, IL crime statistics"
+    },
+    {
+      "organization_name": "Aqsa School",
+      "organization_name_citation": "https://aqsaschool.org/",
+      "leader": "",
+      "leader_citation": "https://aqsaschool.org/",
+      "street_address": "7361 W 92nd St, Bridgeview, IL",
+      "street_address_citation": "https://aqsaschool.org/",
+      "website_url": "https://aqsaschool.org/",
+      "website_url_citation": "https://aqsaschool.org/",
+      "awards_summary": {
+        "total_award_amount": 148496,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 1,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2023 - 09/30/2026",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Arie Crown Hebrew Day School",
-        "company_name_citation": "https://ariecrown.org/",
-        "street_address": "4600 Main St",
-        "street_address_citation": "https://ariecrown.org/",
-        "city": "Skokie",
-        "city_citation": "https://ariecrown.org/",
-        "state": "IL",
-        "state_citation": "https://ariecrown.org/",
-        "website_url": "https://ariecrown.org/",
-        "website_url_citation": "https://ariecrown.org/",
-        "yearly_revenue": 6000000,
-        "yearly_revenue_citation": "Estimated from school size and tuition",
-        "net_worth_citation": "https://ariecrown.org/",
-        "crime_rate_score": 2,
-        "crime_rate_score_citation": "Estimated based on Skokie, IL crime statistics"
+      "latest_yearly_revenue": 2400000,
+      "latest_yearly_revenue_citation": "Estimated from 2022 financials",
+      "net_worth": 0,
+      "net_worth_citation": "https://aqsaschool.org/",
+      "neighborhoodscout_crime_rate_score": 4,
+      "neighborhoodscout_crime_rate_score_citation": "Estimated based on Bridgeview, IL crime statistics"
+    },
+    {
+      "organization_name": "Arie Crown Hebrew Day School",
+      "organization_name_citation": "https://ariecrown.org/",
+      "leader": "",
+      "leader_citation": "https://ariecrown.org/",
+      "street_address": "4600 Main St, Skokie, IL",
+      "street_address_citation": "https://ariecrown.org/",
+      "website_url": "https://ariecrown.org/",
+      "website_url_citation": "https://ariecrown.org/",
+      "awards_summary": {
+        "total_award_amount": 150000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 1,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2025 - 09/30/2028",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
       },
-      {
-        "company_name": "Associated Talmud Torahs of Chicago",
-        "company_name_citation": "https://att.org/",
-        "street_address": "3535 W Foster Ave",
-        "street_address_citation": "https://att.org/",
-        "city": "Chicago",
-        "city_citation": "https://att.org/",
-        "state": "IL",
-        "state_citation": "https://att.org/",
-        "website_url": "https://att.org/",
-        "website_url_citation": "https://att.org/",
-        "yearly_revenue": 6000000,
-        "yearly_revenue_citation": "Estimated from school network size",
-        "net_worth_citation": "https://att.org/",
-        "crime_rate_score": 4,
-        "crime_rate_score_citation": "Estimated based on North Park, Chicago crime statistics"
-      }
-    ]
-  }
+      "latest_yearly_revenue": 6000000,
+      "latest_yearly_revenue_citation": "Estimated from school size and tuition",
+      "net_worth": 0,
+      "net_worth_citation": "https://ariecrown.org/",
+      "neighborhoodscout_crime_rate_score": 2,
+      "neighborhoodscout_crime_rate_score_citation": "Estimated based on Skokie, IL crime statistics"
+    },
+    {
+      "organization_name": "Associated Talmud Torahs of Chicago",
+      "organization_name_citation": "https://att.org/",
+      "leader": "",
+      "leader_citation": "https://att.org/",
+      "street_address": "3535 W Foster Ave, Chicago, IL",
+      "street_address_citation": "https://att.org/",
+      "website_url": "https://att.org/",
+      "website_url_citation": "https://att.org/",
+      "awards_summary": {
+        "total_award_amount": 150000,
+        "total_award_amount_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "award_count": 1,
+        "award_count_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx",
+        "all_award_date_ranges": [
+          {
+            "value": "10/01/2025 - 09/30/2028",
+            "value_citation": "https://omb.illinois.gov/public/gata/csfa/AwardList.aspx"
+          }
+        ]
+      },
+      "latest_yearly_revenue": 6000000,
+      "latest_yearly_revenue_citation": "Estimated from school network size",
+      "net_worth": 0,
+      "net_worth_citation": "https://att.org/",
+      "neighborhoodscout_crime_rate_score": 4,
+      "neighborhoodscout_crime_rate_score_citation": "Estimated based on North Park, Chicago crime statistics"
+    }
+  ]
+}

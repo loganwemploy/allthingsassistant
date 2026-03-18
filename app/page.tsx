@@ -6,6 +6,7 @@ import { SceneHero } from "./components/SceneHero";
 import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
 import { BookingCalendar } from "./components/BookingCalendar";
+import { CalendarPromoBand } from "./components/CalendarPromoBand";
 
 const AKILAH_MAIN =
   "https://dl4.pushbulletusercontent2.com/d0WgxSJ9mXgjr7l62jruYsBA76YsaQtf/image.png";
@@ -21,6 +22,7 @@ export default function Home() {
       <SceneHero />
       {/* <Hero /> */}
       {/* <Philosophy /> */}
+      <CalendarPromoBand />
       <BookingCalendar />
       <SiteFooter />
     </main>

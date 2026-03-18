@@ -1,0 +1,32 @@
+.layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.star {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  opacity: 0.16;
+  transform-origin: center;
+  filter: drop-shadow(0 0 2px rgba(255, 252, 248, 0.25));
+  animation-name: promoSparkleTwinkle;
+  animation-duration: 5.8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes promoSparkleTwinkle {
+  0%,
+  100% {
+    opacity: 0.05;
+  }
+  45% {
+    opacity: 0.18;
+  }
+}
