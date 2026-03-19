@@ -1,51 +1,51 @@
 .root {
   position: relative;
-  padding: 80px 0 40px;
+  padding: 5rem 0 2.5rem;
 }
 
 .ban_a {
   position: relative;
-  width: 1000px;
+  width: 62.5rem;
   max-width: 100%;
-  height: 700px;
-  margin: 40px auto 0;
+  height: 43.75rem;
+  margin: 2.5rem auto 0;
 }
 
 .ban_fill {
   background-color: #efefeb;
   width: 100vw;
   max-width: 53vw;
-  height: 602px;
-  padding: 50px;
+  height: 37.625rem;
+  padding: 3.125rem;
   position: relative;
 }
 
 .ban_mid {
-  width: 950px;
+  width: 59.375rem;
   max-width: 100%;
-  padding: 50px;
+  padding: 3.125rem;
   position: absolute;
-  inset: 50px 0 auto 0;
-  height: 400px;
+  inset: 3.125rem 0 auto 0;
+  height: 25rem;
   border: none}
 
 .ban_img {
-  width: 280px;
-  height: 570px;
-  margin-top: -20px;
-  margin-left: 690px;
+  width: 17.5rem;
+  height: 35.625rem;
+  margin-top: -1.25rem;
+  margin-left: 43.125rem;
   overflow: hidden;
   position: absolute;
   zoom:1
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 56.25rem) {
   
 .ban_img {
-  width: 280px;
-  height: 570px;
-  margin-top: -20px;
-  margin-left: 690px;
+  width: 17.5rem;
+  height: 35.625rem;
+  margin-top: -1.25rem;
+  margin-left: 43.125rem;
   overflow: hidden;
   position: absolute;
   zoom: 0.67;
@@ -61,14 +61,14 @@
 }
 
 .ban_subimg {
-  width: 180px;
-  height: 180px;
+  width: 11.25rem;
+  height: 11.25rem;
   filter: grayscale(100%);
   overflow: hidden;
   position: absolute;
-  margin-left: 510px;
-  margin-top: 321px;
-  border-radius: 999px;
+  margin-left: 31.875rem;
+  margin-top: 20.0625rem;
+  border-radius: 62.4375rem;
   z-index: 2;
 }
 
@@ -80,42 +80,42 @@
 
 .no_a {
   font-family: "Georgia", serif;
-  font-size: 160px;
+  font-size: 10rem;
   color: #a9a585;
   position: absolute;
-  margin-left: 940px;
-  margin-top: 20px;
+  margin-left: 58.75rem;
+  margin-top: 1.25rem;
 }
 
 .no_b {
   font-family: "Georgia", serif;
-  font-size: 160px;
+  font-size: 10rem;
   color: #a9a585;
   position: absolute;
-  margin-left: 1000px;
-  margin-top: 20px;
+  margin-left: 62.5rem;
+  margin-top: 1.25rem;
 }
 
 .title {
   font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 4.9vw, 52px);
+  font-size: clamp(2.2rem, 4.9vw, 3.25rem);
   letter-spacing: 0.02em;
   color: #1e1d1d;
   text-transform: uppercase;
   position: absolute;
-  margin-top: 40px;
-  margin-left: 45px;
+  margin-top: 2.5rem;
+  margin-left: 2.8125rem;
 }
 
 .subtext {
   font-style: italic;
-  font-size: clamp(1.2rem, 2.2vw, 22px);
+  font-size: clamp(1.2rem, 2.2vw, 1.375rem);
   letter-spacing: 0.08em;
   color: #927c67;
   text-transform: lowercase;
   position: absolute;
-  margin-top: 88px;
-  margin-left: 205px;
+  margin-top: 5.5rem;
+  margin-left: 12.8125rem;
 }
 
 .accent_a {
@@ -139,130 +139,130 @@
 
 .sublink {
   position: absolute;
-  margin-top: -36px;
-  margin-left: 560px;
-  padding: 4px 8px 2px 8px;
+  margin-top: -2.25rem;
+  margin-left: 35rem;
+  padding: 0.25rem 0.5rem 0.125rem 0.5rem;
   font-weight: bold;
-  letter-spacing: 2px;
-  font-size: 11px;
+  letter-spacing: 0.125rem;
+  font-size: 0.6875rem;
   color: #efefeb;
   background-color: #a9a585;
   text-transform: uppercase;
 }
 
 .desc {
-  width: 280px;
+  width: 17.5rem;
   font-family: var(--font-body);
   font-size: var(--text-base, 1.125rem);
   line-height: var(--leading-relaxed, 1.65);
   letter-spacing: 0.02em;
   color: #111;
   position: absolute;
-  margin-top: 270px;
-  margin-left: 100px;
+  margin-top: 16.875rem;
+  margin-left: 6.25rem;
   text-align: left;
   opacity: 0.9;
-  padding-left: 20px;
-  border-left: 1px solid #a9a585;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  padding-left: 1.25rem;
+  border-left: 0.0625rem solid #a9a585;
+  text-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.35);
 }
 
 .and_n {
-  font-size: 320px;
+  font-size: 20rem;
   font-family: var(--font-heading);
   position: absolute;
   color: #a9a585;
-  margin-top: 400px;
-  margin-left: -140px;
+  margin-top: 25rem;
+  margin-left: -8.75rem;
   z-index: -1;
 }
 
 .and_nx {
-  width: 300px;
-  height: 300px;
+  width: 18.75rem;
+  height: 18.75rem;
   background-color: #efefeb;
   position: absolute;
-  margin-top: 210px;
-  margin-left: -10px;
+  margin-top: 13.125rem;
+  margin-left: -0.625rem;
 }
 
 .pantone_1,
 .pantone_2,
 .pantone_3,
 .pantone_4 {
-  width: 10px;
-  height: 10px;
+  width: 0.625rem;
+  height: 0.625rem;
   position: absolute;
-  margin-top: 180px;
+  margin-top: 11.25rem;
 }
 
 .pantone_1 {
   background-color: #111;
-  margin-left: 100px;
+  margin-left: 6.25rem;
 }
 .pantone_2 {
   background-color: #927c67;
-  margin-left: 115px;
+  margin-left: 7.1875rem;
 }
 .pantone_3 {
   background-color: #897e65;
-  margin-left: 130px;
+  margin-left: 8.125rem;
 }
 .pantone_4 {
   background-color: #a9a585;
-  margin-left: 145px;
+  margin-left: 9.0625rem;
 }
 
 .set {
-  font-size: var(--text-eyebrow, 12px);
+  font-size: var(--text-eyebrow, 0.75rem);
   font-weight: 600;
   letter-spacing: var(--tracking-mid, 0.06em);
   color: #111;
   position: absolute;
-  margin-top: 178px;
-  margin-left: 180px;
+  margin-top: 11.125rem;
+  margin-left: 11.25rem;
   opacity: 0.7;
 }
 
 .line_a {
-  height: 200px;
-  width: 1px;
+  height: 12.5rem;
+  width: 0.0625rem;
   background-color: #897e65;
   position: absolute;
-  margin-top: 580px;
-  margin-left: 500px;
+  margin-top: 36.25rem;
+  margin-left: 31.25rem;
   d: ;
 }
 
 .line_b {
-  height: 60px;
-  width: 10px;
+  height: 3.75rem;
+  width: 0.625rem;
   background-color: #b6886a;
   position: absolute;
-  margin-top: 720px;
-  margin-left: 501px;
+  margin-top: 45rem;
+  margin-left: 31.3125rem;
   display: none;
 }
 
 .ban_b {
   position: relative;
-  margin: 80px auto 0;
-  width: 800px;
+  margin: 5rem auto 0;
+  width: 50rem;
   max-width: 100%;
-  min-height: 300px;
+  min-height: 18.75rem;
   height: auto;
-  border-right: 1px solid #ccc9c1;
+  border-right: 0.0625rem solid #ccc9c1;
   background-color: #efefeb;
 }
 
 .bg_img {
-  width: 400px;
-  height: 100px;
+  width: 25rem;
+  height: 6.25rem;
   mix-blend-mode: multiply;
   overflow: hidden;
   position: absolute;
-  margin-top: 80px;
-  margin-left: 140px;
+  margin-top: 5rem;
+  margin-left: 8.75rem;
   opacity: 0.6;
 }
 
@@ -272,10 +272,10 @@
 }
 
 .bg_imgB {
-  height: 300px;
-  width: 350px;
+  height: 18.75rem;
+  width: 21.875rem;
   margin-top: 0;
-  margin-left: 450px;
+  margin-left: 28.125rem;
 }
 
 /* Single section: decorative pills + objection content (silver-fox friendly type) */
@@ -286,7 +286,7 @@
 .one_section {
   position: relative;
   width: 100%;
-  max-width: 720px;
+  max-width: 45rem;
   margin: 0 auto;
   padding: 2.5rem 1.5rem 3rem;
   z-index: 1;
@@ -298,19 +298,19 @@
   gap: 0.5rem;
   margin-bottom: 1.75rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid #ccc9c1;
+  border-bottom: 0.0625rem solid #ccc9c1;
 }
 
 .pill {
   display: inline-block;
   padding: 0.4rem 0.85rem;
-  font-size: var(--text-eyebrow, 12px);
+  font-size: var(--text-eyebrow, 0.75rem);
   font-weight: 600;
   letter-spacing: var(--tracking-mid, 0.06em);
   text-transform: uppercase;
   color: #efefeb;
   background-color: var(--accent-3, #897e65);
-  border-radius: var(--radius-pill, 999px);
+  border-radius: var(--radius-pill, 62.4375rem);
 }
 
 .section_head {
@@ -318,7 +318,7 @@
 }
 
 .eyebrow {
-  font-size: var(--text-eyebrow, 12px);
+  font-size: var(--text-eyebrow, 0.75rem);
   letter-spacing: var(--tracking-wide, 0.12em);
   text-transform: uppercase;
   color: var(--muted, #5d5a56);
@@ -351,7 +351,7 @@
 
 .objection_block {
   padding-bottom: 1.75rem;
-  border-bottom: 1px solid rgba(169, 165, 133, 0.4);
+  border-bottom: 0.0625rem solid rgba(169, 165, 133, 0.4);
 }
 
 .objection_block:last-child {
@@ -360,7 +360,7 @@
 }
 
 .objection_label {
-  font-size: var(--text-eyebrow, 12px);
+  font-size: var(--text-eyebrow, 0.75rem);
   letter-spacing: var(--tracking-mid, 0.06em);
   text-transform: uppercase;
   color: var(--accent-2, #927c67);
@@ -402,9 +402,9 @@
   display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   .root {
-    padding: 24px 0 24px;
+    padding: 1.5rem 0 1.5rem;
   }
 
   .ban_a {
@@ -416,47 +416,47 @@
   .ban_fill {
     width: 100%;
     max-width: 100%;
-    padding: 20px 16px 56px;
+    padding: 1.25rem 1rem 3.5rem;
     height: auto;
-    border: 30px solid #897e65;
+    border: 1.875rem solid #897e65;
   }
 
   .ban_mid {
     position: relative;
     inset: auto;
     width: 100%;
-    max-width: 340px;
+    max-width: 21.25rem;
     height: auto;
     margin: 0 auto;
-    padding: 24px 0.67em 47px;
+    padding: 1.5rem 0.67em 2.9375rem;
     text-align: center;
     min-height: 47vh;
-    border: 1px solid #897e65;
+    border: 0.0625rem solid #897e65;
   }
 
   .title {
     position: static;
-    margin: 0 0 4px;
-    font-size: 28px;
+    margin: 0 0 0.25rem;
+    font-size: 1.75rem;
   }
 
   .subtext {
     position: static;
-    margin: 0 0 12px;
-    font-size: 16px;
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
   }
 
   .set {
     position: static;
-    margin: 8px 0 10px;
-    font-size: 11px;
+    margin: 0.5rem 0 0.625rem;
+    font-size: 0.6875rem;
   }
 
   .desc {
     position: static;
-    margin: 16px auto 0;
+    margin: 1rem auto 0;
     width: auto;
-    max-width: 320px;
+    max-width: 20rem;
     text-align: center;
     padding-left: 0;
     border-left: none;
@@ -472,15 +472,15 @@
   .pantone_4 {
     position: static;
     display: inline-block;
-    width: 14px;
-    height: 14px;
-    margin: 24px 3px 0;
+    width: 0.875rem;
+    height: 0.875rem;
+    margin: 1.5rem 0.1875rem 0;
   }
 
   .ban_img {
     position: relative;
-    margin: 0 0 16px;
-    width: min(80vw, 340px);
+    margin: 0 0 1rem;
+    width: min(80vw, 21.25rem);
     height: auto;
     zoom: 1;
     left: 50%;
@@ -490,10 +490,10 @@
   .ban_subimg {
     position: absolute;
     bottom: 0rem;
-    left: calc(50% - 60px);
+    left: calc(50% - 3.75rem);
     margin: 0;
-    width: 110px;
-    height: 110px;
+    width: 6.875rem;
+    height: 6.875rem;
   }
 
   .and_n,
@@ -508,7 +508,7 @@
   .ban_b {
     position: relative;
     width: 100%;
-    margin: 56px 0 0;
+    margin: 3.5rem 0 0;
     height: auto;
   }
 
@@ -528,7 +528,7 @@
 
   .bg_imgB {
     width: 70%;
-    margin: 24px auto 0;
+    margin: 1.5rem auto 0;
     height: auto;
   }
 
@@ -547,7 +547,7 @@
 
   .imej {
     position: relative;
-    margin: 32px auto 0;
+    margin: 2rem auto 0;
     width: 55%;
     height: auto;
   }

@@ -1,7 +1,7 @@
 /* Welcome / feature block – minimal, on-brand. Uses global vars only. */
 .openHours {
   display: block;
-  margin: 0 auto 16px;
+  margin: 0 auto 1rem;
   font: 400 0.8em var(--font-body);
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -11,16 +11,16 @@
 }
 
 .welcomeSection {
-  margin: 24px auto 24px;
-  padding: 0 24px;
-  max-width: 800px;
+  margin: 1.5rem auto 1.5rem;
+  padding: 0 1.5rem;
+  max-width: 50rem;
   width: 100%;
   box-sizing: border-box;
 }
 
 .welcomeGrid {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   width: 100%;
   max-width: 100%;
   align-items: stretch;
@@ -34,19 +34,19 @@
 }
 
 .welcomeLeft {
-  padding: 20px;
+  padding: 1.25rem;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
+  border: 0.0625rem solid var(--border);
   background: var(--card);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .welcomeHeader h2 {
   font: 400 1.25em var(--font-heading);
   text-transform: capitalize;
-  margin: 0 0 4px;
+  margin: 0 0 0.25rem;
   color: var(--ink);
 }
 
@@ -57,21 +57,21 @@
 }
 
 .welcomeCta {
-  margin-top: 4px;
+  margin-top: 0.25rem;
 }
 
 .welcomeRight {
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
+  border: 0.0625rem solid var(--border);
   background: var(--base-1);
   overflow: hidden;
-  min-height: 200px;
+  min-height: 12.5rem;
 }
 
 .featureSplide {
   width: 100%;
   height: 100%;
-  min-height: 220px;
+  min-height: 13.75rem;
 }
 
 .featureSplide :global(.splide__slide) {
@@ -101,9 +101,9 @@
   opacity: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .welcomeSection {
-    margin: 20px 0;
+    margin: 1.25rem 0;
     padding: 0;
   }
 
@@ -113,10 +113,10 @@
 
   .welcomeRight {
     order: -1;
-    min-height: 180px;
+    min-height: 11.25rem;
   }
 
   .featureSplide {
-    min-height: 180px;
+    min-height: 11.25rem;
   }
 }

@@ -35,8 +35,8 @@ export function SiteFooter() {
             target="_blank"
             rel="noopener noreferrer"
             className="footerIcon footerIconCal"
-            title="Book a discovery call (Calendly)"
-            aria-label="Book a discovery call (Calendly)"
+            title="Book a Discovery Call (Calendly)"
+            aria-label="Book a Discovery Call (Calendly)"
           >
             <Calendar size={20} strokeWidth={2} aria-hidden />
           </a>

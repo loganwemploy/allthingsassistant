@@ -14,13 +14,11 @@ const STAR_COUNT = 40;
 
 export function CalendarPromoSparkles() {
   const [stars, setStars] = useState<Star[]>([]);
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
-    if (
-      typeof window !== "undefined" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ) {
-      return;
+    if (typeof window !== "undefined") {
+      setReducedMotion(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
     }
 
     const next: Star[] = [];
@@ -44,7 +42,7 @@ export function CalendarPromoSparkles() {
       {stars.map((star, idx) => (
         <svg
           key={idx}
-          className={styles.star}
+          className={`${styles.star} ${reducedMotion ? styles.starStatic : ""}`}
           viewBox="0 0 10 10"
           style={{
             left: star.left,
@@ -55,11 +53,11 @@ export function CalendarPromoSparkles() {
         >
           <polygon
             points="5,0 6.6,3.4 10,3.8 7.5,6.1 8.2,9.5 5,7.8 1.8,9.5 2.5,6.1 0,3.8 3.4,3.4"
-            fill="rgba(146,124,103,0.35)"
+            fill="rgba(146,124,103,0.52)"
           />
           <polygon
             points="5,1.4 6,3.6 8.2,3.9 6.6,5.4 7.1,7.6 5,6.4 2.9,7.6 3.4,5.4 1.8,3.9 4,3.6"
-            fill="rgba(255,252,248,0.6)"
+            fill="rgba(255,252,248,0.9)"
           />
         </svg>
       ))}

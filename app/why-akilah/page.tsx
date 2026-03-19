@@ -76,7 +76,7 @@ export default function WhyAkilahPage() {
                 </p>
                 <div className="whyHeaderActions">
                   <CTAButton href="https://calendly.com/allthingsassistantllc">
-                    Book a discovery call
+                    Book a Discovery Call
                   </CTAButton>
                 </div>
               </div>
@@ -144,7 +144,7 @@ export default function WhyAkilahPage() {
                 </div>
                 <div className="postInfo">
                   <span>
-                    All Things Assistant LLC · <a href="https://calendly.com/allthingsassistantllc" target="_blank" rel="noopener noreferrer">Book a discovery call</a>
+                    All Things Assistant LLC · <a href="https://calendly.com/allthingsassistantllc" target="_blank" rel="noopener noreferrer">Book a Discovery Call</a>
                   </span>
                 </div>
               </div>

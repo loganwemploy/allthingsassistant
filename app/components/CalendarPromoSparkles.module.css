@@ -9,11 +9,11 @@
 
 .star {
   position: absolute;
-  width: 7px;
-  height: 7px;
+  width: 0.4375rem;
+  height: 0.4375rem;
   opacity: 0.16;
   transform-origin: center;
-  filter: drop-shadow(0 0 2px rgba(255, 252, 248, 0.25));
+  filter: drop-shadow(0 0 0.125rem rgba(255, 252, 248, 0.25));
   animation-name: promoSparkleTwinkle;
   animation-duration: 5.8s;
   animation-timing-function: ease-in-out;

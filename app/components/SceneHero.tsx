@@ -1,114 +1,95 @@
 "use client";
 
-import { useState } from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/css";
 import { CTAButton } from "./CTAButton";
 
 const CALENDLY = "https://calendly.com/allthingsassistantllc";
 
 const SCENES = [
   {
-    heading: "Free your time, grow your business.",
-    factSubtitle: "Busy professionals spend",
+    heading: "You’ve mastered your craft—now it’s time your support reflects that level.",
+    factSubtitle: "Unspoken cost",
     factNumber: "20+ hrs",
-    factDesc: "on admin each month—inbox, calendar, follow-ups.",
-    rightHeading: "Your virtual office powerhouse.",
+    factDesc: "lost each month to admin drag, follow-ups, and context switching.",
+    rightHeading: "Leadership gets diluted by logistics.",
     rightParagraph:
-      "All Things Assistant LLC helps you reclaim that time with executive-level support. One discovery call to clarify priorities, then we handle the rest.",
+      "You are not disorganized. You are overloaded by low-leverage coordination that steals focus from strategic work.",
   },
   {
-    heading: "Reclaim your time. Delegate with confidence.",
-    factSubtitle: "Over",
-    factNumber: "20 years",
-    factDesc: "of elite executive support from Akilah Adams, MBA.",
-    rightHeading: "Book → clarify → delegate.",
+    heading: "Delegate with confidence, not guesswork.",
+    factSubtitle: "Credibility",
+    factNumber: "20+ years",
+    factDesc: "of executive support experience, strengthened by an MBA.",
+    rightHeading: "Structure, discretion, calm execution.",
     rightParagraph:
-      "We start with a short discovery call, identify what's slowing you down, agree on priorities, and put a sustainable plan in place.",
+      "Akilah built this company to remove friction, protect your attention, and keep execution moving in demanding environments.",
   },
   {
-    heading: "Inbox, calendar, operations—handled.",
-    factSubtitle: "One point of contact for",
-    factNumber: "all of it",
-    factDesc: "email, scheduling, travel, and follow-through.",
-    rightHeading: "Relief from overwhelm.",
+    heading: "From fragmented tasks to seamless execution.",
+    factSubtitle: "Core outcomes",
+    factNumber: "4",
+    factDesc: "execution pillars: operations rhythm, projects, events, and follow-through.",
+    rightHeading: "Your workflow becomes easier to scale.",
     rightParagraph:
-      "Stop juggling details in your head. We triage, track, and execute so you can focus on the work only you can do.",
+      "Details are handled with precision so you can operate with clarity, confidence, and consistency.",
   },
   {
-    heading: "Executive support without a full-time hire.",
-    factSubtitle: "Custom support.",
-    factNumber: "No one-size-fits-all.",
-    factDesc: "Retainer, project-based, or hourly—we match your needs.",
-    rightHeading: "Schedule appointment · virtual or 1v1.",
+    heading: "Book once. Clarify priorities. Start moving forward.",
+    factSubtitle: "Simple process",
+    factNumber: "3 steps",
+    factDesc: "discover, align, execute.",
+    rightHeading: "No pressure - just fit and priorities.",
     rightParagraph:
-      "Book a discovery call to see if we're a fit. We'll clarify scope, timeline, and next steps so you can start delegating with confidence.",
+      "Bring your bottlenecks to the call and leave with a clearer operating plan for what to delegate first.",
   },
 ];
 
 export function SceneHero() {
-  const [scene, setScene] = useState(0);
-  const total = SCENES.length;
-  const s = SCENES[scene];
-
-  const goPrev = () => setScene((i) => (i === 0 ? total - 1 : i - 1));
-  const goNext = () => setScene((i) => (i === total - 1 ? 0 : i + 1));
-
   return (
     <section className="sceneHero" aria-label="Hero slideshow">
       <div className="sceneHeroCard">
-        <header className="sceneHeroHeader">
-          <span className="sceneHeroBrand">All Things Assistant LLC</span>
-          <span className="sceneHeroPager" aria-live="polite">
-            {String(scene + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
-          </span>
-        </header>
+        <Splide
+          aria-label="All Things Assistant value slides"
+          options={{
+            type: "loop",
+            autoplay: true,
+            interval: 5500,
+            pauseOnHover: true,
+            pauseOnFocus: true,
+            speed: 650,
+            arrows: false,
+            pagination: true,
+            drag: true,
+            swipe: true,
+            keyboard: "global",
+          }}
+        >
+          {SCENES.map((s) => (
+            <SplideSlide key={s.heading}>
+              <header className="sceneHeroHeader">
+                <span className="sceneHeroBrand">All Things Assistant LLC</span>
+              </header>
 
-        <div className="sceneHeroBody">
-          <div className="sceneHeroPrimary">
-            <h2 className="sceneHeroTitle">{s.heading}</h2>
-            <CTAButton href={CALENDLY}>Book a discovery call</CTAButton>
-          </div>
+              <div className="sceneHeroBody">
+                <div className="sceneHeroPrimary">
+                  <h2 className="sceneHeroTitle">{s.heading}</h2>
+                  <CTAButton href={CALENDLY}>Book a Discovery Call</CTAButton>
+                </div>
 
-          <div className="sceneHeroSecondary">
-            <div className="sceneHeroFact">
-              <span className="sceneHeroFactSub">{s.factSubtitle}</span>
-              <span className="sceneHeroFactNum">{s.factNumber}</span>
-              <span className="sceneHeroFactDesc">{s.factDesc}</span>
-            </div>
-            <h3 className="sceneHeroSubhead">{s.rightHeading}</h3>
-            <p className="sceneHeroText">{s.rightParagraph}</p>
-          </div>
-        </div>
-
-        <nav className="sceneHeroNav" aria-label="Slideshow">
-          <button
-            type="button"
-            className="sceneHeroNavBtn"
-            onClick={goPrev}
-            aria-label="Previous slide"
-          >
-            ‹ Prev
-          </button>
-          <div className="sceneHeroDots">
-            {SCENES.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                className={`sceneHeroDot ${i === scene ? "sceneHeroDotActive" : ""}`}
-                onClick={() => setScene(i)}
-                aria-label={`Go to slide ${i + 1}`}
-                aria-current={i === scene ? "true" : undefined}
-              />
-            ))}
-          </div>
-          <button
-            type="button"
-            className="sceneHeroNavBtn"
-            onClick={goNext}
-            aria-label="Next slide"
-          >
-            Next ›
-          </button>
-        </nav>
+                <div className="sceneHeroSecondary">
+                  <div className="sceneHeroFact">
+                    <span className="sceneHeroFactSub">{s.factSubtitle}</span>
+                    <span className="sceneHeroFactNum">{s.factNumber}</span>
+                    <span className="sceneHeroFactDesc">{s.factDesc}</span>
+                  </div>
+                  <h3 className="sceneHeroSubhead">{s.rightHeading}</h3>
+                  <p className="sceneHeroText">{s.rightParagraph}</p>
+                </div>
+              </div>
+            </SplideSlide>
+          ))}
+        </Splide>
       </div>
     </section>
   );

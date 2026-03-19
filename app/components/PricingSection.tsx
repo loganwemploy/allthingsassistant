@@ -1,3 +1,5 @@
+import { Check } from "lucide-react";
+
 const PAYPAL_LABEL = "PayPal";
 
 type PricingCard = {
@@ -102,7 +104,10 @@ export function PricingSection() {
           <div className="pricingPrice">{c.price}</div>
           <ul className="pricingBullets">
             {c.bullets.map((b) => (
-              <li key={b}>{b}</li>
+              <li key={b}>
+                <Check className="pricingBulletIcon" aria-hidden />
+                <span>{b}</span>
+              </li>
             ))}
           </ul>
           <div className="pricingPayPal" aria-label="PayPal available">

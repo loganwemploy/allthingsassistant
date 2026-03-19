@@ -1,13 +1,13 @@
 .wrap {
   display: grid;
-  gap: 14px;
+  gap: 0.875rem;
 }
 
 .toolbar {
   display: grid;
-  gap: 12px;
-  padding: 14px;
-  border: 1px solid var(--border);
+  gap: 0.75rem;
+  padding: 0.875rem;
+  border: 0.0625rem solid var(--border);
   background: var(--card);
   box-shadow: var(--shadow);
   border-radius: var(--radius-md);
@@ -15,7 +15,7 @@
 
 .search {
   display: grid;
-  gap: 6px;
+  gap: 0.375rem;
 }
 
 .label {
@@ -28,9 +28,9 @@
 .input,
 .select {
   width: 100%;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.75rem;
+  border: 0.0625rem solid var(--border);
   background: rgba(255, 255, 255, 0.9);
   font: inherit;
 }
@@ -54,20 +54,20 @@
 }
 
 .filtersGrid {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   display: grid;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .range {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .check {
   display: inline-flex;
-  gap: 10px;
+  gap: 0.625rem;
   align-items: center;
   font-size: 0.95rem;
   color: var(--ink);
@@ -75,9 +75,9 @@
 
 .clearBtn {
   width: fit-content;
-  padding: 10px 14px;
+  padding: 0.625rem 0.875rem;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--border);
+  border: 0.0625rem solid var(--border);
   background: transparent;
   font-weight: 700;
   cursor: pointer;
@@ -91,7 +91,7 @@
 .meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 0.75rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -102,12 +102,12 @@
 
 .pageSize {
   display: inline-flex;
-  gap: 8px;
+  gap: 0.5rem;
   align-items: center;
 }
 
 .tableShell {
-  border: 1px solid var(--border);
+  border: 0.0625rem solid var(--border);
   border-radius: var(--radius-md);
   overflow: auto;
   background: rgba(255, 255, 255, 0.92);
@@ -116,7 +116,7 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 1680px;
+  min-width: 105rem;
 }
 
 .thSub {
@@ -125,14 +125,14 @@
   text-transform: none;
   letter-spacing: normal;
   color: var(--muted);
-  margin-top: 4px;
-  font-size: 10px;
+  margin-top: 0.25rem;
+  font-size: 0.625rem;
 }
 
 .table th,
 .table td {
-  padding: 12px 12px;
-  border-bottom: 1px solid rgba(169, 165, 133, 0.35);
+  padding: 0.75rem 0.75rem;
+  border-bottom: 0.0625rem solid rgba(169, 165, 133, 0.35);
   vertical-align: top;
 }
 
@@ -166,16 +166,16 @@
 .link {
   color: var(--accent-2);
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 0.1875rem;
 }
 
 .cite {
   display: inline-block;
-  margin-top: 6px;
-  font-size: 12px;
+  margin-top: 0.375rem;
+  font-size: 0.75rem;
   color: var(--muted);
-  border: 1px solid rgba(169, 165, 133, 0.55);
-  padding: 3px 8px;
+  border: 0.0625rem solid rgba(169, 165, 133, 0.55);
+  padding: 0.1875rem 0.5rem;
   border-radius: var(--radius-pill);
 }
 
@@ -186,22 +186,22 @@
 
 .badge {
   display: inline-block;
-  margin-left: 8px;
-  padding: 2px 8px;
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.5rem;
   border-radius: var(--radius-pill);
-  border: 1px solid rgba(169, 165, 133, 0.55);
-  font-size: 12px;
+  border: 0.0625rem solid rgba(169, 165, 133, 0.55);
+  font-size: 0.75rem;
   color: var(--muted);
   white-space: nowrap;
 }
 
 .citeNote {
   display: block;
-  margin-top: 6px;
-  font-size: 11px;
+  margin-top: 0.375rem;
+  font-size: 0.6875rem;
   line-height: 1.35;
   color: var(--muted);
-  max-width: 280px;
+  max-width: 17.5rem;
 }
 
 .rangesList {
@@ -212,7 +212,7 @@
 }
 
 .rangesList li {
-  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
 }
 
 .rangesList li:last-child {
@@ -229,14 +229,14 @@
 }
 
 .sourceRowCell {
-  padding: 8px 14px 16px !important;
-  border-bottom: 1px solid rgba(169, 165, 133, 0.28);
+  padding: 0.5rem 0.875rem 1rem !important;
+  border-bottom: 0.0625rem solid rgba(169, 165, 133, 0.28);
   vertical-align: top !important;
 }
 
 .sourcesFootnote {
   font-family: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  font-size: 10px;
+  font-size: 0.625rem;
   line-height: 1.55;
   letter-spacing: 0.01em;
   color: rgba(55, 52, 40, 0.42);
@@ -246,7 +246,7 @@
   color: inherit;
   text-decoration: underline;
   text-decoration-color: rgba(55, 52, 40, 0.22);
-  text-underline-offset: 2px;
+  text-underline-offset: 0.125rem;
 }
 
 .sourcesSingleLink:hover {
@@ -270,7 +270,7 @@
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: rgba(55, 52, 40, 0.2);
-  text-underline-offset: 3px;
+  text-underline-offset: 0.1875rem;
 }
 
 .sourcesDetails summary::-webkit-details-marker {
@@ -282,27 +282,27 @@
 }
 
 .sourcesPanel {
-  margin-top: 10px;
-  padding: 10px 12px 12px;
-  max-width: min(100%, 340px);
+  margin-top: 0.625rem;
+  padding: 0.625rem 0.75rem 0.75rem;
+  max-width: min(100%, 21.25rem);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
   align-items: stretch;
-  border: 1px solid rgba(169, 165, 133, 0.2);
-  border-radius: 4px;
+  border: 0.0625rem solid rgba(169, 165, 133, 0.2);
+  border-radius: 0.25rem;
   background: rgba(255, 255, 255, 0.65);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0.0625rem 0 rgba(0, 0, 0, 0.03);
 }
 
 .sourcesPanelLink {
   font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 11px;
+  font-size: 0.6875rem;
   line-height: 1.4;
   color: rgba(55, 52, 40, 0.48);
   text-decoration: underline;
   text-decoration-color: rgba(55, 52, 40, 0.18);
-  text-underline-offset: 2px;
+  text-underline-offset: 0.125rem;
   word-break: break-all;
 }
 
@@ -313,23 +313,23 @@
 .sourcesPanelNote {
   margin: 0;
   font-family: ui-serif, Georgia, serif;
-  font-size: 10px;
+  font-size: 0.625rem;
   line-height: 1.45;
   font-style: italic;
   color: rgba(55, 52, 40, 0.4);
 }
 
 .cardSourcesFooter {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(169, 165, 133, 0.18);
+  margin-top: 0.875rem;
+  padding-top: 0.75rem;
+  border-top: 0.0625rem solid rgba(169, 165, 133, 0.18);
 }
 
 .cardField {
   display: grid;
-  gap: 4px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(169, 165, 133, 0.25);
+  gap: 0.25rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 0.0625rem solid rgba(169, 165, 133, 0.25);
 }
 
 .cardField:last-child {
@@ -339,7 +339,7 @@
 
 .cardValueBlock {
   display: grid;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .cardSection {
@@ -347,8 +347,8 @@
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
   color: var(--accent-2);
-  margin-top: 8px;
-  margin-bottom: 4px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .mobileZone {
@@ -357,16 +357,16 @@
   gap: 0;
 }
 
-/* ~48px+ touch targets; label 6px below icon (proximity grouping) */
+/* ~3rem+ touch targets; label 0.375rem below icon (proximity grouping) */
 .mobileViewToggle {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  gap: clamp(28px, 12vw, 48px);
-  padding: 16px 20px 20px;
-  margin-bottom: 4px;
-  border: 1px solid var(--border);
+  gap: clamp(1.75rem, 12vw, 3rem);
+  padding: 1rem 1.25rem 1.25rem;
+  margin-bottom: 0.25rem;
+  border: 0.0625rem solid var(--border);
   border-radius: var(--radius-md);
   background: var(--card);
   box-shadow: var(--shadow);
@@ -376,20 +376,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 0.375rem;
 }
 
 .viewToggleBtn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
-  min-width: 64px;
-  min-height: 64px;
+  width: 4rem;
+  height: 4rem;
+  min-width: 4rem;
+  min-height: 4rem;
   padding: 0;
-  border-radius: 18px;
-  border: 2px solid var(--border);
+  border-radius: 1.125rem;
+  border: 0.125rem solid var(--border);
   background: rgba(255, 255, 255, 0.95);
   color: var(--ink);
   cursor: pointer;
@@ -404,8 +404,8 @@
 }
 
 .viewToggleBtn:focus-visible {
-  outline: 3px solid var(--accent-2);
-  outline-offset: 3px;
+  outline: 0.1875rem solid var(--accent-2);
+  outline-offset: 0.1875rem;
 }
 
 .viewToggleBtn[aria-pressed="true"] {
@@ -415,20 +415,20 @@
 }
 
 .viewToggleIcon {
-  width: 28px;
-  height: 28px;
+  width: 1.75rem;
+  height: 1.75rem;
   flex-shrink: 0;
 }
 
 .viewToggleLabel {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
   line-height: 1.2;
   text-align: center;
-  max-width: 72px;
+  max-width: 4.5rem;
 }
 
 .viewToggleItem:has(.viewToggleBtn[aria-pressed="true"]) .viewToggleLabel {
@@ -438,14 +438,14 @@
 .mobileList {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--border);
+  border: 0.0625rem solid var(--border);
   border-radius: var(--radius-md);
   overflow: hidden;
   background: rgba(255, 255, 255, 0.92);
 }
 
 .listRowWrap {
-  border-bottom: 1px solid rgba(169, 165, 133, 0.35);
+  border-bottom: 0.0625rem solid rgba(169, 165, 133, 0.35);
 }
 
 .listRowWrap:last-child {
@@ -456,10 +456,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 0.875rem;
   width: 100%;
-  min-height: 56px;
-  padding: 16px 16px 16px 18px;
+  min-height: 3.5rem;
+  padding: 1rem 1rem 1rem 1.125rem;
   text-align: left;
   font: inherit;
   color: inherit;
@@ -474,8 +474,8 @@
 }
 
 .listRowTrigger:focus-visible {
-  outline: 3px solid var(--accent-2);
-  outline-offset: -3px;
+  outline: 0.1875rem solid var(--accent-2);
+  outline-offset: -0.1875rem;
 }
 
 .listRowText {
@@ -492,8 +492,8 @@
 }
 
 .listRowSub {
-  margin-top: 6px;
-  font-size: 13px;
+  margin-top: 0.375rem;
+  font-size: 0.8125rem;
   line-height: 1.35;
   color: var(--muted);
   display: -webkit-box;
@@ -504,8 +504,8 @@
 
 .listChevron {
   flex-shrink: 0;
-  width: 28px;
-  height: 28px;
+  width: 1.75rem;
+  height: 1.75rem;
   color: var(--muted);
   transition: transform 0.2s ease;
 }
@@ -515,15 +515,15 @@
 }
 
 .listDetailCard {
-  padding: 4px 16px 20px 18px;
+  padding: 0.25rem 1rem 1.25rem 1.125rem;
   background: rgba(240, 241, 235, 0.65);
-  border-top: 1px solid rgba(169, 165, 133, 0.25);
+  border-top: 0.0625rem solid rgba(169, 165, 133, 0.25);
 }
 
 .mobileGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 0.75rem;
   align-items: stretch;
 }
 
@@ -531,11 +531,11 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 10px;
-  min-height: 148px;
-  padding: 14px 12px 12px;
+  gap: 0.625rem;
+  min-height: 9.25rem;
+  padding: 0.875rem 0.75rem 0.75rem;
   border-radius: var(--radius-md);
-  border: 2px solid var(--border);
+  border: 0.125rem solid var(--border);
   background: var(--card);
   box-shadow: var(--shadow);
   cursor: pointer;
@@ -551,18 +551,18 @@
 }
 
 .gridTile:focus-visible {
-  outline: 3px solid var(--accent-2);
-  outline-offset: 2px;
+  outline: 0.1875rem solid var(--accent-2);
+  outline-offset: 0.125rem;
 }
 
 .gridTileSelected {
   border-color: var(--accent-2);
-  box-shadow: 0 0 0 1px var(--accent-2);
+  box-shadow: 0 0 0 0.0625rem var(--accent-2);
 }
 
 .gridTileIcon {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   color: var(--accent-2);
   flex-shrink: 0;
 }
@@ -583,12 +583,12 @@
 .gridTileMeta {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.25rem;
   flex: 1;
 }
 
 .gridTileStatLine {
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.35;
   color: var(--muted);
 }
@@ -597,11 +597,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 12px 14px;
-  border-radius: 14px;
+  min-height: 3rem;
+  padding: 0.75rem 0.875rem;
+  border-radius: 0.875rem;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.9375rem;
   text-decoration: none;
   color: #fff;
   background: var(--accent-2);
@@ -617,17 +617,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 12px;
-  border-radius: 14px;
-  font-size: 14px;
+  min-height: 3rem;
+  padding: 0.75rem;
+  border-radius: 0.875rem;
+  font-size: 0.875rem;
   color: var(--muted);
   background: rgba(169, 165, 133, 0.15);
   margin-top: auto;
 }
 
 .gridTileHint {
-  font-size: 10px;
+  font-size: 0.625rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--muted);
@@ -636,27 +636,27 @@
 }
 
 .gridDetailPanel {
-  margin-top: 16px;
-  padding: 16px;
-  border: 1px solid var(--border);
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 0.0625rem solid var(--border);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.95);
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .gridCloseBtn {
-  min-height: 52px;
-  margin-top: 8px;
-  padding: 14px 20px;
-  border-radius: 14px;
-  border: 2px solid var(--border);
+  min-height: 3.25rem;
+  margin-top: 0.5rem;
+  padding: 0.875rem 1.25rem;
+  border-radius: 0.875rem;
+  border: 0.125rem solid var(--border);
   background: transparent;
   font: inherit;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   color: var(--ink);
 }
@@ -667,24 +667,24 @@
 }
 
 .gridCloseBtn:focus-visible {
-  outline: 3px solid var(--accent-2);
-  outline-offset: 2px;
+  outline: 0.1875rem solid var(--accent-2);
+  outline-offset: 0.125rem;
 }
 
 .card {
-  border: 1px solid var(--border);
+  border: 0.0625rem solid var(--border);
   border-radius: var(--radius-md);
   background: var(--card);
   box-shadow: var(--shadow);
-  padding: 14px;
+  padding: 0.875rem;
   display: grid;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .cardTop {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 0.75rem;
   align-items: flex-start;
 }
 
@@ -698,22 +698,22 @@
   font-size: var(--text-eyebrow);
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  padding: 8px 10px;
+  padding: 0.5rem 0.625rem;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--border);
+  border: 0.0625rem solid var(--border);
   white-space: nowrap;
 }
 
 .cardGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .cardRow {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 10px;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.625rem;
   align-items: baseline;
 }
 
@@ -732,14 +732,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 12px;
+  gap: 0.75rem;
+  padding: 0.75rem;
 }
 
 .pageBtn {
-  padding: 10px 14px;
+  padding: 0.625rem 0.875rem;
   border-radius: var(--radius-pill);
-  border: 1px solid var(--border);
+  border: 0.0625rem solid var(--border);
   background: transparent;
   font-weight: 700;
   cursor: pointer;
@@ -754,7 +754,7 @@
   color: var(--muted);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 53.75rem) {
   .tableShell {
     display: none;
   }
@@ -762,25 +762,25 @@
     display: flex;
   }
   .cardRow {
-    grid-template-columns: 96px 1fr;
+    grid-template-columns: 6rem 1fr;
   }
   .pageBtn {
-    min-height: 48px;
-    min-width: 112px;
-    padding: 14px 22px;
-    font-size: 16px;
+    min-height: 3rem;
+    min-width: 7rem;
+    padding: 0.875rem 1.375rem;
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 40rem) {
   .toolbar {
-    padding: 12px;
+    padding: 0.75rem;
   }
   .range {
     grid-template-columns: 1fr;
   }
   .meta {
-    gap: 10px;
+    gap: 0.625rem;
   }
 }
 

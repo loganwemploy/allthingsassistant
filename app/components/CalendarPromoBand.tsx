@@ -15,56 +15,52 @@ export function CalendarPromoBand() {
         <div className={styles.hero}>
           <div className={styles.eyebrow}>
             <Zap className={styles.eyebrowIcon} aria-hidden />
-            <span>// All Things Assistant LLC</span>
+            <span>// Built for leaders ready to delegate</span>
           </div>
           <h2 id="calendar-promo-heading" className={styles.headline}>
-            Increase productivity, increase output,{" "}
-            <span className={styles.accent}>increase profit</span>
+            You’ve mastered your craft—now it’s time your support reflects that level.
           </h2>
           <p className={styles.subtitle}>
-            What&apos;s holding you back from moving forward—waiting for the perfect week, or the
-            work that never shrinks? Pick a date on the calendar below and take one clear step
-            today.
+            In high-performing environments, hidden friction slows execution. Book a Discovery Call to replace fragmented admin with seamless follow-through and strategic support.
           </p>
           <a href="#booking" className={styles.heroCta}>
-            Pick your date
+            Book a Discovery Call
           </a>
         </div>
 
         <div className={styles.featuresDesktop}>
           <div className={styles.featureCol}>
             <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
-            <p className={styles.featureKicker}>email, scheduling, travel, and follow-through.</p>
-            <p className={styles.featureLead}>Relief.</p>
+            <p className={styles.featureKicker}>Why you need me</p>
+            <p className={styles.featureLead}>Lead, don't manage logistics.</p>
             <p className={styles.featureBody}>
-            Stop juggling details in your head. We triage, track, and execute so you can focus on the work only you can do.
+            Your highest-value time belongs to growth and decisions, not inbox routing, scheduling drift, and follow-up debt.
             </p>
           </div>
           <div className={styles.featureCol}>
             <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
-            <p className={styles.featureKicker}>What could you accomplish with 20+ extra hours a week?</p>
-            <p className={styles.featureLead}>Reclaim your productivity.</p>
+            <p className={styles.featureKicker}>Why trust me</p>
+            <p className={styles.featureLead}>Professional, confidential, consistent.</p>
             <p className={styles.featureBody}>
-              Most admins or business owners spend 20+ hours a week submitting emails, scheduling, or ochestrating. Let's optimize your work flow.            </p>
+              Over two decades of executive support and an MBA-backed operating approach means details are handled with precision and discretion.            </p>
           </div>
         </div>
 
         <div className={styles.featuresMobile}>
           <div className={styles.mobileFeatureBlock}>
             <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
-            <p className={styles.featureKicker}>No calendar chaos</p>
+            <p className={styles.featureKicker}>Why choose me</p>
             <p className={styles.featureLead}>Reliable.</p>
             <p className={styles.featureBody}>
-              One place to request time; we handle coordination and follow-through so your schedule
-              stays sane.
+              I operate at a standard where excellence is expected and your workflow feels effortless.
             </p>
           </div>
           <div className={styles.mobileFeatureBlock}>
             <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
-            <p className={styles.featureKicker}>From request to clarity</p>
+            <p className={styles.featureKicker}>Discovery call outcome</p>
             <p className={styles.featureLead}>Fast.</p>
             <p className={styles.featureBody}>
-              Short discovery, clear next steps—so you&apos;re not stuck in email ping-pong.
+              You leave with clear priorities, a support rhythm, and immediate next actions.
             </p>
           </div>
         </div>
@@ -81,7 +77,7 @@ export function CalendarPromoBand() {
             <span className={styles.brandText}>Akilah Adams</span>
           </div>
           <a href="#booking" className={styles.orangeCta}>
-            Pick your date
+            Book a Discovery Call
           </a>
         </div>
         </div>
