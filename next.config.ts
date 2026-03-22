@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         hostname: "files.jcink.net",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
     ],
   },
 };

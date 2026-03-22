@@ -1,0 +1,117 @@
+{
+  "weekLabel": "Week 1",
+  "pageTitle": "Personal Assistant Job Leads — Live from Indeed",
+  "pageSubtitle": "Curated Miami-area listings with context for outreach.",
+  "friendNotesHeading": "A note for your friend",
+  "friendNotes": [
+    "Trivium Group is the strongest lead — direct PA to CEO, named founder, very active online, well-funded Amazon agency.",
+    "For emails, tools like Hunter.io (free 25 searches/month) or Apollo.io (free tier) are more reliable than scraping — enter the company domain to surface verified emails.",
+    "LinkedIn InMail or a connection request with a note often outperforms cold email for PA roles."
+  ],
+  "leads": [
+    {
+      "id": "trivium",
+      "company": "Trivium Group",
+      "jobTitle": "Personal Assistant to CEO",
+      "location": "Miami, FL (Hybrid)",
+      "details": [
+        { "label": "CEO / Founder", "value": "Mina Elias" },
+        {
+          "label": "LinkedIn",
+          "value": "Mina Elias (profile)",
+          "href": "https://www.linkedin.com/in/theminaelias"
+        },
+        {
+          "label": "Company LinkedIn",
+          "value": "Trivium Group LLC",
+          "href": "https://www.linkedin.com/company/trivium-group-llc"
+        },
+        {
+          "label": "Website",
+          "value": "triviumco.com",
+          "href": "https://triviumco.com"
+        },
+        {
+          "label": "Est. revenue",
+          "value": "$300M+ in client Amazon sales managed; agency revenue est. $5–20M/yr"
+        },
+        {
+          "label": "Email",
+          "value": "Not publicly listed — contact via LinkedIn or triviumco.com"
+        }
+      ],
+      "tip": "Best bet — this is a PA to CEO role directly. Mina Elias is very active on LinkedIn and social media. A DM on LinkedIn is likely to get a response.",
+      "tipVariant": "highlight",
+      "jobUrl": null
+    },
+    {
+      "id": "atlantic-radio",
+      "company": "Atlantic Radio Miami",
+      "jobTitle": "Personal Assistant",
+      "location": "Miami, FL (near MIA airport)",
+      "details": [
+        {
+          "label": "CEO / Owner",
+          "value": "Not publicly surfaced — appears to be a small private company"
+        },
+        {
+          "label": "Revenue",
+          "value": "Small private company — likely under $5M"
+        },
+        {
+          "label": "Notes",
+          "value": "Supporting management + President per listing description"
+        }
+      ],
+      "tip": "Apply directly through Indeed and ask to speak with the hiring manager. The listing mentions President's contacts, emails, and schedule.",
+      "tipVariant": "note",
+      "jobUrl": null
+    },
+    {
+      "id": "aw-socials",
+      "company": "Aw Socials",
+      "jobTitle": "Personal Assistant",
+      "location": "Miami Beach, FL",
+      "details": [
+        {
+          "label": "Pay",
+          "value": "~$32/hr (per listing; confirm on Indeed)"
+        },
+        {
+          "label": "CEO / Owner",
+          "value": "Not publicly surfaced — boutique social media / influencer company"
+        },
+        {
+          "label": "Notes",
+          "value": "Also hiring \"Social Media Content Creator for CEO Brand\" — strong signal of a personal brand or influencer-run business"
+        }
+      ],
+      "tip": "Check their Instagram and social handles. The CEO may be an influencer or public figure — LinkedIn search for \"Aw Socials\" or \"AwSocials\" may surface the founder.",
+      "tipVariant": "note",
+      "jobUrl": null
+    },
+    {
+      "id": "assistant-company",
+      "company": "The Assistant Company",
+      "jobTitle": "Personal Assistant",
+      "location": "Miami, FL 33137",
+      "details": [
+        {
+          "label": "Parent company",
+          "value": "Acquired by Clubessential (Cincinnati-based SaaS) in 2022"
+        },
+        {
+          "label": "Revenue",
+          "value": "Part of a larger SaaS portfolio — original TAC est. ~$2–10M"
+        },
+        {
+          "label": "Notes",
+          "value": "Spa/activity management software — PA role likely supports the exec team"
+        }
+      ],
+      "tip": "Corporate context: useful if you prefer structured teams over solo founders.",
+      "tipVariant": "note",
+      "jobUrl": null
+    }
+  ]
+}

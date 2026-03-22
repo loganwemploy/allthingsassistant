@@ -1,33 +1,155 @@
+import Image from "next/image";
+import Link from "next/link";
 import { CTAButton } from "./CTAButton";
-import { Check } from "lucide-react";
+import { AlertCircle, ArrowLeftRight, Check, Clock3, Users } from "lucide-react";
 import styles from "./ConversionSections.module.css";
 
+const CONTEXT_ROWS = [
+  {
+    icon: AlertCircle,
+    text: "Constantly shifting priorities that drain your creative energy.",
+  },
+  {
+    icon: Users,
+    text: "Office politics and operational friction slowing your momentum.",
+  },
+  {
+    icon: Clock3,
+    text: "Accumulating follow-up debt that keeps you awake at night.",
+  },
+  {
+    icon: ArrowLeftRight,
+    text: "Exhausting context switching between vision and coordination.",
+  },
+] as const;
+
 export function ConversionSections() {
+  const leftRows = CONTEXT_ROWS.slice(0, 2);
+  const rightRows = CONTEXT_ROWS.slice(2, 4);
+
   return (
-    <section className={styles.wrap} aria-labelledby="conversion-story-heading">
+    <section className={styles.wrap} aria-labelledby="context-heading">
       <div className={styles.container}>
-        <article className={styles.card}>
-          <p className={styles.eyebrow}>The unspoken cost</p>
-          <h2 id="conversion-story-heading" className={styles.title}>
-            You&apos;ve mastered your craft—now it&apos;s time your support reflects that level.
+        <div className={styles.contextSection}>
+          <p className={styles.contextEyebrow}>The context</p>
+          <h2 id="context-heading" className={styles.contextTitle}>
+            The unspoken tax on high performers.
           </h2>
-          <p className={styles.text}>
-            In high-performing environments, growth often comes with hidden friction: shifting priorities,
-            complex personalities, follow-up debt, and constant context switching. You are not falling behind;
-            you are carrying low-leverage coordination that should already be handled.
-          </p>
-        </article>
+          <div className={styles.contextGrid}>
+            <div className={styles.contextCard}>
+              {leftRows.map(({ icon: Icon, text }) => (
+                <div key={text} className={styles.contextRow}>
+                  <Icon className={styles.contextIcon} strokeWidth={1.5} aria-hidden />
+                  <p className={styles.contextRowText}>{text}</p>
+                </div>
+              ))}
+            </div>
+            <div className={styles.contextCard}>
+              {rightRows.map(({ icon: Icon, text }) => (
+                <div key={text} className={styles.contextRow}>
+                  <Icon className={styles.contextIcon} strokeWidth={1.5} aria-hidden />
+                  <p className={styles.contextRowText}>{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className={styles.contextDivider} role="separator" />
+          <blockquote className={styles.contextQuote}>
+            <p>
+              High-leverage leadership means protecting your attention from low-leverage coordination—so
+              strategy gets the room it deserves.
+            </p>
+          </blockquote>
+          <Link href="#booking" className={styles.contextCta}>
+            If this feels familiar, start here
+            <span aria-hidden="true"> →</span>
+          </Link>
+        </div>
+      </div>
 
-        <article className={styles.card}>
-          <p className={styles.eyebrow}>Origin and authority</p>
-          <h3 className={styles.title}>Why Akilah built All Things Assistant</h3>
-          <p className={styles.text}>
-            Akilah began as a church secretary supporting leadership and quickly became known for structure,
-            discretion, and calm execution. Over 20+ years and an MBA later, she now operates as a strategic
-            partner for leaders who need seamless execution behind the scenes.
-          </p>
-        </article>
+      <section
+        className={styles.originSection}
+        aria-labelledby="origin-hero-heading"
+      >
+        <div className={styles.originHero}>
+          <div className={styles.originHeroImageWrap}>
+            <Image
+              src="/akilah.jpg"
+              alt="Akilah Adams, MBA — founder of All Things Assistant"
+              fill
+              priority
+              sizes="100vw"
+              className={styles.originHeroImgAkilah}
+            />
+            {/* Desktop (≥80rem): bright sky — Unsplash License (free use) */}
+            <Image
+              src="https://images.unsplash.com/photo-1527482797697-8795b05a13fe?auto=format&fit=crop&w=2400&q=85"
+              alt=""
+              fill
+              sizes="100vw"
+              className={styles.originHeroImgSky}
+            />
+            <div className={styles.originHeroScrim} aria-hidden />
+            <div className={styles.originHeroShoulderTone} aria-hidden />
+          </div>
+          <div className={styles.originHeroContent}>
+            <p className={styles.originTagline}>The evolution of support</p>
+            <h2 id="origin-hero-heading" className={styles.originHeroTitle}>
+              Grace under pressure.
+              <br />
+              Precision by design.
+            </h2>
+            <div className={styles.originHeroRule} aria-hidden />
+          </div>
+        </div>
 
+        <div className={styles.originBody}>
+          <div className={styles.originBodyInner}>
+            <div className={styles.originColText}>
+              <h3 id="conversion-story-heading" className={styles.originHeading}>
+                From the sanctuary to the boardroom.
+              </h3>
+              <blockquote className={styles.originQuote}>
+                <p>
+                  I learned early that the highest form of service is invisibility—the smooth operation of
+                  a space where leaders can simply lead.
+                </p>
+              </blockquote>
+              <p className={styles.originBodyText}>
+                Akilah began as a church secretary supporting leadership and quickly became known for structure,
+                discretion, and calm execution. That foundation became what she calls{" "}
+                <em>executive grace</em>: quiet precision that keeps the room steady so vision can move.
+              </p>
+              <p className={styles.originBodyText}>
+                Over 20+ years and an MBA later, she founded All Things Assistant to bring that same standard
+                to the boardroom—strategic partnership for leaders who need seamless execution behind the scenes.
+              </p>
+            </div>
+            <div className={styles.originColVisual}>
+              <div className={styles.originVisualCard}>
+                <div className={styles.originVisualHeader}>
+                  <p className={styles.originVisualName}>Akilah Adams</p>
+                  <p className={styles.originVisualRole}>MBA · Professional executive support</p>
+                </div>
+                <div className={styles.originVisualPhoto} aria-hidden>
+                  <Image
+                    src="https://dl4.pushbulletusercontent2.com/YVpmFJlIaS2MKM2pi6chgJk20XuTld0i/image.png"
+                    alt="Akilah Adams"
+                    fill
+                    sizes="(max-width: 52rem) 100vw, 40vw"
+                    className={styles.originVisualImg}
+                  />
+                </div>
+                <div className={styles.originBadge}>
+                  <span>20 years of refinement</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className={styles.container}>
         <div className={styles.grid3}>
           <article className={styles.card}>
             <p className={styles.eyebrow}>Why you need me</p>
@@ -56,7 +178,7 @@ export function ConversionSections() {
 
         <article className={styles.card}>
           <p className={styles.eyebrow}>Services as outcomes</p>
-          <h3 className={styles.title}>What you gain from support that matches your level</h3>
+          <h2 className={styles.title}>What you gain from support that matches your level</h2>
           <ul className={styles.outcomeList}>
             <li>
               <Check className={styles.bulletIcon} aria-hidden />
@@ -79,7 +201,7 @@ export function ConversionSections() {
 
         <article className={styles.card}>
           <p className={styles.eyebrow}>How it works</p>
-          <h3 className={styles.title}>A simple path from overwhelm to execution</h3>
+          <h2 className={styles.title}>A simple path from overwhelm to execution</h2>
           <ol className={styles.process}>
             <li>
               <span className={styles.stepNo}>1</span>
@@ -98,7 +220,7 @@ export function ConversionSections() {
 
         <article className={styles.card}>
           <p className={styles.eyebrow}>Decision point</p>
-          <h3 className={styles.title}>Operate with clarity, confidence, and ease.</h3>
+          <h2 className={styles.title}>Operate with clarity, confidence, and ease.</h2>
           <p className={styles.text}>
             If you are ready to stop managing friction and start leading at your highest level,
             let&apos;s map your priorities and build your support rhythm.

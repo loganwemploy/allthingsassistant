@@ -14,7 +14,7 @@ const SCENES = [
     factDesc: "lost each month to admin drag, follow-ups, and context switching.",
     rightHeading: "Leadership gets diluted by logistics.",
     rightParagraph:
-      "You are not disorganized. You are overloaded by low-leverage coordination that steals focus from strategic work.",
+      "You are overloaded by low-leverage coordination that quietly steals focus from strategic work—not short on talent or discipline.",
   },
   {
     heading: "Delegate with confidence, not guesswork.",
@@ -47,7 +47,7 @@ const SCENES = [
 
 export function SceneHero() {
   return (
-    <section className="sceneHero" aria-label="Hero slideshow">
+    <section id="sceneHero" className="sceneHero" aria-label="Hero slideshow">
       <div className="sceneHeroCard">
         <Splide
           aria-label="All Things Assistant value slides"
