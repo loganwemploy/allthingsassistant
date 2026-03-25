@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { CTAButton } from "./CTAButton";
 import { AlertCircle, ArrowLeftRight, Check, Clock3, Users } from "lucide-react";
+import { SceneHero } from "./SceneHero";
 import styles from "./ConversionSections.module.css";
+
+const AKILAH_HERO =
+  "https://dl4.pushbulletusercontent2.com/d0WgxSJ9mXgjr7l62jruYsBA76YsaQtf/image.png";
 
 const CONTEXT_ROWS = [
   {
@@ -67,6 +71,8 @@ export function ConversionSections() {
         </div>
       </div>
 
+      <SceneHero />
+
       <section
         className={styles.originSection}
         aria-labelledby="origin-hero-heading"
@@ -74,20 +80,12 @@ export function ConversionSections() {
         <div className={styles.originHero}>
           <div className={styles.originHeroImageWrap}>
             <Image
-              src="/akilah.jpg"
-              alt="Akilah Adams, MBA — founder of All Things Assistant"
+                src={AKILAH_HERO}
+                alt="Akilah Adams, MBA — founder of All Things Assistant LLC"
               fill
               priority
               sizes="100vw"
               className={styles.originHeroImgAkilah}
-            />
-            {/* Desktop (≥80rem): bright sky — Unsplash License (free use) */}
-            <Image
-              src="https://images.unsplash.com/photo-1527482797697-8795b05a13fe?auto=format&fit=crop&w=2400&q=85"
-              alt=""
-              fill
-              sizes="100vw"
-              className={styles.originHeroImgSky}
             />
             <div className={styles.originHeroScrim} aria-hidden />
             <div className={styles.originHeroShoulderTone} aria-hidden />
@@ -95,7 +93,7 @@ export function ConversionSections() {
           <div className={styles.originHeroContent}>
             <p className={styles.originTagline}>The evolution of support</p>
             <h2 id="origin-hero-heading" className={styles.originHeroTitle}>
-              Grace under pressure.
+                Calm under pressure.
               <br />
               Precision by design.
             </h2>
@@ -118,7 +116,7 @@ export function ConversionSections() {
               <p className={styles.originBodyText}>
                 Akilah began as a church secretary supporting leadership and quickly became known for structure,
                 discretion, and calm execution. That foundation became what she calls{" "}
-                <em>executive grace</em>: quiet precision that keeps the room steady so vision can move.
+                <em>executive steadiness</em>: quiet precision that keeps the room steady so vision can move.
               </p>
               <p className={styles.originBodyText}>
                 Over 20+ years and an MBA later, she founded All Things Assistant to bring that same standard

@@ -1,0 +1,152 @@
+/* Rounded editorial panel (adapted to All Things Assistant branding). */
+.wrap {
+  width: 100%;
+  max-width: 70rem;
+  margin: 1.5rem auto 0;
+  padding: 0 1.5rem;
+}
+
+.rounded {
+  display: grid;
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  border-radius: var(--radius-md);
+  background: var(--card);
+  border: 0.0625rem solid var(--border);
+  box-shadow: var(--shadow);
+  grid-template-columns: 36% 64%;
+  grid-template-areas:
+    "top top"
+    "images text";
+  overflow: hidden;
+}
+
+.top {
+  grid-area: top;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.5rem;
+  gap: 0.875rem;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.tag {
+  width: max-content;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 0.4rem 0.65rem;
+  background: rgba(146, 124, 103, 0.18);
+  border: 0.0625rem solid rgba(146, 124, 103, 0.35);
+  color: var(--ink);
+}
+
+.rule {
+  width: 100%;
+  height: 0.0625rem;
+  background: rgba(30, 29, 29, 0.18);
+}
+
+.images {
+  grid-area: images;
+  position: relative;
+  padding: 0 0 1.25rem 1.5rem;
+}
+
+.sticky {
+  position: sticky;
+  top: 1rem;
+}
+
+.accent {
+  width: 120%;
+  height: 8.75rem;
+  background: rgba(169, 165, 133, 0.5);
+  position: absolute;
+  top: 2.75rem;
+  left: -1.5rem;
+  mix-blend-mode: multiply;
+}
+
+.imgShell {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border: 0.0625rem solid rgba(30, 29, 29, 0.18);
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.55);
+  position: relative;
+  z-index: 1;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.quote {
+  margin-top: 0.75rem;
+  padding: 0 0.5rem;
+  font-style: italic;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.text {
+  grid-area: text;
+  padding: 1rem 1.75rem 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.9;
+  color: rgba(30, 29, 29, 0.92);
+}
+
+.text p {
+  margin: 0 0 0.95rem;
+}
+
+.text p:last-child {
+  margin-bottom: 0;
+}
+
+.text strong {
+  color: var(--ink);
+}
+
+.ctaRow {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+@media (max-width: 52rem) {
+  .rounded {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "top"
+      "images"
+      "text";
+    max-width: 36rem;
+  }
+
+  .images {
+    padding: 0 1.5rem 0.75rem;
+  }
+
+  .accent {
+    left: 0;
+    width: 100%;
+  }
+
+  .sticky {
+    position: relative;
+    top: auto;
+  }
+}
+

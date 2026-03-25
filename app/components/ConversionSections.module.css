@@ -309,30 +309,13 @@
   }
 }
 
-.originHeroImgAkilah,
-.originHeroImgSky {
+.originHeroImgAkilah {
   object-fit: cover;
 }
 
 .originHeroImgAkilah {
   object-position: center 18%;
   filter: grayscale(1) contrast(1.2) brightness(0.86);
-}
-
-.originHeroImgSky {
-  display: none;
-  object-position: center 35%;
-  filter: saturate(1.06) brightness(1.03);
-}
-
-@media (min-width: 80rem) {
-  .originHeroImgAkilah {
-    display: none;
-  }
-
-  .originHeroImgSky {
-    display: block;
-  }
 }
 
 .originHeroScrim {
@@ -346,17 +329,6 @@
     rgba(0, 0, 0, 0.25) 100%
   );
   pointer-events: none;
-}
-
-@media (min-width: 80rem) {
-  .originHeroScrim {
-    background: linear-gradient(
-      to top,
-      rgba(8, 28, 58, 0.45) 0%,
-      rgba(255, 255, 255, 0.06) 38%,
-      rgba(255, 255, 255, 0.12) 100%
-    );
-  }
 }
 
 .originHeroShoulderTone {

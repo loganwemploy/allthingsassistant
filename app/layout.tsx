@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lora, Open_Sans } from "next/font/google";
+import { Amiri, Lora, Open_Sans } from "next/font/google";
 import "./globals.css";
 
 const lora = Lora({
@@ -10,6 +10,12 @@ const lora = Lora({
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
+});
+
+const amiri = Amiri({
+  variable: "--font-amiri",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -33,7 +39,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lora.variable} ${openSans.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Amiri&family=Open+Sans:wght@300;400;600;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${lora.variable} ${openSans.variable} ${amiri.variable}`}>
         {children}
       </body>
     </html>

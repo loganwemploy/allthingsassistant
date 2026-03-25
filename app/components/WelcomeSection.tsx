@@ -1,7 +1,6 @@
 "use client";
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/css";
 import { CTAButton } from "./CTAButton";
 import styles from "./WelcomeSection.module.css";
 
