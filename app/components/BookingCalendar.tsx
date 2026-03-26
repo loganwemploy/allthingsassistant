@@ -120,7 +120,9 @@ export function BookingCalendar() {
       <div className="container bookingGrid">
         <div className="card pad bookingIntro">
           <div className="eyebrow">Book an intake</div>
-          <h2 className="h2">Pick a time that works for you.</h2>
+          <h2 className="h2 pinline">
+            <span>Pick a time that works for you.</span>
+          </h2>
           <p className="muted">
             Choose a date that fits your schedule and share a few details.
             Behind the scenes, this calendar can be wired to Google Calendar and Sheets so every

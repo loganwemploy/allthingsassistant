@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { CTAButton } from "./CTAButton";
 import { AlertCircle, ArrowLeftRight, Check, Clock3, Users } from "lucide-react";
-import { SceneHero } from "./SceneHero";
 import styles from "./ConversionSections.module.css";
+import { TypeWriter } from "./TypeWriter";
 
-const AKILAH_HERO =
-  "https://dl4.pushbulletusercontent2.com/d0WgxSJ9mXgjr7l62jruYsBA76YsaQtf/image.png";
+const RELAXED_OFFICE =
+  "https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=1600";
 
 const CONTEXT_ROWS = [
   {
@@ -36,8 +36,8 @@ export function ConversionSections() {
       <div className={styles.container}>
         <div className={styles.contextSection}>
           <p className={styles.contextEyebrow}>The context</p>
-          <h2 id="context-heading" className={styles.contextTitle}>
-            The unspoken tax on high performers.
+          <h2 id="context-heading" className={`${styles.contextTitle} pinline`}>
+            <span>The unspoken tax on high performers.</span>
           </h2>
           <div className={styles.contextGrid}>
             <div className={styles.contextCard}>
@@ -71,41 +71,18 @@ export function ConversionSections() {
         </div>
       </div>
 
-      <SceneHero />
-
       <section
         className={styles.originSection}
         aria-labelledby="origin-hero-heading"
       >
-        <div className={styles.originHero}>
-          <div className={styles.originHeroImageWrap}>
-            <Image
-                src={AKILAH_HERO}
-                alt="Akilah Adams, MBA — founder of All Things Assistant LLC"
-              fill
-              priority
-              sizes="100vw"
-              className={styles.originHeroImgAkilah}
-            />
-            <div className={styles.originHeroScrim} aria-hidden />
-            <div className={styles.originHeroShoulderTone} aria-hidden />
-          </div>
-          <div className={styles.originHeroContent}>
-            <p className={styles.originTagline}>The evolution of support</p>
-            <h2 id="origin-hero-heading" className={styles.originHeroTitle}>
-                Calm under pressure.
-              <br />
-              Precision by design.
-            </h2>
-            <div className={styles.originHeroRule} aria-hidden />
-          </div>
-        </div>
-
         <div className={styles.originBody}>
           <div className={styles.originBodyInner}>
             <div className={styles.originColText}>
-              <h3 id="conversion-story-heading" className={styles.originHeading}>
-                From the sanctuary to the boardroom.
+              <h3
+                id="conversion-story-heading"
+                className={`${styles.originHeading} pinline`}
+              >
+                <span>From the sanctuary to the boardroom.</span>
               </h3>
               <blockquote className={styles.originQuote}>
                 <p>
@@ -131,8 +108,8 @@ export function ConversionSections() {
                 </div>
                 <div className={styles.originVisualPhoto} aria-hidden>
                   <Image
-                    src="https://dl4.pushbulletusercontent2.com/YVpmFJlIaS2MKM2pi6chgJk20XuTld0i/image.png"
-                    alt="Akilah Adams"
+                    src={RELAXED_OFFICE}
+                    alt="Relaxed office work setting"
                     fill
                     sizes="(max-width: 52rem) 100vw, 40vw"
                     className={styles.originVisualImg}
@@ -151,7 +128,9 @@ export function ConversionSections() {
         <div className={styles.grid3}>
           <article className={styles.card}>
             <p className={styles.eyebrow}>Why you need me</p>
-            <h3 className={styles.miniTitle}>Your time belongs in leadership.</h3>
+            <h3 className={`${styles.miniTitle} pinline`}>
+              <span>Your time belongs in leadership.</span>
+            </h3>
             <p className={styles.miniText}>
               Stop spending strategic hours on logistics, scheduling drift, and fragmented follow-through.
             </p>
@@ -159,7 +138,9 @@ export function ConversionSections() {
 
           <article className={styles.card}>
             <p className={styles.eyebrow}>Why trust me</p>
-            <h3 className={styles.miniTitle}>Professional, confidential, consistent.</h3>
+            <h3 className={`${styles.miniTitle} pinline`}>
+              <span>Professional, confidential, consistent.</span>
+            </h3>
             <p className={styles.miniText}>
               Decades of executive support in demanding environments built a high standard of discretion and reliability.
             </p>
@@ -167,7 +148,9 @@ export function ConversionSections() {
 
           <article className={styles.card}>
             <p className={styles.eyebrow}>Why choose me</p>
-            <h3 className={styles.miniTitle}>Excellence without micromanagement.</h3>
+            <h3 className={`${styles.miniTitle} pinline`}>
+              <span>Excellence without micromanagement.</span>
+            </h3>
             <p className={styles.miniText}>
               Details are handled at a level where your workflow feels smoother, cleaner, and easier to scale.
             </p>
@@ -176,30 +159,42 @@ export function ConversionSections() {
 
         <article className={styles.card}>
           <p className={styles.eyebrow}>Services as outcomes</p>
-          <h2 className={styles.title}>What you gain from support that matches your level</h2>
+          <h2 className={`${styles.title} pinline`}>
+            <span>What you gain from support that matches your level</span>
+          </h2>
+
+          <div className={styles.trustStrip} aria-label="Trust signals">
+            <span className={styles.trustPill}>NDA available</span>
+            <span className={styles.trustPill}>Executive comms</span>
+            <span className={styles.trustPill}>Calendar + inbox</span>
+            <span className={styles.trustPill}>Follow-through systems</span>
+          </div>
+
           <ul className={styles.outcomeList}>
             <li>
               <Check className={styles.bulletIcon} aria-hidden />
-              <span>Executive operations rhythm: calendar, priorities, and communication handled consistently.</span>
+              <span>Executive operations rhythm: calendar, priorities, and communication—kept consistent.</span>
             </li>
             <li>
               <Check className={styles.bulletIcon} aria-hidden />
-              <span>Project execution support: fewer dropped handoffs and faster follow-through.</span>
+              <span>Project execution support: fewer dropped handoffs, faster follow-through.</span>
             </li>
             <li>
               <Check className={styles.bulletIcon} aria-hidden />
-              <span>Event and meeting orchestration: polished planning without last-minute scramble.</span>
+              <span>Meetings and events: polished planning without last-minute scramble.</span>
             </li>
             <li>
               <Check className={styles.bulletIcon} aria-hidden />
-              <span>Systemized admin flow: cleaner processes that reduce noise and increase output.</span>
+              <span>Systemized admin flow: cleaner processes that reduce noise.</span>
             </li>
           </ul>
         </article>
 
         <article className={styles.card}>
           <p className={styles.eyebrow}>How it works</p>
-          <h2 className={styles.title}>A simple path from overwhelm to execution</h2>
+          <h2 className={`${styles.title} pinline`}>
+            <span>A simple path from overwhelm to execution</span>
+          </h2>
           <ol className={styles.process}>
             <li>
               <span className={styles.stepNo}>1</span>
@@ -216,15 +211,45 @@ export function ConversionSections() {
           </ol>
         </article>
 
+        <article className={`${styles.card} ${styles.pinlineCard}`}>
+          <div className={styles.pinlineContainer}>
+            <h2 className={styles.pinlineHeadline}>
+              On the
+              <br />
+              <span className={styles.pinlineLarge}>Possibility</span> of{" "}
+              <span className={styles.pinlineLarge}>Support</span>
+            </h2>
+
+            <h3 className={styles.pinlineTitle}>
+              <span>Executive Pinline</span>
+            </h3>
+
+            <p className={styles.pinlineText}>
+              High-profile leadership should not be spent in inbox triage and fragmented
+              follow-up. Akilah provides quiet, senior-level execution that keeps every
+              moving part aligned so your calendar, communication, and commitments stay
+              sharp under pressure.
+            </p>
+          </div>
+        </article>
+
         <article className={styles.card}>
           <p className={styles.eyebrow}>Decision point</p>
-          <h2 className={styles.title}>Operate with clarity, confidence, and ease.</h2>
-          <p className={styles.text}>
-            If you are ready to stop managing friction and start leading at your highest level,
-            let&apos;s map your priorities and build your support rhythm.
-          </p>
+          <TypeWriter ariaLabel="Decision point message" speed={1} threshold={0.25}>
+            <h2 className={`${styles.title} pinline`}>
+              <span>Operate with clarity, confidence, and ease.</span>
+            </h2>
+            <p className={styles.text}>
+              If you are ready to stop managing friction and start leading at your highest level,
+              let&apos;s map your priorities and build your support rhythm.
+            </p>
+          </TypeWriter>
           <div className={styles.ctaRow}>
             <CTAButton>Book a Discovery Call</CTAButton>
+            <Link href="/cv" className={styles.contextCta} style={{ marginLeft: 0 }}>
+              Download CV
+              <span aria-hidden="true"> →</span>
+            </Link>
             <span className={styles.micro}>No pressure - this call is for fit and priorities.</span>
           </div>
         </article>

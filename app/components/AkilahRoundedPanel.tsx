@@ -11,49 +11,49 @@ const AKILAH_IMG =
 export function AkilahRoundedPanel() {
   return (
     <section className={styles.wrap} aria-label="About Akilah Adams">
-      <div className={styles.rounded}>
-        <div className={styles.top}>
-          <span className={styles.tag}>Akilah Adams, MBA</span>
-          <span className={styles.rule} aria-hidden="true" />
-        </div>
+      <div className={styles.heroPanel}>
+        <div className={styles.copyCol}>
+          <div className={styles.kicker}>All Things Assistant LLC</div>
+          <h2 className={styles.heroTitle}>
+            On the
+            <br />
+            <span className={styles.large}>Possibility</span> of{" "}
+            <span className={styles.large}>Calm</span>
+          </h2>
 
-        <div className={styles.images}>
-          <div className={styles.sticky}>
-            <span className={styles.accent} aria-hidden="true" />
-            <div className={styles.imgShell}>
-              <Image
-                src={AKILAH_IMG}
-                alt="Akilah Adams, MBA"
-                width={520}
-                height={680}
-                className={styles.img}
-              />
-            </div>
-            <div className={styles.quote}>
-              “Discretion, follow-through, and calm execution—so your leadership stays
-              focused.”
-            </div>
+          <h3 className={`${styles.subhead} pinline`}>
+            <span>Executive support for high-profile leaders</span>
+          </h3>
+
+          <p className={styles.copy}>
+            High-stakes leadership loses momentum in the sidelines: inbox drift,
+            scheduling pressure, and follow-ups that steal strategic focus. Akilah
+            brings quiet precision so your operations stay composed while you lead.
+          </p>
+
+          <div className={styles.links}>
+            <a href="#booking">Book Discovery Call</a>
+            <a href="#booking">View Scheduling</a>
+          </div>
+
+          <div className={styles.ctaRow}>
+            <CTAButton href={CALENDLY}>Book a Discovery Call</CTAButton>
           </div>
         </div>
 
-        <div className={styles.text}>
-          <p>
-            High-profile leaders don’t lose momentum in big dramatic ways—they lose it
-            in the quiet friction: missed follow-ups, scheduling drift, scattered
-            logistics, and the constant mental load of remembering everything.
-          </p>
-          <p>
-            <strong>All Things Assistant LLC</strong> exists to remove that friction.
-            Akilah is the behind-the-scenes partner who protects your attention,
-            keeps operations moving, and makes your day feel controlled again.
-          </p>
-          <p>
-            Without the right support, deadlines slip, relationships cool off, and
-            strategic work gets crowded out by coordination. With the right support,
-            your calendar, communication, and execution rhythm become reliable.
-          </p>
-          <div className={styles.ctaRow}>
-            <CTAButton href={CALENDLY}>Book a Discovery Call</CTAButton>
+        <div className={styles.visualCol}>
+          <div className={styles.focal}>
+            <Image
+              src={AKILAH_IMG}
+              alt="Akilah Adams, MBA"
+              width={520}
+              height={680}
+              className={styles.focalImg}
+            />
+            <span className={styles.point} aria-hidden="true" />
+          </div>
+          <div className={styles.quote}>
+            Discretion. Follow-through. Calm execution.
           </div>
         </div>
       </div>

@@ -162,7 +162,9 @@ export default function WhyAkilahPage() {
               <div className="whyReasons">
                 {REASONS.map((reason) => (
                   <article key={reason.title} className="whyReasonCard">
-                    <h2 className="whyReasonTitle">{reason.title}</h2>
+                    <h2 className="whyReasonTitle pinline">
+                      <span>{reason.title}</span>
+                    </h2>
                     <p className="whyReasonBody">{reason.body}</p>
                   </article>
                 ))}

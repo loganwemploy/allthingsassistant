@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { TypeWriter } from "./TypeWriter";
 import styles from "./CollageHero.module.css";
 
 const AKILAH_MAIN =
@@ -15,8 +16,10 @@ export function CollageHero() {
       <div className={styles.shell}>
         <div className={styles.cream}>
           <div className={styles.textCol}>
-            <h1 className={styles.title}>Akilah Adams MBA</h1>
-            <p className={styles.subtext}>professional personal assistant</p>
+            <TypeWriter ariaLabel="Hero introduction" speed={1} threshold={0.3}>
+              <h1 className={styles.title}>Akilah Adams MBA</h1>
+              <p className={styles.subtext}>professional personal assistant</p>
+            </TypeWriter>
 
             <div className={styles.expRow}>
               <div className={styles.pantoneRow} aria-hidden="true">
@@ -34,7 +37,7 @@ export function CollageHero() {
               scale, and breathe easier.
             </p>
 
-            <Link href="#sceneHero" className={styles.sublink}>
+            <Link href="#booking" className={styles.sublink}>
               turn the page →
             </Link>
           </div>

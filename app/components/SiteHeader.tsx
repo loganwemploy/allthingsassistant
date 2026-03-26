@@ -18,6 +18,7 @@ export function SiteHeader() {
       { label: "Pricing", href: "#pricing" },
       { label: "How It Works", href: "#how" },
       { label: "Contact", href: "#contact" },
+      { label: "Blog", href: "/blog" },
     ],
     [],
   );
@@ -74,6 +75,9 @@ export function SiteHeader() {
 
         <div className="headerActions">
           <CTAButton className="hideSm">Book a Discovery Call</CTAButton>
+          <Link className="navLink hideSm" href="/cv" onClick={() => setOpen(false)}>
+            Download CV
+          </Link>
 
           <button
             className="menuBtn"
@@ -105,6 +109,9 @@ export function SiteHeader() {
             </div>
 
             <nav className="mobileMenuLinks" aria-label="Mobile navigation">
+              <Link className="mobileLink" href="/cv" onClick={() => setOpen(false)}>
+                Download CV
+              </Link>
               {nav.map((item) => (
                 <Link
                   key={item.href}

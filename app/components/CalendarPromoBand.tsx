@@ -17,8 +17,8 @@ export function CalendarPromoBand() {
             <Zap className={styles.eyebrowIcon} aria-hidden />
             <span>// Built for leaders ready to delegate</span>
           </div>
-          <h2 id="calendar-promo-heading" className={styles.headline}>
-            You’ve mastered your craft—now it’s time your support reflects that level.
+          <h2 id="calendar-promo-heading" className={`${styles.headline} pinline`}>
+            <span>You’ve mastered your craft—now it’s time your support reflects that level.</span>
           </h2>
           <p className={styles.subtitle}>
             In high-performing environments, hidden friction slows execution. Book a Discovery Call to replace fragmented admin with seamless follow-through and strategic support.

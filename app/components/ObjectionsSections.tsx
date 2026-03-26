@@ -60,7 +60,9 @@ export function ObjectionsSections() {
       <div className="container">
         <div className="sectionHead">
           <div className="eyebrow">Common concerns</div>
-          <h2 className="h2">We’ve heard them—here’s how we meet them.</h2>
+          <h2 className="h2 pinline">
+            <span>We’ve heard them—here’s how we meet them.</span>
+          </h2>
           <p className="muted" style={{ marginTop: 8, maxWidth: "42ch" }}>
             Anticipating your objections so you can decide with clarity. Every concern below is something Akilah and All Things Assistant LLC are built to address.
           </p>
@@ -77,8 +79,8 @@ export function ObjectionsSections() {
               <div className="eyebrow" style={{ marginBottom: 6 }}>
                 Objection: {s.objection}
               </div>
-              <h3 className="h2" style={{ marginTop: 0, fontSize: "1.25rem" }}>
-                {s.headline}
+              <h3 className="h2 pinline" style={{ marginTop: 0, fontSize: "1.25rem" }}>
+                <span>{s.headline}</span>
               </h3>
               <p className="muted" style={{ marginBottom: 0, lineHeight: 1.55 }}>
                 {s.body}

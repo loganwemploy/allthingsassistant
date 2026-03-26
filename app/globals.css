@@ -72,7 +72,11 @@ a {
 }
 
 .section {
-  padding: 4.5rem 0;
+  padding: 3.75rem 0;
+}
+
+.sectionTight {
+  padding: 2.5rem 0;
 }
 
 .grid {
@@ -98,7 +102,11 @@ a {
   }
 
   .section {
-    padding: 3rem 0 3.5rem;
+    padding: 2.75rem 0 3rem;
+  }
+
+  .sectionTight {
+    padding: 2rem 0;
   }
 }
 
@@ -117,7 +125,7 @@ a {
 }
 
 .pad {
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
 .eyebrow {
@@ -125,6 +133,7 @@ a {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
+  margin: 0 0 0.5rem;
 }
 
 .muted {
@@ -135,7 +144,7 @@ a {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   letter-spacing: 0.01em;
-  margin: 0.5rem 0 0.625rem;
+  margin: 0.35rem 0 0.6rem;
 }
 
 .list {
@@ -154,6 +163,57 @@ a {
 
 .sectionHead {
   margin-bottom: 1.25rem;
+}
+
+/* Header pinline (line-on-sides) utility */
+.pinline {
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  font-size: clamp(1.1rem, 1.9vw, 1.55rem);
+  margin: 1.1rem 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: var(--tracking-tight);
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.pinline > span {
+  position: relative;
+  display: inline-block;
+  line-height: 1.1;
+  padding: 0 0.1rem;
+}
+
+.pinline > span strong {
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 1.08em;
+}
+
+.pinline > span::before,
+.pinline > span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 0.0625rem;
+  background: var(--border);
+  width: 99999px;
+}
+
+.pinline > span::before {
+  left: 100%;
+  margin-left: 1.25rem;
+}
+
+.pinline > span::after {
+  right: 100%;
+  margin-right: 1.25rem;
 }
 
 /* Header */
