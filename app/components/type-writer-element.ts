@@ -20,11 +20,11 @@ export function defineTypeWriterElement() {
     _original: DocumentFragment | null = null;
     _container: HTMLDivElement | null = null;
     _prefersReducedMotion = false;
-    _cfg = { speed: 100000 , minDur: 50, maxDur: 500 };
+    _cfg = { speed: 100 , minDur: 50, maxDur: 500 };
 
     connectedCallback() {
       const dir = this.getAttribute("dir") || "ltr";
-      const speed = Number(this.getAttribute("speed")) || 10000;
+      const speed = Number(this.getAttribute("speed")) || 100;
       const minDur = Number(this.getAttribute("min-duration")) || 50;
       const maxDur = Number(this.getAttribute("max-duration")) || 500;
       const autostart = this.getAttribute("autostart") !== "false";
@@ -177,7 +177,7 @@ export function defineTypeWriterElement() {
         this._idx++;
 
         const nextDelay = item.type === "char" ? delay + ((Math.random() * 6) | 0) : 0;
-        this._animationTimeout = window.setTimeout(processNext, nextDelay);
+        this._animationTimeout = setTimeout(processNext, nextDelay);
       };
 
       processNext();

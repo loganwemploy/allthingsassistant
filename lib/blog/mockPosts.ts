@@ -60,7 +60,9 @@ export const mockPosts: BlogPost[] = [
   },
 ];
 
-export function getMockPostBySlug(slug: string) {
-  return mockPosts.find((p) => p.slug === slug) ?? null;
+export function getMockPostBySlug(slug: string | undefined | null) {
+  if (slug == null || String(slug).trim() === "") return null;
+  const normalized = String(slug).trim();
+  return mockPosts.find((p) => p.slug === normalized) ?? null;
 }
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
 import styles from "./blog.module.css";
@@ -27,7 +28,7 @@ export default async function BlogIndexPage() {
 
         <div className={styles.heading}>
           <div className={styles.titleRow}>
-            <div className={styles.siteTitle}>Akilah Notes</div>
+            <div className={styles.siteTitle}>Akilah&apos;s Blog</div>
             <div className={styles.dateBlock}>
               Edition {String(Math.max(1, posts.length))}
               <br />
@@ -41,31 +42,29 @@ export default async function BlogIndexPage() {
         </div>
 
         {posts.map((p) => (
-          <article key={p.slug} className={styles.post}>
-            <Image
-              src={p.heroImageUrl}
-              alt={p.title}
-              width={900}
-              height={520}
-              className={styles.postImage}
-            />
+          <Link key={p.slug} href={`/blog/${p.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
+            <article className={styles.post} aria-label={`Read article: ${p.title}`}>
+              <Image
+                src={p.heroImageUrl}
+                alt={p.title}
+                width={900}
+                height={520}
+                className={styles.postImage}
+              />
 
-            <div className={styles.postMeta}>
-              <b>{p.author}</b> &emsp; · &emsp; {formatDate(p.dateISO)} &emsp; · &emsp; {p.readTimeMinutes} min read
-            </div>
+              <div className={styles.postMeta}>
+                <b>{p.author}</b> &emsp; · &emsp; {formatDate(p.dateISO)} &emsp; · &emsp; {p.readTimeMinutes} min read
+              </div>
 
-            <h2 className={styles.postTitle}>{p.title}</h2>
+              <h2 className={styles.postTitle} style={{ textDecoration: "underline", textUnderlineOffset: "0.15em" }}>
+                {p.title}
+              </h2>
 
-            <details>
-              <summary className={styles.detailsSummary}>Read more/less</summary>
               <div className={styles.detailsBody}>
                 <p>{p.excerpt}</p>
-                {p.body.slice(0, 2).map((para, idx) => (
-                  <p key={idx}>{para}</p>
-                ))}
               </div>
-            </details>
-          </article>
+            </article>
+          </Link>
         ))}
 
         <div className={styles.callout} aria-label="Hiring callout">

@@ -22,6 +22,24 @@
   gap: 1rem;
 }
 
+.cardLink {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  outline: none;
+}
+
+.cardLink:hover .card {
+  transform: translateY(-2px);
+  box-shadow: 0 1.25rem 2.6rem rgba(20, 20, 20, 0.12);
+}
+
+.cardLink:focus-visible .card {
+  outline: 0.14rem solid rgba(46, 111, 255, 0.6);
+  outline-offset: 0.15rem;
+}
+
 .card {
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -30,6 +48,7 @@
   box-shadow: var(--shadow);
   display: grid;
   grid-template-rows: 12rem 1fr;
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .imgWrap {
@@ -71,10 +90,6 @@
   line-height: 1.25;
 }
 
-.postTitle a {
-  color: var(--ink);
-}
-
 .excerpt {
   margin: 0;
   color: var(--muted);
@@ -88,7 +103,7 @@
   font-weight: 600;
 }
 
-.readMore a {
+.readMore {
   color: var(--accent-2);
 }
 

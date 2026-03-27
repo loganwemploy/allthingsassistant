@@ -19,44 +19,42 @@ export async function FeaturedBlogArticles() {
           <div className="eyebrow">Featured blog</div>
           <h2 className={styles.title}>
             <span className="pinline">
-              <span>Akilah Notes</span>
+              <span>Akilah&apos;s Blog</span>
             </span>
           </h2>
         </div>
 
         <div className={styles.grid}>
           {posts.map((p) => (
-            <article key={p.slug} className={styles.card}>
-              <div className={styles.imgWrap}>
-                <Image
-                  src={p.heroImageUrl}
-                  alt={p.title}
-                  fill
-                  sizes="(max-width: 60rem) 100vw, 33vw"
-                  className={styles.img}
-                />
-              </div>
-              <div className={styles.cardBody}>
-                <div className={styles.meta}>
-                  <span>{p.author}</span>
-                  <span aria-hidden="true">·</span>
-                  <time dateTime={p.dateISO}>
-                    {new Date(p.dateISO).toLocaleDateString(undefined, {
-                      year: "numeric",
-                      month: "short",
-                      day: "2-digit",
-                    })}
-                  </time>
+            <Link key={p.slug} href={`/blog/${p.slug}`} className={styles.cardLink}>
+              <article className={styles.card} aria-label={`Read article: ${p.title}`}>
+                <div className={styles.imgWrap} aria-hidden="true">
+                  <Image
+                    src={p.heroImageUrl}
+                    alt={p.title}
+                    fill
+                    sizes="(max-width: 60rem) 100vw, 33vw"
+                    className={styles.img}
+                  />
                 </div>
-                <h3 className={styles.postTitle}>
-                  <Link href={`/blog/${p.slug}`}>{p.title}</Link>
-                </h3>
-                <p className={styles.excerpt}>{p.excerpt}</p>
-                <div className={styles.readMore}>
-                  <Link href={`/blog/${p.slug}`}>Read more →</Link>
+                <div className={styles.cardBody}>
+                  <div className={styles.meta}>
+                    <span>{p.author}</span>
+                    <span aria-hidden="true">·</span>
+                    <time dateTime={p.dateISO}>
+                      {new Date(p.dateISO).toLocaleDateString(undefined, {
+                        year: "numeric",
+                        month: "short",
+                        day: "2-digit",
+                      })}
+                    </time>
+                  </div>
+                  <h3 className={styles.postTitle}>{p.title}</h3>
+                  <p className={styles.excerpt}>{p.excerpt}</p>
+                  <div className={styles.readMore}>Read more →</div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </Link>
           ))}
         </div>
       </div>

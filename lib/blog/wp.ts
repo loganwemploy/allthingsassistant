@@ -16,7 +16,8 @@ async function tryFetchWPPosts(): Promise<BlogPost[]> {
   if (!Array.isArray(json)) return mockPosts;
 
   return json.map((p) => {
-    const slug: string = String(p.slug ?? "");
+    const rawSlug = String(p.slug ?? "").trim();
+    const slug: string = rawSlug || (p.id != null ? `post-${p.id}` : "");
     const title: string = p.title?.rendered ? String(p.title.rendered).replace(/<[^>]+>/g, "") : "Untitled";
     const excerpt: string = p.excerpt?.rendered
       ? String(p.excerpt.rendered).replace(/<[^>]+>/g, "")
@@ -55,9 +56,15 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
   const url = `${baseUrl.replace(/\/$/, "")}/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}&_embed`;
   try {
     const res = await fetch(url, { cache: "no-store" });
-    if (!res.ok) return getMockPostBySlug(slug);
+    if (!res.ok) {
+      const fromList = (await getBlogPosts()).find((p) => p.slug === slug) ?? null;
+      return fromList ?? getMockPostBySlug(slug);
+    }
     const json: any[] = await res.json();
-    if (!Array.isArray(json) || !json[0]) return getMockPostBySlug(slug);
+    if (!Array.isArray(json) || !json[0]) {
+      const fromList = (await getBlogPosts()).find((p) => p.slug === slug) ?? null;
+      return fromList ?? getMockPostBySlug(slug);
+    }
     // Minimal mapping; expand once you confirm the WP fields.
     const p = json[0];
     return {
@@ -81,7 +88,8 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
       ],
     };
   } catch {
-    return getMockPostBySlug(slug);
+    const fromList = (await getBlogPosts()).find((p) => p.slug === slug) ?? null;
+    return fromList ?? getMockPostBySlug(slug);
   }
 }
 
