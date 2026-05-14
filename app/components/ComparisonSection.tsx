@@ -4,11 +4,11 @@ import { TypeWriter } from "./TypeWriter";
 import styles from "./ComparisonSection.module.css";
 
 const ROWS = [
-  { without: "Inbox piles up, urgent replies get buried", with: "Inbox triaged daily, priorities flagged, loops closed" },
-  { without: "Calendar chaos — reschedules, double-books, no agendas", with: "Calendar owned: confirmations, prep, clear next steps" },
-  { without: "Follow-ups drift for days or weeks", with: "Follow-through systems that close every loop" },
-  { without: "Admin eats evenings and weekends", with: "Admin handled — you focus on outcomes" },
-  { without: "Context-switching all day", with: "Structured handoffs, consistent execution" },
+  { without: "Inbox piles up, urgent replies get buried", with: "Inbox triaged daily, priorities flagged, loops closed", withoutMobile: "Inbox piles up", withMobile: "Inbox triaged, loops closed" },
+  { without: "Calendar chaos — reschedules, double-books, no agendas", with: "Calendar owned: confirmations, prep, clear next steps", withoutMobile: "Calendar chaos", withMobile: "Calendar owned, next steps" },
+  { without: "Follow-ups drift for days or weeks", with: "Follow-through systems that close every loop", withoutMobile: "Follow-ups drift", withMobile: "Systems close every loop" },
+  { without: "Admin eats evenings and weekends", with: "Admin handled — you focus on outcomes", withoutMobile: "Admin eats your time", withMobile: "Admin handled, you focus" },
+  { without: "Context-switching all day", with: "Structured handoffs, consistent execution", withoutMobile: "Context-switching", withMobile: "Structured execution" },
 ];
 
 export function ComparisonSection() {
@@ -41,11 +41,17 @@ export function ComparisonSection() {
               <div className={styles.row}>
                 <div className={styles.cell}>
                   <span className={styles.bullet} aria-hidden="true" />
-                  <span className="mobile-clamp-1">{r.without}</span>
+                  <span>
+                    <span className="desktop-only">{r.without}</span>
+                    <span className="mobile-only">{r.withoutMobile}</span>
+                  </span>
                 </div>
                 <div className={`${styles.cell} ${styles.cellWith}`}>
                   <Check size={14} strokeWidth={2.5} className={styles.checkIcon} aria-hidden />
-                  <span className="mobile-clamp-1">{r.with}</span>
+                  <span>
+                    <span className="desktop-only">{r.with}</span>
+                    <span className="mobile-only">{r.withMobile}</span>
+                  </span>
                 </div>
               </div>
             </Reveal>

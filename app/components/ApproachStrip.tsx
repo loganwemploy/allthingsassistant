@@ -47,7 +47,10 @@ export function ApproachStrip() {
                   <span className={styles.stepNum}>0{i + 1}</span>
                   <Icon className={styles.icon} strokeWidth={1.5} aria-hidden />
                   <h3 className={styles.cardTitle}>{title}</h3>
-                  <p className={`${styles.cardDesc} mobile-clamp-1`}>{desc}</p>
+                  <p className={styles.cardDesc}>
+                    <span className="desktop-only">{desc}</span>
+                    <span className="mobile-only">{desc === "Discovery and priority mapping around your current bottlenecks." ? "Map your bottlenecks." : desc === "Workflow alignment, boundaries, and communication cadence." ? "Align workflows and cadence." : "Reliable execution, calm control."}</span>
+                  </p>
                 </div>
               </Reveal>
             );

@@ -54,6 +54,7 @@ export default function PricingPage() {
         eyebrow="Pricing"
         title="Flat monthly retainer. No surprises."
         description="Pick a tier based on weekly task volume. All plans include one-week turnaround and unlimited revisions."
+        mobileDescription="Pick a tier based on your volume."
       />
 
       <section className="pr-grid-section">
@@ -114,8 +115,9 @@ export default function PricingPage() {
               </div>
             ))}
           </div>
-          <p className="pr-helper mobile-clamp-2">
-            Not sure which tier fits?{" "}
+          <p className="pr-helper">
+            <span className="desktop-only">Not sure which tier fits?{" "}</span>
+            <span className="mobile-only">Not sure?{" "}</span>
             <Link href="/#booking" className="pr-helper-link">Book a free Discovery Call →</Link>
           </p>
         </div>
@@ -125,8 +127,9 @@ export default function PricingPage() {
         <div className="container">
           <p className="eyebrow pr-cta-eyebrow">Next step</p>
           <h2 className="heroTitle pr-cta-title">Book a Discovery Call</h2>
-          <p className="muted pr-cta-text mobile-clamp-2">
-            We&apos;ll review your workload, answer questions, and recommend the right tier.
+          <p className="muted pr-cta-text">
+            <span className="desktop-only">We&apos;ll review your workload, answer questions, and recommend the right tier.</span>
+            <span className="mobile-only">We&apos;ll recommend the right tier.</span>
           </p>
           <div className="pr-cta-btns">
             <Link href="/#booking" className="btn btnPrimary">Book a Discovery Call</Link>

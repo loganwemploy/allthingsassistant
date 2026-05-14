@@ -27,10 +27,11 @@ export function CalendarPromoBand() {
             </h2>
           </Reveal>
           <Reveal direction="up" delay={0.15}>
-            <p className={`${styles.subtitle} mobile-clamp-1`}>
-              In high-performing environments, hidden friction slows execution. Book a
+            <p className={styles.subtitle}>
+              <span className="desktop-only">In high-performing environments, hidden friction slows execution. Book a
               Discovery Call to replace fragmented admin with seamless follow-through and
-              strategic support.
+              strategic support.</span>
+              <span className="mobile-only">Hidden friction slows execution.</span>
             </p>
           </Reveal>
           <Reveal direction="right" delay={0.2}>
@@ -46,9 +47,10 @@ export function CalendarPromoBand() {
               <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
               <p className={styles.featureKicker}>Why you need me</p>
               <p className={styles.featureLead}>Lead, don&apos;t manage logistics.</p>
-              <p className={`${styles.featureBody} mobile-clamp-1`}>
-                Your highest-value time belongs to growth and decisions, not inbox routing,
-                scheduling drift, and follow-up debt.
+              <p className={styles.featureBody}>
+                <span className="desktop-only">Your highest-value time belongs to growth and decisions, not inbox routing,
+                scheduling drift, and follow-up debt.</span>
+                <span className="mobile-only">Your time belongs to growth.</span>
               </p>
             </div>
           </Reveal>
@@ -57,9 +59,10 @@ export function CalendarPromoBand() {
               <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
               <p className={styles.featureKicker}>Why trust me</p>
               <p className={styles.featureLead}>Professional, confidential, consistent.</p>
-              <p className={`${styles.featureBody} mobile-clamp-1`}>
-                Over two decades of executive support and an MBA-backed operating approach
-                means details are handled with precision and discretion.
+              <p className={styles.featureBody}>
+                <span className="desktop-only">Over two decades of executive support and an MBA-backed operating approach
+                means details are handled with precision and discretion.</span>
+                <span className="mobile-only">Two decades of precision.</span>
               </p>
             </div>
           </Reveal>
@@ -68,8 +71,9 @@ export function CalendarPromoBand() {
               <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
               <p className={styles.featureKicker}>Why choose me</p>
               <p className={styles.featureLead}>Excellence without micromanagement.</p>
-              <p className={`${styles.featureBody} mobile-clamp-1`}>
-                Details are handled at a level where your workflow feels smoother, cleaner, and easier to scale.
+              <p className={styles.featureBody}>
+                <span className="desktop-only">Details are handled at a level where your workflow feels smoother, cleaner, and easier to scale.</span>
+                <span className="mobile-only">Smoother, cleaner, easier.</span>
               </p>
             </div>
           </Reveal>

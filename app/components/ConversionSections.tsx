@@ -17,18 +17,22 @@ const CONTEXT_ITEMS = [
   {
     icon: ArrowLeftRight,
     text: "Constantly shifting priorities that drain your creative energy.",
+    mobileText: "Shifting priorities drain energy.",
   },
   {
     icon: BriefcaseBusiness,
     text: "Office politics and operational friction slowing your momentum.",
+    mobileText: "Politics & friction slow you.",
   },
   {
     icon: Clock3,
     text: "Accumulating follow-up debt that keeps you awake at night.",
+    mobileText: "Follow-up debt keeps you up.",
   },
   {
     icon: RefreshCw,
     text: "Exhausting context switching between vision and coordination.",
+    mobileText: "Context switching exhausts.",
   },
 ] as const;
 
@@ -36,18 +40,22 @@ const SERVICE_OUTCOMES = [
   {
     icon: Check,
     text: "Executive operations rhythm: calendar, priorities, and communication — kept consistent.",
+    mobileText: "Calendar, priorities, comms — consistent.",
   },
   {
     icon: Target,
     text: "Project execution support: fewer dropped handoffs, faster follow-through.",
+    mobileText: "Fewer handoffs, faster follow-through.",
   },
   {
     icon: FileText,
     text: "Meetings and events: polished planning without last-minute scramble.",
+    mobileText: "Polished planning, no scramble.",
   },
   {
     icon: Zap,
     text: "Systemized admin flow: cleaner processes that reduce noise.",
+    mobileText: "Cleaner processes, less noise.",
   },
 ] as const;
 
@@ -74,19 +82,23 @@ export function ConversionSections() {
             </TypeWriter>
           </Reveal>
           <div className={styles.problemGrid}>
-            {CONTEXT_ITEMS.map(({ icon: Icon, text }, i) => (
+            {CONTEXT_ITEMS.map(({ icon: Icon, text, mobileText }, i) => (
               <Reveal key={text} delay={0.08 * i} direction="left">
                 <div className={styles.problemRow}>
                   <Icon className={styles.problemIcon} strokeWidth={1.5} aria-hidden />
-                  <p className={`${styles.problemText} mobile-clamp-1`}>{text}</p>
+                  <p className={styles.problemText}>
+                    <span className="desktop-only">{text}</span>
+                    <span className="mobile-only">{mobileText}</span>
+                  </p>
                 </div>
               </Reveal>
             ))}
           </div>
           <Reveal direction="fade" delay={0.3}>
-            <p className={`${styles.quote} mobile-clamp-1`}>
-              High-leverage leadership means protecting your attention from low-leverage
-              coordination — so strategy gets the room it deserves.
+            <p className={styles.quote}>
+              <span className="desktop-only">High-leverage leadership means protecting your attention from low-leverage
+              coordination — so strategy gets the room it deserves.</span>
+              <span className="mobile-only">Protect your attention. Strategy leads.</span>
             </p>
           </Reveal>
           <Reveal direction="right" delay={0.35}>
@@ -107,13 +119,16 @@ export function ConversionSections() {
           </Reveal>
 
           <div className={styles.outcomesGrid}>
-            {SERVICE_OUTCOMES.map(({ icon: Icon, text }, i) => {
+            {SERVICE_OUTCOMES.map(({ icon: Icon, text, mobileText }, i) => {
               const dirs = ["scale", "zoom", "fade", "scale"] as const;
               return (
                 <Reveal key={text} delay={0.06 * i} direction={dirs[i]}>
                   <div className={styles.outcomeCard}>
                     <Icon className={styles.outcomeIcon} strokeWidth={1.5} aria-hidden />
-                    <p className={`${styles.outcomeText} mobile-clamp-1`}>{text}</p>
+                    <p className={styles.outcomeText}>
+                      <span className="desktop-only">{text}</span>
+                      <span className="mobile-only">{mobileText}</span>
+                    </p>
                   </div>
                 </Reveal>
               );

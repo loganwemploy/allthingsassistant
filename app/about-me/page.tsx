@@ -28,21 +28,24 @@ export default function AboutMePage() {
               <h1 className="h2 pinline" style={{ maxWidth: "26rem" }}>
                 <span>From the sanctuary to the boardroom.</span>
               </h1>
-              <blockquote className="aboutQuote mobile-clamp-2">
-                I learned early that the highest form of service is
+              <blockquote className="aboutQuote">
+                <span className="desktop-only">I learned early that the highest form of service is
                 invisibility—the smooth operation of a space where leaders can
-                simply lead.
+                simply lead.</span>
+                <span className="mobile-only">Service is invisibility — leaders lead.</span>
               </blockquote>
-              <p className="muted mobile-clamp-1" style={{ maxWidth: "44ch" }}>
-                Akilah began as a church secretary supporting leadership and
+              <p className="muted" style={{ maxWidth: "44ch" }}>
+                <span className="desktop-only">Akilah began as a church secretary supporting leadership and
                 quickly became known for structure, discretion, and calm execution.
                 That foundation became what she calls executive steadiness: quiet
-                precision that keeps the room steady so vision can move.
+                precision that keeps the room steady so vision can move.</span>
+                <span className="mobile-only">Structure, discretion, and calm execution.</span>
               </p>
-              <p className="muted mobile-clamp-1" style={{ maxWidth: "44ch" }}>
-                Over 20+ years and an MBA later, she founded All Things Assistant
+              <p className="muted" style={{ maxWidth: "44ch" }}>
+                <span className="desktop-only">Over 20+ years and an MBA later, she founded All Things Assistant
                 to bring that same standard to the boardroom—strategic partnership
-                for leaders who need seamless execution behind the scenes.
+                for leaders who need seamless execution behind the scenes.</span>
+                <span className="mobile-only">Quiet precision for the boardroom.</span>
               </p>
               <div className="aboutLinks">
                 <a

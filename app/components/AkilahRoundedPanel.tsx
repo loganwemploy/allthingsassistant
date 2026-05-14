@@ -27,11 +27,12 @@ export function AkilahRoundedPanel() {
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
-            <p className={`${styles.copy} mobile-clamp-1`}>
-              Executive support for high-profile leaders. High-stakes leadership loses
+            <p className={styles.copy}>
+              <span className="desktop-only">Executive support for high-profile leaders. High-stakes leadership loses
               momentum in the sidelines: inbox drift, scheduling pressure, and follow-ups
               that steal strategic focus. Akilah brings quiet precision so your operations
-              stay composed while you lead.
+              stay composed while you lead.</span>
+              <span className="mobile-only">Quiet precision for your operations.</span>
             </p>
           </Reveal>
 

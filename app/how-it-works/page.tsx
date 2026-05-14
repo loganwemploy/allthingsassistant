@@ -34,6 +34,7 @@ export default function HowItWorksPage() {
         eyebrow="How it works"
         title="From overwhelmed to in control — without the learning curve"
         description="A straightforward process to get your time back. No onboarding chaos, no buzzwords."
+        mobileDescription="A straightforward process."
       />
 
       <section className="hiw-process">
@@ -45,7 +46,10 @@ export default function HowItWorksPage() {
                 <div>
                   <span className="hiw-step-label">{step.label}</span>
                   <h2 className="hiw-step-title">{step.title}</h2>
-                  <p className="hiw-step-desc mobile-clamp-2">{step.desc}</p>
+                  <p className="hiw-step-desc">
+                    <span className="desktop-only">{step.desc}</span>
+                    <span className="mobile-only">{step.desc === "Discovery and priority mapping around your current bottlenecks." ? "Map your bottlenecks." : step.desc === "Workflow alignment, boundaries, and communication cadence." ? "Align workflows and cadence." : "Reliable execution, calm control."}</span>
+                  </p>
                 </div>
               </div>
             ))}
@@ -67,7 +71,7 @@ export default function HowItWorksPage() {
             {FAQ.map((f) => (
               <details key={f.q} className="hiw-faq-item">
                 <summary className="hiw-faq-q">{f.q}</summary>
-                <p className="hiw-faq-a mobile-clamp-2">{f.a}</p>
+                <p className="hiw-faq-a">{f.a}</p>
               </details>
             ))}
           </div>

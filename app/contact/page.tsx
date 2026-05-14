@@ -24,6 +24,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Book a Discovery Call"
         description="15 minutes to map your priorities, answer your questions, and see if there&apos;s a fit. No commitment, no pitch."
+        mobileDescription="Map your priorities, no commitment."
       />
 
       <section className="ct-booking">

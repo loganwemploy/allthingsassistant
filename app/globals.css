@@ -3254,5 +3254,17 @@ a {
   }
 }
 
+.mobile-only {
+  display: none;
+}
 
+@media (max-width: 40rem) {
+  .mobile-only {
+    display: inline;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+}
 

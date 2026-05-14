@@ -11,12 +11,12 @@ export const metadata = {
 };
 
 const SERVICES = [
-  { icon: CalendarCheck, title: "Executive operations rhythm", desc: "Calendar, priorities, and communication — kept consistent." },
-  { icon: CheckSquare, title: "Project execution support", desc: "Fewer dropped handoffs, faster follow-through on every initiative." },
-  { icon: Users, title: "Meetings and events", desc: "Polished planning without last-minute scramble." },
-  { icon: GitBranch, title: "Systemized admin flow", desc: "Cleaner processes that reduce noise and free your focus." },
-  { icon: MessageSquare, title: "Executive comms", desc: "Correspondence drafted, triaged, and managed with your voice." },
-  { icon: RefreshCw, title: "Follow-through systems", desc: "Lightweight workflows so nothing slips through the cracks." },
+  { icon: CalendarCheck, title: "Executive operations rhythm", desc: "Calendar, priorities, and communication — kept consistent.", mobileDesc: "Calendar, priorities, comms." },
+  { icon: CheckSquare, title: "Project execution support", desc: "Fewer dropped handoffs, faster follow-through on every initiative.", mobileDesc: "Fewer handoffs, faster follow-through." },
+  { icon: Users, title: "Meetings and events", desc: "Polished planning without last-minute scramble.", mobileDesc: "Polished planning, no scramble." },
+  { icon: GitBranch, title: "Systemized admin flow", desc: "Cleaner processes that reduce noise and free your focus.", mobileDesc: "Cleaner processes, more focus." },
+  { icon: MessageSquare, title: "Executive comms", desc: "Correspondence drafted, triaged, and managed with your voice.", mobileDesc: "Correspondence in your voice." },
+  { icon: RefreshCw, title: "Follow-through systems", desc: "Lightweight workflows so nothing slips through the cracks.", mobileDesc: "Nothing slips through." },
 ];
 
 export default function ServicesPage() {
@@ -29,6 +29,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Administrative support you can hand off with confidence."
         description="Inbox triage, calendar ownership, document ops, and the day-to-day execution that keeps your business running."
+        mobileDescription="Inbox triage, calendar, and document ops."
       />
 
       <section className="svc-outcomes">
@@ -48,7 +49,10 @@ export default function ServicesPage() {
                     <Icon size={18} strokeWidth={1.5} className="svc-card-icon" aria-hidden />
                     <div>
                       <strong className="svc-card-title">{s.title}</strong>
-                      <span className="svc-card-desc mobile-clamp-1"> — {s.desc}</span>
+                      <span className="svc-card-desc">
+                        <span className="desktop-only"> — {s.desc}</span>
+                        <span className="mobile-only"> — {s.mobileDesc}</span>
+                      </span>
                     </div>
                   </div>
                 );
