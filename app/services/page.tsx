@@ -48,7 +48,7 @@ export default function ServicesPage() {
                     <Icon size={18} strokeWidth={1.5} className="svc-card-icon" aria-hidden />
                     <div>
                       <strong className="svc-card-title">{s.title}</strong>
-                      <span className="svc-card-desc"> — {s.desc}</span>
+                      <span className="svc-card-desc mobile-clamp-1"> — {s.desc}</span>
                     </div>
                   </div>
                 );

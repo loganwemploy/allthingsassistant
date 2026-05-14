@@ -45,7 +45,7 @@ export default function HowItWorksPage() {
                 <div>
                   <span className="hiw-step-label">{step.label}</span>
                   <h2 className="hiw-step-title">{step.title}</h2>
-                  <p className="hiw-step-desc">{step.desc}</p>
+                  <p className="hiw-step-desc mobile-clamp-2">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -67,7 +67,7 @@ export default function HowItWorksPage() {
             {FAQ.map((f) => (
               <details key={f.q} className="hiw-faq-item">
                 <summary className="hiw-faq-q">{f.q}</summary>
-                <p className="hiw-faq-a">{f.a}</p>
+                <p className="hiw-faq-a mobile-clamp-2">{f.a}</p>
               </details>
             ))}
           </div>

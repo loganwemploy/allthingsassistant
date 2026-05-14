@@ -78,13 +78,13 @@ export function ConversionSections() {
               <Reveal key={text} delay={0.08 * i} direction="left">
                 <div className={styles.problemRow}>
                   <Icon className={styles.problemIcon} strokeWidth={1.5} aria-hidden />
-                  <p className={`${styles.problemText} mobile-clamp-2`}>{text}</p>
+                  <p className={`${styles.problemText} mobile-clamp-1`}>{text}</p>
                 </div>
               </Reveal>
             ))}
           </div>
           <Reveal direction="fade" delay={0.3}>
-            <p className={`${styles.quote} mobile-clamp-2`}>
+            <p className={`${styles.quote} mobile-clamp-1`}>
               High-leverage leadership means protecting your attention from low-leverage
               coordination — so strategy gets the room it deserves.
             </p>
@@ -113,7 +113,7 @@ export function ConversionSections() {
                 <Reveal key={text} delay={0.06 * i} direction={dirs[i]}>
                   <div className={styles.outcomeCard}>
                     <Icon className={styles.outcomeIcon} strokeWidth={1.5} aria-hidden />
-                    <p className={`${styles.outcomeText} mobile-clamp-2`}>{text}</p>
+                    <p className={`${styles.outcomeText} mobile-clamp-1`}>{text}</p>
                   </div>
                 </Reveal>
               );

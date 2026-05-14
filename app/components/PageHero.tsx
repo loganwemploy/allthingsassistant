@@ -11,7 +11,7 @@ export function PageHero({ eyebrow, title, description, page }: PageHeroProps) {
       <div className={`container ${page}-hero-inner`}>
         <p className="eyebrow">{eyebrow}</p>
         <h1 className={`heroTitle ${page}-hero-title`}>{title}</h1>
-        <p className={`muted ${page}-hero-sub mobile-clamp-2`}>{description}</p>
+        <p className={`muted ${page}-hero-sub mobile-clamp-1`}>{description}</p>
       </div>
     </section>
   );

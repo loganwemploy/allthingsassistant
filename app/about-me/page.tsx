@@ -28,18 +28,18 @@ export default function AboutMePage() {
               <h1 className="h2 pinline" style={{ maxWidth: "26rem" }}>
                 <span>From the sanctuary to the boardroom.</span>
               </h1>
-              <blockquote className="aboutQuote">
+              <blockquote className="aboutQuote mobile-clamp-2">
                 I learned early that the highest form of service is
                 invisibility—the smooth operation of a space where leaders can
                 simply lead.
               </blockquote>
-              <p className="muted mobile-clamp-2" style={{ maxWidth: "44ch" }}>
+              <p className="muted mobile-clamp-1" style={{ maxWidth: "44ch" }}>
                 Akilah began as a church secretary supporting leadership and
                 quickly became known for structure, discretion, and calm execution.
                 That foundation became what she calls executive steadiness: quiet
                 precision that keeps the room steady so vision can move.
               </p>
-              <p className="muted mobile-clamp-2" style={{ maxWidth: "44ch" }}>
+              <p className="muted mobile-clamp-1" style={{ maxWidth: "44ch" }}>
                 Over 20+ years and an MBA later, she founded All Things Assistant
                 to bring that same standard to the boardroom—strategic partnership
                 for leaders who need seamless execution behind the scenes.
