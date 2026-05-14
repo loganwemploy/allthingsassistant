@@ -5,7 +5,12 @@
 
 @media (max-width: 30rem) {
   .wrap {
-    padding: 2rem 0 1.5rem;
+    padding: 1.5rem 0 1.25rem;
+  }
+
+  .container {
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
 }
 
