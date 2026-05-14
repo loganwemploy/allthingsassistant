@@ -164,6 +164,14 @@ export function SiteHeader() {
       </div>
 
           {(open || leaving) && (
+            <div
+              className={`mobileMenuBackdrop ${leaving ? "mobileMenuBackdropLeave" : ""}`}
+              onClick={closeMenu}
+              aria-hidden="true"
+            />
+          )}
+
+          {(open || leaving) && (
           <div
             ref={menuRef}
             id="mobileMenuPanel"
@@ -174,14 +182,14 @@ export function SiteHeader() {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-          <div className="container mobileMenuInner">
+          <div className="mobileMenuInner">
             <div className="mobileMenuTop">
               <Link href="/" className="mobileMenuBrand" onClick={closeMenu}>
                 <Image
                   src={LOGO_URL}
                   alt="All Things Assistant logo"
-                  width={36}
-                  height={36}
+                  width={32}
+                  height={32}
                   className="mobileMenuLogo"
                 />
               </Link>
