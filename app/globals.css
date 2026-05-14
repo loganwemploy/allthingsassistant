@@ -3229,12 +3229,6 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    transition-duration: 0.01ms !important;
-  }
-
   .pageWrapper,
   .word-highlight,
   .word-highlight-light,
@@ -3249,16 +3243,6 @@ a {
   .word-highlight,
   .word-highlight-light {
     background: none;
-  }
-
-  .reveal,
-  .reveal-left,
-  .reveal-right,
-  .reveal-scale,
-  .reveal-fade,
-  .reveal-zoom {
-    opacity: 1 !important;
-    transform: none !important;
   }
 }
 
