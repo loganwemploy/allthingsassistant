@@ -47,7 +47,7 @@ export function ApproachStrip() {
                   <span className={styles.stepNum}>0{i + 1}</span>
                   <Icon className={styles.icon} strokeWidth={1.5} aria-hidden />
                   <h3 className={styles.cardTitle}>{title}</h3>
-                  <p className={styles.cardDesc}>{desc}</p>
+                  <p className={`${styles.cardDesc} mobile-clamp-2`}>{desc}</p>
                 </div>
               </Reveal>
             );

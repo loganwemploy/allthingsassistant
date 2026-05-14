@@ -41,11 +41,11 @@ export function ComparisonSection() {
               <div className={styles.row}>
                 <div className={styles.cell}>
                   <span className={styles.bullet} aria-hidden="true" />
-                  {r.without}
+                  <span className="mobile-clamp-2">{r.without}</span>
                 </div>
                 <div className={`${styles.cell} ${styles.cellWith}`}>
                   <Check size={14} strokeWidth={2.5} className={styles.checkIcon} aria-hidden />
-                  {r.with}
+                  <span className="mobile-clamp-2">{r.with}</span>
                 </div>
               </div>
             </Reveal>

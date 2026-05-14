@@ -105,24 +105,8 @@
 }
 
 @media (max-width: 40rem) {
-  .eyebrow {
-    font-size: 0.5625rem;
-  }
-
-  .title {
-    font-size: 1.1rem;
-  }
-
   .card {
     padding: 1.15rem;
-  }
-
-  .cardTitle {
-    font-size: 0.875rem;
-  }
-
-  .cardDesc {
-    font-size: 0.75rem;
   }
 
   .stepNum {
