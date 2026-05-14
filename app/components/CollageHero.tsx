@@ -30,7 +30,7 @@ export function CollageHero() {
             </Reveal>
 
             <Reveal direction="up">
-                <p className={styles.desc}>
+                <p className={`${styles.desc} mobile-clamp-2`}>
                   <strong className={styles.taglineHighlight}>Reclaim Your Time</strong> with
                   All Things Assistant LLC – Your virtual office powerhouse. We provide
                   professional, reliable, and detail-oriented virtual assistant services
@@ -39,7 +39,7 @@ export function CollageHero() {
             </Reveal>
 
             <Reveal direction="up" delay={0.15}>
-              <div className={styles.metaRow}>
+              <div className={`${styles.metaRow} mobile-clamp-1`}>
                 <span className={styles.meta}>20+ years exec support</span>
                 <span className={styles.metaDot} aria-hidden="true" />
                 <span className={styles.meta}>MBA</span>

@@ -249,13 +249,7 @@
 }
 
 @media (max-width: 56rem) {
-  .problemGrid {
-    grid-template-columns: 1fr;
-  }
 
-  .outcomesGrid {
-    grid-template-columns: 1fr;
-  }
 
   .contextTitle {
     max-width: 100%;

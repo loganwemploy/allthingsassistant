@@ -98,34 +98,85 @@ a {
 }
 
 @media (max-width: 40rem) {
-  .page {
-    overflow-x: hidden;
-  }
-
   .container {
     padding: 0 1rem;
   }
 
   .section {
-    padding: 2.75rem 0 3rem;
+    padding: 2rem 0 2rem;
   }
 
   .sectionTight {
-    padding: 2rem 0;
+    padding: 1.25rem 0;
+  }
+
+  html {
+    font-size: 93.75%;
+  }
+
+  p, .muted, .heroLead, .svc-card-desc, .hiw-step-desc, .aboutQuote p {
+    font-size: 0.75rem;
+    line-height: 1.45;
+  }
+
+  .heroTitle {
+    font-size: clamp(1.25rem, 4.5vw, 1.6rem) !important;
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+  }
+
+  .heroLead {
+    font-size: 0.8125rem;
+  }
+
+  .h2 {
+    font-size: 1rem;
+  }
+
+  .eyebrow {
+    font-size: 0.5625rem;
+  }
+
+  .pinline {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+
+  .mobile-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .mobile-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
   }
 }
 
 @media (max-width: 30rem) {
+  html {
+    font-size: 87.5%;
+  }
+
   .section {
-    padding: 2rem 0 2.25rem;
+    padding: 1.5rem 0 1.75rem;
   }
 
   .sectionTight {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
   }
 
   .container {
     padding: 0 0.75rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(1.1rem, 4vw, 1.35rem) !important;
   }
 }
 
@@ -260,7 +311,9 @@ a {
 
 .headerScrolled {
   background: rgba(255, 255, 255, 0.97);
-  box-shadow: 0 0.0625rem 0.5rem rgba(43, 31, 24, 0.08);
+  box-shadow:
+    0 0.0625rem 0.5rem rgba(43, 31, 24, 0.08),
+    0 0 1.5rem rgba(63, 90, 58, 0.08);
 }
 
 .headerScrolled .header {
@@ -623,7 +676,7 @@ a {
 @media (max-width: 40rem) {
   .header {
     gap: 0.75rem;
-    padding: 0.875rem 1rem;
+    padding: 0.875rem 0.625rem;
   }
 
   .brandText {
@@ -638,7 +691,7 @@ a {
 
 @media (max-width: 30rem) {
   .header {
-    padding: 0.875rem 0.75rem;
+    padding: 0.875rem 0.5rem;
   }
 }
 
@@ -1059,10 +1112,6 @@ a {
 }
 
 @media (max-width: 30rem) {
-  .heroBadges {
-    grid-template-columns: 1fr;
-  }
-
   .badgeLabel {
     font-size: 0.75rem;
   }
@@ -1585,10 +1634,6 @@ a {
   .whyShell {
     padding: 2.5rem 0 2rem;
   }
-
-  .whyReasons {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Pricing (for PricingSection component) */
@@ -2071,10 +2116,6 @@ a {
 }
 
 @media (max-width: 30rem) {
-  .aboutCtaGrid {
-    grid-template-columns: 1fr;
-  }
-
   .aboutImgFrame {
     width: min(50%, 12rem);
   }
@@ -3191,15 +3232,33 @@ a {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .pageWrapper,
+  .word-highlight,
+  .word-highlight-light,
+  .ambient-circle,
+  .cta-glow,
+  .sectionDivider::after,
+  .aboutCtaWrap,
+  .section-olive-live {
+    animation: none !important;
   }
 
   .word-highlight,
   .word-highlight-light {
     background: none;
-    animation: none;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-fade,
+  .reveal-zoom {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 

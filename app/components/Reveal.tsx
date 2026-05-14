@@ -22,15 +22,23 @@ export function Reveal({ children, className = "", delay = 0, direction = "up", 
       ([entry]) => {
         if (entry.isIntersecting) {
           setVisible(true);
-        } else {
-          setVisible(false);
+          observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+      { threshold: 0.05, rootMargin: "0px 0px -20px 0px" },
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+
+    const timer = setTimeout(() => {
+      setVisible(true);
+      observer.disconnect();
+    }, 2500);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timer);
+    };
   }, []);
 
   return (

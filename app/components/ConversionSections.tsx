@@ -113,7 +113,7 @@ export function ConversionSections() {
                 <Reveal key={text} delay={0.06 * i} direction={dirs[i]}>
                   <div className={styles.outcomeCard}>
                     <Icon className={styles.outcomeIcon} strokeWidth={1.5} aria-hidden />
-                    <p className={styles.outcomeText}>{text}</p>
+                    <p className={`${styles.outcomeText} mobile-clamp-2`}>{text}</p>
                   </div>
                 </Reveal>
               );

@@ -27,7 +27,7 @@ export function AkilahRoundedPanel() {
           </Reveal>
 
           <Reveal direction="up" delay={0.1}>
-            <p className={styles.copy}>
+            <p className={`${styles.copy} mobile-clamp-2`}>
               Executive support for high-profile leaders. High-stakes leadership loses
               momentum in the sidelines: inbox drift, scheduling pressure, and follow-ups
               that steal strategic focus. Akilah brings quiet precision so your operations
@@ -36,10 +36,7 @@ export function AkilahRoundedPanel() {
           </Reveal>
 
           <Reveal direction="right" delay={0.2}>
-            <div className={styles.ctaRow}>
-              <Link href="/#booking" className="btn btnPrimary">Book a Discovery Call</Link>
-              <Link href="/contact" className="btn">View Scheduling</Link>
-            </div>
+            <Link href="/#booking" className="btn btnPrimary">Book a Discovery Call</Link>
           </Reveal>
         </div>
 

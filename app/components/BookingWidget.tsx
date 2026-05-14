@@ -8,23 +8,23 @@ const CALENDLY_URL =
 
 export function BookingWidget() {
   const [ready, setReady] = useState(false);
-
-  const mq = typeof window !== "undefined" ? window.matchMedia("(max-width: 40rem)") : null;
-  const [height, setHeight] = useState(mq?.matches ? 500 : 700);
+  const [height, setHeight] = useState(700);
 
   useEffect(() => {
     const mmq = window.matchMedia("(max-width: 40rem)");
+    setHeight(mmq.matches ? 500 : 700);
     const handler = (e: MediaQueryListEvent) => setHeight(e.matches ? 500 : 700);
     mmq.addEventListener("change", handler);
     return () => mmq.removeEventListener("change", handler);
   }, []);
 
   return (
-    <div className="calendlyShell">
+    <div className="calendlyShell" style={{ position: "relative" }}>
       {!ready && (
         <div
           style={{
-            height,
+            position: "absolute",
+            inset: 0,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -33,6 +33,7 @@ export function BookingWidget() {
             color: "var(--muted)",
             fontSize: "0.875rem",
             letterSpacing: "0.06em",
+            zIndex: 1,
           }}
         >
           Loading calendar…
@@ -41,12 +42,7 @@ export function BookingWidget() {
       <div
         className="calendly-inline-widget"
         data-url={CALENDLY_URL}
-        style={{
-          minWidth: 280,
-          height,
-          borderRadius: "0.75rem",
-          display: ready ? undefined : "none",
-        }}
+        style={{ minWidth: 280, height, borderRadius: "0.75rem" }}
       />
       <div className="calendlyFooter">
         <span className="calendlyFooterText">
