@@ -262,6 +262,14 @@
 }
 
 @media (max-width: 40rem) {
+  .problemGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .outcomesGrid {
+    grid-template-columns: 1fr;
+  }
+
   .cta {
     font-size: 0.75rem;
   }
