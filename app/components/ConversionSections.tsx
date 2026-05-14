@@ -24,7 +24,7 @@ const CONTEXT_ITEMS = [
   },
   {
     icon: Clock3,
-    text: "Follow-up debt that keeps you awake at night.",
+    text: "Accumulating follow-up debt that keeps you awake at night.",
   },
   {
     icon: RefreshCw,
@@ -35,7 +35,7 @@ const CONTEXT_ITEMS = [
 const SERVICE_OUTCOMES = [
   {
     icon: Check,
-    text: "Calendar, priorities, and communication — kept consistent.",
+    text: "Executive operations rhythm: calendar, priorities, and communication — kept consistent.",
   },
   {
     icon: Target,
@@ -43,7 +43,7 @@ const SERVICE_OUTCOMES = [
   },
   {
     icon: FileText,
-    text: "Polished planning without last-minute scramble.",
+    text: "Meetings and events: polished planning without last-minute scramble.",
   },
   {
     icon: Zap,
@@ -85,7 +85,8 @@ export function ConversionSections() {
           </div>
           <Reveal direction="fade" delay={0.3}>
             <p className={`${styles.quote} mobile-clamp-2`}>
-              Protect your attention from low-leverage coordination — so strategy gets the room it deserves.
+              High-leverage leadership means protecting your attention from low-leverage
+              coordination — so strategy gets the room it deserves.
             </p>
           </Reveal>
           <Reveal direction="right" delay={0.35}>

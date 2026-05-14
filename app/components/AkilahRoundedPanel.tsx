@@ -28,8 +28,9 @@ export function AkilahRoundedPanel() {
 
           <Reveal direction="up" delay={0.1}>
             <p className={`${styles.copy} mobile-clamp-2`}>
-              High-stakes leadership loses momentum in the sidelines: inbox drift, scheduling
-              pressure, and follow-ups that steal focus. Akilah brings quiet precision so you
+              Executive support for high-profile leaders. High-stakes leadership loses
+              momentum in the sidelines: inbox drift, scheduling pressure, and follow-ups
+              that steal strategic focus. Akilah brings quiet precision so your operations
               stay composed while you lead.
             </p>
           </Reveal>

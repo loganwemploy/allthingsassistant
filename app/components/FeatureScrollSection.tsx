@@ -74,12 +74,14 @@ export function FeatureScrollSection() {
               </span>
             </h2>
             <p>
-              High-profile leadership shouldn&apos;t be spent in inbox triage. Akilah
-              provides quiet, senior-level execution that keeps every moving part
-              aligned under pressure.
+              High-profile leadership should not be spent in inbox triage and fragmented
+              follow-up. Akilah provides quiet, senior-level execution that keeps every
+              moving part aligned so your calendar, communication, and commitments stay
+              sharp under pressure.
             </p>
             <p>
-              Ready to stop managing friction and start leading? Let&apos;s map your
+              Operate with clarity, confidence, and ease. If you are ready to stop
+              managing friction and start leading at your highest level, let&apos;s map your
               priorities and build your support rhythm.
             </p>
           </div>
