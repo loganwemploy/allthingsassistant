@@ -27,7 +27,7 @@ export function CalendarPromoBand() {
             </h2>
           </Reveal>
           <Reveal direction="up" delay={0.15}>
-            <p className={styles.subtitle}>
+            <p className={`${styles.subtitle} mobile-clamp-2`}>
               In high-performing environments, hidden friction slows execution. Book a
               Discovery Call to replace fragmented admin with seamless follow-through and
               strategic support.
@@ -46,7 +46,7 @@ export function CalendarPromoBand() {
               <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
               <p className={styles.featureKicker}>Why you need me</p>
               <p className={styles.featureLead}>Lead, don&apos;t manage logistics.</p>
-              <p className={styles.featureBody}>
+              <p className={`${styles.featureBody} mobile-clamp-2`}>
                 Your highest-value time belongs to growth and decisions, not inbox routing,
                 scheduling drift, and follow-up debt.
               </p>
@@ -57,7 +57,7 @@ export function CalendarPromoBand() {
               <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
               <p className={styles.featureKicker}>Why trust me</p>
               <p className={styles.featureLead}>Professional, confidential, consistent.</p>
-              <p className={styles.featureBody}>
+              <p className={`${styles.featureBody} mobile-clamp-2`}>
                 Over two decades of executive support and an MBA-backed operating approach
                 means details are handled with precision and discretion.
               </p>
@@ -68,7 +68,7 @@ export function CalendarPromoBand() {
               <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
               <p className={styles.featureKicker}>Why choose me</p>
               <p className={styles.featureLead}>Excellence without micromanagement.</p>
-              <p className={styles.featureBody}>
+              <p className={`${styles.featureBody} mobile-clamp-2`}>
                 Details are handled at a level where your workflow feels smoother, cleaner, and easier to scale.
               </p>
             </div>
