@@ -138,6 +138,14 @@
 }
 
 @media (max-width: 40rem) {
+  .eyebrow {
+    font-size: 0.5625rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
   .cell {
     padding: 0.625rem 0.875rem;
     font-size: 0.8125rem;

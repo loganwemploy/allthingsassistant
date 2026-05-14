@@ -97,10 +97,15 @@
 }
 
 @media (max-width: 40rem) {
+  .eyebrow {
+    font-size: 0.5625rem;
+  }
+
   .content {
     padding: 1rem;
     margin-top: -5rem;
   }
+
   .card {
     padding: 1.1rem 1rem 1.15rem;
   }

@@ -262,11 +262,44 @@
 }
 
 @media (max-width: 40rem) {
-  .quote {
-    padding: 0.875rem 1rem;
+  .eyebrow {
+    font-size: 0.5625rem;
+  }
+
+  .contextTitle {
+    font-size: 1.15rem;
+  }
+
+  .problemText {
+    font-size: 0.75rem;
+  }
+
+  .outcomesTitle {
+    font-size: 1rem;
+  }
+
+  .outcomeText {
+    font-size: 0.75rem;
+  }
+
+  .trustPill {
+    font-size: 0.5625rem;
   }
 
   .cta {
+    font-size: 0.75rem;
+  }
+
+  .quote {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.85rem;
+  }
+
+  .contextCta {
+    font-size: 0.625rem;
+  }
+
+  .micro {
     font-size: 0.75rem;
   }
 }
