@@ -28,9 +28,8 @@ export function CalendarPromoBand() {
           </Reveal>
           <Reveal direction="up" delay={0.15}>
             <p className={`${styles.subtitle} mobile-clamp-2`}>
-              In high-performing environments, hidden friction slows execution. Book a
-              Discovery Call to replace fragmented admin with seamless follow-through and
-              strategic support.
+              Hidden friction slows execution. Book a Discovery Call to replace
+              fragmented admin with seamless support.
             </p>
           </Reveal>
           <Reveal direction="right" delay={0.2}>
@@ -47,8 +46,8 @@ export function CalendarPromoBand() {
               <p className={styles.featureKicker}>Why you need me</p>
               <p className={styles.featureLead}>Lead, don&apos;t manage logistics.</p>
               <p className={`${styles.featureBody} mobile-clamp-2`}>
-                Your highest-value time belongs to growth and decisions, not inbox routing,
-                scheduling drift, and follow-up debt.
+                Your highest-value time belongs to growth and decisions, not inbox routing
+                and follow-up debt.
               </p>
             </div>
           </Reveal>
@@ -58,8 +57,7 @@ export function CalendarPromoBand() {
               <p className={styles.featureKicker}>Why trust me</p>
               <p className={styles.featureLead}>Professional, confidential, consistent.</p>
               <p className={`${styles.featureBody} mobile-clamp-2`}>
-                Over two decades of executive support and an MBA-backed operating approach
-                means details are handled with precision and discretion.
+                Two decades of executive support and an MBA — details handled with precision.
               </p>
             </div>
           </Reveal>
@@ -69,7 +67,7 @@ export function CalendarPromoBand() {
               <p className={styles.featureKicker}>Why choose me</p>
               <p className={styles.featureLead}>Excellence without micromanagement.</p>
               <p className={`${styles.featureBody} mobile-clamp-2`}>
-                Details are handled at a level where your workflow feels smoother, cleaner, and easier to scale.
+                Your workflow feels smoother, cleaner, and easier to scale.
               </p>
             </div>
           </Reveal>
