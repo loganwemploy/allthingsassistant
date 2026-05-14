@@ -1,7 +1,12 @@
 "use client";
 
-import { createElement, useEffect, useId, useRef } from "react";
+import { useEffect, useId, useRef } from "react";
 import { defineTypeWriterElement } from "./type-writer-element";
+
+type TypeWriterEl = HTMLElement & {
+  start?: () => void;
+  reset?: () => void;
+};
 
 type Props = {
   children: React.ReactNode;
@@ -27,7 +32,6 @@ export function TypeWriter({
   ariaLabel,
 }: Props) {
   const id = useId();
-  const ref = useRef<HTMLElement | null>(null);
   const startedRef = useRef(false);
 
   useEffect(() => {
@@ -35,7 +39,7 @@ export function TypeWriter({
   }, []);
 
   useEffect(() => {
-    const el = ref.current as any;
+    const el = document.getElementById(id) as TypeWriterEl | null;
     if (!el) return;
 
     // Keep it deterministic if component remounts.
@@ -64,24 +68,22 @@ export function TypeWriter({
 
     io.observe(el);
     return () => io.disconnect();
-  }, [startOnView, threshold]);
+  }, [id, startOnView, threshold]);
 
   // Map UX-friendly speed levels (1..15) to characters/sec for the custom element.
   const clampedLevel = Math.min(15, Math.max(1, Math.round(speed)));
   const charsPerSecond = Math.round(2 + ((clampedLevel - 1) / 14) * 58);
 
-  return createElement(
-    "type-writer",
-    {
-      id,
-      ref,
-      className,
-      "aria-label": ariaLabel,
-      autostart: "false",
-      speed: String(charsPerSecond),
-      "respect-motion-preference": "true",
-    } as any,
-    children,
+  return (
+    <type-writer
+      id={id}
+      className={className}
+      aria-label={ariaLabel}
+      autostart="false"
+      speed={String(charsPerSecond)}
+      respect-motion-preference="true"
+    >
+      {children}
+    </type-writer>
   );
 }
-

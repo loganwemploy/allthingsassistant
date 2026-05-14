@@ -1,23 +1,29 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { useEffect, useMemo, useRef } from "react";
-import { CTAButton } from "./CTAButton";
 import styles from "./FeatureScrollSection.module.css";
-
-const CALENDLY = "https://calendly.com/allthingsassistantllc";
 
 export function FeatureScrollSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
 
   const bg = useMemo(
-    () =>
-      `url("https://images.pexels.com/photos/5716002/pexels-photo-5716002.jpeg?auto=compress&cs=tinysrgb&w=2000")`,
+    () => `url("/feature-bg.jpg")`,
     [],
   );
 
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
+
+    const isMobile = window.matchMedia("(max-width: 40rem)").matches;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (isMobile || prefersReducedMotion) {
+      el.style.setProperty("--bg-scale", "1.1");
+      el.style.setProperty("--bg-blur", "0px");
+      el.style.setProperty("--bg-opacity", "0.5");
+      return;
+    }
 
     let raf = 0;
 
@@ -29,9 +35,8 @@ export function FeatureScrollSection() {
         const total = rect.height + viewportH;
         const progress = Math.min(1, Math.max(0, (viewportH - rect.top) / total));
 
-        // Gentle zoom-out + blur-in + fade as user scrolls through.
         const scale = 1.18 - progress * 0.12;
-        const blur = progress * 5; // px
+        const blur = progress * 5;
         const opacity = 1 - progress * 0.55;
 
         el.style.setProperty("--bg-scale", String(scale));
@@ -54,7 +59,7 @@ export function FeatureScrollSection() {
     <section
       ref={sectionRef}
       className={styles.section}
-      style={{ ["--feature-bg" as any]: bg }}
+      style={{ "--feature-bg": bg } as CSSProperties}
       aria-label="What it feels like with support"
     >
       <div className={styles.frame}>
@@ -62,30 +67,26 @@ export function FeatureScrollSection() {
 
         <div className={styles.content}>
           <div className={styles.card}>
-            <h2 className="pinline">
+            <p className={styles.eyebrow}>On the Possibility of Support</p>
+            <h2 className={`pinline gradient-text-card`}>
               <span>
-                On the <strong>possibility</strong> of ease
+                Executive support for high-stakes leadership
               </span>
             </h2>
             <p>
-              When your calendar, inbox, and follow‑through are handled with executive
-              precision, you stop thinking about logistics and start thinking about
-              outcomes.
+              High-profile leadership should not be spent in inbox triage and fragmented
+              follow-up. Akilah provides quiet, senior-level execution that keeps every
+              moving part aligned so your calendar, communication, and commitments stay
+              sharp under pressure.
             </p>
             <p>
-              Akilah’s role is to protect your attention, keep commitments moving, and
-              make your day feel calm and controlled—without you micromanaging.
+              Operate with clarity, confidence, and ease. If you are ready to stop
+              managing friction and start leading at your highest level, let&apos;s map your
+              priorities and build your support rhythm.
             </p>
-            <div className={styles.ctaRow}>
-              <CTAButton href={CALENDLY}>Book a Discovery Call</CTAButton>
-              <a className="navLink" href="/cv">
-                Download CV →
-              </a>
-            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
-

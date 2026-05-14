@@ -19,17 +19,22 @@ const amiri = Amiri({
 });
 
 export const metadata: Metadata = {
-  title: "All Things Assistant LLC | Virtual Assistant Services",
+  title: "All Things Assistant | Administrative Support",
   description:
-    "All Things Assistant LLC provides executive administrative and virtual assistant support to help busy professionals reclaim time, stay organized, and grow their business.",
+    "All Things Assistant provides senior administrative support to help busy leaders reclaim time, stay organized, and execute consistently.",
   keywords: [
-    "Virtual Assistant Services",
+    "Administrative Professional",
     "Executive Administrative Support",
-    "Executive Assistant Services",
     "Administrative Support Services",
-    "Virtual Executive Assistant",
-    "Outsource Administrative Tasks",
+    "Virtual Administrative Support",
+    "Inbox and calendar support",
   ],
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -40,14 +45,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Amiri&family=Open+Sans:wght@300;400;600;800&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="preconnect" href="https://assets.calendly.com" />
+        <link rel="dns-prefetch" href="https://assets.calendly.com" />
       </head>
       <body className={`${lora.variable} ${openSans.variable} ${amiri.variable}`}>
-        {children}
+        <div className="pageWrapper">
+          {children}
+        </div>
       </body>
     </html>
   );

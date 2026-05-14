@@ -1,0 +1,28 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="All Things Assistant A mark">
+  <path
+    d="M32 8L53 56H44.4L39.9 45.5H24.1L19.6 56H11L32 8Z"
+    fill="#1F1B16"
+  />
+  <path
+    d="M27.3 35.8H36.7L32 24.6L27.3 35.8Z"
+    fill="#F3EFE7"
+  />
+  <!-- subtle “ops” cue: a tiny checklist notch on the crossbar -->
+  <path
+    d="M24.5 41.2C27.4 39.1 29.6 37.6 31.2 36.7C33.1 35.6 34.5 35.2 35.7 35.2C37 35.2 37.9 35.8 38.6 37.2"
+    stroke="#A24A2A"
+    stroke-width="2.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.9"
+  />
+  <path
+    d="M39.7 37.4L41.6 39.3L45.2 35.7"
+    stroke="#2F4A3A"
+    stroke-width="2.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.9"
+  />
+</svg>
+

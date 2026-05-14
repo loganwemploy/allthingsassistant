@@ -1,63 +1,64 @@
 "use client";
 
 import Image from "next/image";
-import { CTAButton } from "./CTAButton";
+import Link from "next/link";
+import { TypeWriter } from "./TypeWriter";
+import { WordHighlight } from "./WordHighlight";
+import { Reveal } from "./Reveal";
 import styles from "./AkilahRoundedPanel.module.css";
 
-const CALENDLY = "https://calendly.com/allthingsassistantllc";
-const AKILAH_IMG =
-  "https://dl4.pushbulletusercontent2.com/d0WgxSJ9mXgjr7l62jruYsBA76YsaQtf/image.png";
+const AKILAH_PHOTO = "/akilah-photo.jpg";
 
 export function AkilahRoundedPanel() {
   return (
-    <section className={styles.wrap} aria-label="About Akilah Adams">
-      <div className={styles.heroPanel}>
+    <section className={styles.wrap} aria-label="About All Things Assistant">
+      <div className={styles.panel}>
         <div className={styles.copyCol}>
-          <div className={styles.kicker}>All Things Assistant LLC</div>
-          <h2 className={styles.heroTitle}>
-            On the
-            <br />
-            <span className={styles.large}>Possibility</span> of{" "}
-            <span className={styles.large}>Calm</span>
-          </h2>
+          <Reveal direction="left">
+            <p className={styles.eyebrow}>All Things Assistant LLC</p>
+          </Reveal>
 
-          <h3 className={`${styles.subhead} pinline`}>
-            <span>Executive support for high-profile leaders</span>
-          </h3>
+          <Reveal direction="zoom">
+            <TypeWriter speed={3} threshold={0.3} ariaLabel="Panel title">
+              <h2 className={styles.title}>
+                On the Possibility of <WordHighlight light>Calm</WordHighlight>
+              </h2>
+            </TypeWriter>
+          </Reveal>
 
-          <p className={styles.copy}>
-            High-stakes leadership loses momentum in the sidelines: inbox drift,
-            scheduling pressure, and follow-ups that steal strategic focus. Akilah
-            brings quiet precision so your operations stay composed while you lead.
-          </p>
+          <Reveal direction="up" delay={0.1}>
+            <p className={styles.copy}>
+              Executive support for high-profile leaders. High-stakes leadership loses
+              momentum in the sidelines: inbox drift, scheduling pressure, and follow-ups
+              that steal strategic focus. Akilah brings quiet precision so your operations
+              stay composed while you lead.
+            </p>
+          </Reveal>
 
-          <div className={styles.links}>
-            <a href="#booking">Book Discovery Call</a>
-            <a href="#booking">View Scheduling</a>
-          </div>
-
-          <div className={styles.ctaRow}>
-            <CTAButton href={CALENDLY}>Book a Discovery Call</CTAButton>
-          </div>
+          <Reveal direction="right" delay={0.2}>
+            <div className={styles.ctaRow}>
+              <Link href="/#booking" className="btn btnPrimary">Book a Discovery Call</Link>
+              <Link href="/contact" className="btn">View Scheduling</Link>
+            </div>
+          </Reveal>
         </div>
 
         <div className={styles.visualCol}>
-          <div className={styles.focal}>
-            <Image
-              src={AKILAH_IMG}
-              alt="Akilah Adams, MBA"
-              width={520}
-              height={680}
-              className={styles.focalImg}
-            />
-            <span className={styles.point} aria-hidden="true" />
-          </div>
-          <div className={styles.quote}>
-            Discretion. Follow-through. Calm execution.
-          </div>
+          <Reveal direction="scale" delay={0.1}>
+            <div className={styles.photoFrame}>
+              <Image
+                src={AKILAH_PHOTO}
+                alt="Akilah Adams"
+                width={320}
+                height={400}
+                className={styles.photo}
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+              />
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
   );
 }
-

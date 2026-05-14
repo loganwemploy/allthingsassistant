@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FileText, Zap } from "lucide-react";
+import { Reveal } from "./Reveal";
 import { CalendarPromoSparkles } from "./CalendarPromoSparkles";
 import styles from "./CalendarPromoBand.module.css";
 
 const AKILAH_AVATAR =
-  "https://dl4.pushbulletusercontent2.com/d0WgxSJ9mXgjr7l62jruYsBA76YsaQtf/image.png";
+  "/akilah-photo.jpg";
 
 export function CalendarPromoBand() {
   return (
@@ -13,73 +15,83 @@ export function CalendarPromoBand() {
         <CalendarPromoSparkles />
         <div className={styles.innerContent}>
         <div className={styles.hero}>
-          <div className={styles.eyebrow}>
-            <Zap className={styles.eyebrowIcon} aria-hidden />
-            <span>// Built for leaders ready to delegate</span>
-          </div>
-          <h2 id="calendar-promo-heading" className={`${styles.headline} pinline`}>
-            <span>You’ve mastered your craft—now it’s time your support reflects that level.</span>
-          </h2>
-          <p className={styles.subtitle}>
-            In high-performing environments, hidden friction slows execution. Book a Discovery Call to replace fragmented admin with seamless follow-through and strategic support.
-          </p>
-          <a href="#booking" className={styles.heroCta}>
-            Book a Discovery Call
-          </a>
+          <Reveal direction="left">
+            <div className={styles.eyebrow}>
+              <Zap className={styles.eyebrowIcon} aria-hidden />
+              <span>Built for leaders ready to delegate</span>
+            </div>
+          </Reveal>
+          <Reveal direction="zoom" delay={0.08}>
+            <h2 id="calendar-promo-heading" className={`${styles.headline} pinline`}>
+              <span>You&apos;ve mastered your craft — now it&apos;s time your support reflects that level.</span>
+            </h2>
+          </Reveal>
+          <Reveal direction="up" delay={0.15}>
+            <p className={styles.subtitle}>
+              In high-performing environments, hidden friction slows execution. Book a
+              Discovery Call to replace fragmented admin with seamless follow-through and
+              strategic support.
+            </p>
+          </Reveal>
+          <Reveal direction="right" delay={0.2}>
+            <Link href="/contact" className={styles.heroCta}>
+              Book a Discovery Call
+            </Link>
+          </Reveal>
         </div>
 
         <div className={styles.featuresDesktop}>
-          <div className={styles.featureCol}>
-            <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
-            <p className={styles.featureKicker}>Why you need me</p>
-            <p className={styles.featureLead}>Lead, don't manage logistics.</p>
-            <p className={styles.featureBody}>
-            Your highest-value time belongs to growth and decisions, not inbox routing, scheduling drift, and follow-up debt.
-            </p>
-          </div>
-          <div className={styles.featureCol}>
-            <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
-            <p className={styles.featureKicker}>Why trust me</p>
-            <p className={styles.featureLead}>Professional, confidential, consistent.</p>
-            <p className={styles.featureBody}>
-              Over two decades of executive support and an MBA-backed operating approach means details are handled with precision and discretion.            </p>
-          </div>
+          <Reveal direction="left" delay={0.1}>
+            <div className={styles.featureCol}>
+              <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
+              <p className={styles.featureKicker}>Why you need me</p>
+              <p className={styles.featureLead}>Lead, don&apos;t manage logistics.</p>
+              <p className={styles.featureBody}>
+                Your highest-value time belongs to growth and decisions, not inbox routing,
+                scheduling drift, and follow-up debt.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal direction="scale" delay={0.2}>
+            <div className={styles.featureCol}>
+              <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
+              <p className={styles.featureKicker}>Why trust me</p>
+              <p className={styles.featureLead}>Professional, confidential, consistent.</p>
+              <p className={styles.featureBody}>
+                Over two decades of executive support and an MBA-backed operating approach
+                means details are handled with precision and discretion.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal direction="right" delay={0.3}>
+            <div className={styles.featureCol}>
+              <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
+              <p className={styles.featureKicker}>Why choose me</p>
+              <p className={styles.featureLead}>Excellence without micromanagement.</p>
+              <p className={styles.featureBody}>
+                Details are handled at a level where your workflow feels smoother, cleaner, and easier to scale.
+              </p>
+            </div>
+          </Reveal>
         </div>
 
-        <div className={styles.featuresMobile}>
-          <div className={styles.mobileFeatureBlock}>
-            <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
-            <p className={styles.featureKicker}>Why choose me</p>
-            <p className={styles.featureLead}>Reliable.</p>
-            <p className={styles.featureBody}>
-              I operate at a standard where excellence is expected and your workflow feels effortless.
-            </p>
+        <Reveal direction="up" delay={0.3}>
+          <div className={styles.bottomBar}>
+            <div className={styles.brand}>
+              <Image
+                src={AKILAH_AVATAR}
+                alt=""
+                width={40}
+                height={40}
+                className={styles.avatar}
+              />
+              <span className={styles.brandText}>Akilah Adams, MBA</span>
+            </div>
+            <Link href="/contact" className={styles.orangeCta}>
+              Book a Discovery Call
+            </Link>
           </div>
-          <div className={styles.mobileFeatureBlock}>
-            <FileText className={styles.featureIcon} strokeWidth={1.5} aria-hidden />
-            <p className={styles.featureKicker}>Discovery call outcome</p>
-            <p className={styles.featureLead}>Fast.</p>
-            <p className={styles.featureBody}>
-              You leave with clear priorities, a support rhythm, and immediate next actions.
-            </p>
-          </div>
-        </div>
-
-        <div className={styles.bottomBar}>
-          <div className={styles.brand}>
-            <Image
-              src={AKILAH_AVATAR}
-              alt=""
-              width={40}
-              height={40}
-              className={styles.avatar}
-            />
-            <span className={styles.brandText}>Akilah Adams</span>
-          </div>
-          <a href="#booking" className={styles.orangeCta}>
-            Book a Discovery Call
-          </a>
-        </div>
+        </Reveal>
         </div>
       </div>
     </section>

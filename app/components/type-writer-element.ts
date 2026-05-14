@@ -1,5 +1,3 @@
-/* eslint-disable no-underscore-dangle */
-
 // Registers the <type-writer> custom element once.
 // This is a direct adaptation of the user-provided Web Component.
 
@@ -7,12 +5,16 @@ export function defineTypeWriterElement() {
   if (typeof window === "undefined") return;
   if (customElements.get("type-writer")) return;
 
+  type FlatNode =
+    | { type: "char"; char: string; parent: Node }
+    | { type: "open" | "close"; node: Element; parent: Node };
+
   class TypeWriter extends HTMLElement {
     _gen = 0;
     _paused = false;
     _running = false;
     _idx = 0;
-    _nodes: any[] = [];
+    _nodes: FlatNode[] = [];
     _totalChars = 0;
     _currentCharCount = 0;
     _lastEmittedPercent = 0;
@@ -68,7 +70,7 @@ export function defineTypeWriterElement() {
     }
 
     _flattenNodes(node: Node) {
-      const result: any[] = [];
+      const result: FlatNode[] = [];
       let charCount = 0;
 
       const walk = (n: Node, parent: Node, inPre: boolean) => {
@@ -235,4 +237,3 @@ export function defineTypeWriterElement() {
 
   customElements.define("type-writer", TypeWriter);
 }
-

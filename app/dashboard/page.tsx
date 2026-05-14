@@ -9,7 +9,7 @@ const data = week1 as WeekLeadsData;
 
 export const metadata: Metadata = {
   title: "Weekly leads · All Things Assistant",
-  description: "Personal assistant job leads curated for Akilah.",
+  description: "Administrative professional job leads curated for Akilah.",
   robots: { index: false, follow: false },
 };
 

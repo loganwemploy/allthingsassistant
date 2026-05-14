@@ -1,6 +1,6 @@
 {
   "weekLabel": "Week 1",
-  "pageTitle": "Personal Assistant Job Leads — Live from Indeed",
+  "pageTitle": "Administrative Professional Job Leads — Live from Indeed",
   "pageSubtitle": "Curated Miami-area listings with context for outreach.",
   "friendNotesHeading": "A note for your friend",
   "friendNotes": [
@@ -12,7 +12,7 @@
     {
       "id": "trivium",
       "company": "Trivium Group",
-      "jobTitle": "Personal Assistant to CEO",
+      "jobTitle": "Administrative Professional to CEO",
       "location": "Miami, FL (Hybrid)",
       "details": [
         { "label": "CEO / Founder", "value": "Mina Elias" },
@@ -47,7 +47,7 @@
     {
       "id": "atlantic-radio",
       "company": "Atlantic Radio Miami",
-      "jobTitle": "Personal Assistant",
+      "jobTitle": "Administrative Professional",
       "location": "Miami, FL (near MIA airport)",
       "details": [
         {
@@ -70,7 +70,7 @@
     {
       "id": "aw-socials",
       "company": "Aw Socials",
-      "jobTitle": "Personal Assistant",
+      "jobTitle": "Administrative Professional",
       "location": "Miami Beach, FL",
       "details": [
         {
@@ -93,7 +93,7 @@
     {
       "id": "assistant-company",
       "company": "The Assistant Company",
-      "jobTitle": "Personal Assistant",
+      "jobTitle": "Administrative Professional",
       "location": "Miami, FL 33137",
       "details": [
         {

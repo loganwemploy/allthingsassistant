@@ -1,267 +1,322 @@
-/* Collage hero — grid + flex; no fixed “artboard” pixel positions */
-
 .root {
   overflow-x: clip;
   padding: clamp(2rem, 5vw, 5rem) 0 clamp(1.5rem, 3vw, 2.5rem);
+  position: relative;
+}
+
+.root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(56rem 30rem at 8% 22%, rgba(63, 90, 58, 0.35), transparent 60%),
+    radial-gradient(36rem 36rem at 92% 8%, rgba(43, 31, 24, 0.12), transparent 55%);
+  pointer-events: none;
+}
+
+/* Floating ambient olive circles */
+.root::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
 }
 
 .shell {
   width: min(100%, 70rem);
   margin-inline: auto;
   padding-inline: clamp(1rem, 4vw, 1.75rem);
+  position: relative;
+  z-index: 1;
 }
 
-.cream {
+.panel {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-  gap: clamp(1rem, 4vw, 2.75rem);
-  align-items: end;
-  padding: clamp(1.5rem, 4vw, 3.125rem);
-  background-color: #efefeb;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 4vw, 3rem);
   position: relative;
   isolation: isolate;
 }
 
+.panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 2rem;
+  background: var(--parchment);
+  z-index: -1;
+}
+
+.panel::after {
+  content: "";
+  position: absolute;
+  inset: -0.375rem;
+  border: 0.0625rem solid var(--gold-accent);
+  border-radius: calc(2rem + 0.3125rem);
+  pointer-events: none;
+  z-index: -1;
+}
+
 .textCol {
   min-width: 0;
-  align-self: center;
   display: flex;
   flex-direction: column;
-  gap: clamp(0.35rem, 1.8vw, 0.65rem);
+  gap: 0.75rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--accent-1);
 }
 
 .title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: clamp(1.65rem, 3.1vw, 3.05rem);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1.12;
-  color: #1e1d1d;
-  text-transform: uppercase;
-}
-
-.subtext {
-  margin: 0;
-  padding-left: clamp(0.25rem, 5vw, 3.75rem);
-  font-style: italic;
-  font-size: clamp(1rem, 2vw, 1.375rem);
-  letter-spacing: 0.08em;
-  color: #927c67;
-  text-transform: lowercase;
-  line-height: 1.35;
-}
-
-.expRow {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.65rem 1rem;
-  margin-top: 0.35rem;
-}
-
-.pantoneRow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  flex-shrink: 0;
-}
-
-.dot {
-  width: 0.625rem;
-  height: 0.625rem;
-  flex-shrink: 0;
-}
-
-.dot[data-tone="1"] {
-  background-color: #111;
-}
-.dot[data-tone="2"] {
-  background-color: #927c67;
-}
-.dot[data-tone="3"] {
-  background-color: #897e65;
-}
-.dot[data-tone="4"] {
-  background-color: #a9a585;
-}
-
-.set {
-  margin: 0;
-  font-size: clamp(0.65rem, 1.2vw, 0.75rem);
-  font-weight: 600;
-  letter-spacing: var(--tracking-mid, 0.06em);
-  text-transform: uppercase;
-  color: #111;
-  opacity: 0.72;
-  line-height: 1.35;
-  min-width: 0;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.08;
+  color: var(--ink);
 }
 
 .desc {
-  margin: clamp(0.75rem, 2vw, 1.25rem) 0 0;
-  max-width: min(42ch, 100%);
-  padding-left: 1.15rem;
-  border-left: 0.0625rem solid #a9a585;
+  margin: 0.25rem 0 0;
+  max-width: 44ch;
   font-family: var(--font-body);
-  font-size: clamp(1rem, 1.35vw, var(--text-base, 1.2rem));
-  line-height: var(--leading-relaxed, 1.65);
-  letter-spacing: 0.02em;
-  color: #111;
-  overflow-wrap: anywhere;
-  word-break: normal;
-  hyphens: auto;
+  font-size: clamp(1rem, 1.35vw, 1.15rem);
+  line-height: 1.65;
+  color: var(--muted);
 }
 
-.sublink {
-  align-self: flex-start;
-  margin-top: clamp(1rem, 2.5vw, 1.5rem);
-  padding: 0.35rem 0.65rem 0.3rem;
+.taglineHighlight {
+  color: var(--olive);
   font-weight: 700;
-  font-size: clamp(0.62rem, 1.1vw, 0.6875rem);
-  letter-spacing: 0.125rem;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.meta {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  background: rgba(63, 90, 58, 0.07);
+  padding: 0.3rem 0.625rem;
+  border-radius: 62.4375rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.meta:hover {
+  background: rgba(63, 90, 58, 0.14);
+  transform: translateY(-0.0625rem);
+}
+
+.scrollHint {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-1);
+  opacity: 0.6;
+  animation: scrollPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.6; transform: translateX(0); }
+  50% { opacity: 1; transform: translateX(4px); }
+}
+
+.metaDot {
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background: var(--accent-1);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin-top: 0.75rem;
+  padding: 0.875rem 2rem;
+  font-weight: 700;
+  font-size: clamp(0.6875rem, 1vw, 0.75rem);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #efefeb;
-  background-color: #a9a585;
-  border-radius: 0.125rem;
+  color: rgba(255, 255, 255, 0.96);
+  background: var(--accent-2);
+  border-radius: var(--radius-pill);
+  border: 0.0625rem solid var(--accent-2);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0.25rem 0.75rem rgba(43, 31, 24, 0.2);
+  position: relative;
+  animation: ctaPulse 2.5s ease-in-out infinite;
 }
 
-.sublink:focus-visible {
-  outline: 0.1875rem solid var(--accent-2, #927c67);
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+  background-size: 200% 100%;
+  animation: ctaShimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 0.25rem 0.75rem rgba(43, 31, 24, 0.2); }
+  50%      { box-shadow: 0 0.25rem 0.75rem rgba(43, 31, 24, 0.2), 0 0 1.5rem rgba(63, 90, 58, 0.25); }
+}
+
+.cta:hover {
+  background: var(--accent-1);
+  border-color: var(--accent-1);
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.5rem 1.25rem rgba(63, 90, 58, 0.3);
+}
+
+.cta:focus-visible {
+  outline: 0.1875rem solid var(--accent-2);
   outline-offset: 0.125rem;
 }
 
-/* Visual column: watermark behind + circle + tall portrait */
+@keyframes ctaShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 .visualCol {
   position: relative;
   min-width: 0;
-  min-height: min(52vw, 24rem);
+  min-height: min(46vw, 24rem);
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
 }
 
-.watermark {
+.photoFrame {
+  position: relative;
+  width: min(100%, 18rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  animation:
+    photoEntrance 1s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    photoFloat 3s ease-in-out 1.2s infinite;
+  box-shadow:
+    0 0.75rem 2rem rgba(43, 31, 24, 0.18),
+    0 0 0 0.375rem rgba(63, 90, 58, 0.12);
+  background: var(--card);
+}
+
+@keyframes photoFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+
+.photoFrame::after {
+  content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  gap: 0.02em;
-  padding-top: 0.15rem;
-  padding-right: clamp(0, 2vw, 0.5rem);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3.5rem, 14vw, 10rem);
-  line-height: 0.85;
-  color: #a9a585;
+  border-radius: 50%;
+  border: 0.125rem solid rgba(255, 255, 255, 0.1);
   pointer-events: none;
-  user-select: none;
-  overflow: hidden;
 }
 
-.watermarkDigit {
-  opacity: 0.92;
+@keyframes photoEntrance {
+  0% { opacity: 0; transform: scale(0.88) translateY(24px); }
+  60% { transform: scale(1.02) translateY(-4px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-.visualOverlap {
-  position: relative;
+.photoAccent {
+  position: absolute;
+  inset: 0;
   z-index: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  gap: clamp(0.2rem, 1.5vw, 0.65rem);
-  margin-left: clamp(-1.75rem, -5vw, -0.35rem);
+  background: linear-gradient(
+    180deg,
+    transparent 50%,
+    rgba(63, 90, 58, 0.15) 100%
+  );
+  pointer-events: none;
 }
 
-.portraitCircle {
-  position: relative;
-  width: clamp(6.5rem, 22vw, 11.25rem);
-  aspect-ratio: 1;
-  flex-shrink: 0;
-  border-radius: 62.4375rem;
-  overflow: hidden;
-  filter: grayscale(100%);
-  box-shadow: 0 0.35rem 1.25rem rgba(30, 29, 29, 0.14);
-}
-
-.portraitMain {
-  position: relative;
-  width: clamp(9.5rem, 30vw, 17.5rem);
-  flex-shrink: 0;
-  aspect-ratio: 280 / 570;
-  overflow: hidden;
-  box-shadow: 0 0.5rem 1.5rem rgba(30, 29, 29, 0.12);
-}
-
-.portraitImg {
+.photo {
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 20%;
 }
 
 @media (max-width: 56rem) {
-  .cream {
+  .panel {
     grid-template-columns: 1fr;
     gap: clamp(1.5rem, 4vw, 2rem);
-    align-items: stretch;
   }
 
   .textCol {
-    align-self: stretch;
     order: 1;
-  }
-
-  .visualCol {
-    order: 2;
-    min-height: auto;
-    justify-content: center;
-    padding: 0.25rem 0 0.5rem;
-  }
-
-  .visualOverlap {
-    margin-left: 0;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .watermark {
-    justify-content: center;
-    padding-right: 0;
-    opacity: 0.45;
-    font-size: clamp(4rem, 28vw, 8rem);
-  }
-
-  .subtext {
-    padding-left: 0;
+    text-align: center;
+    align-items: center;
   }
 
   .desc {
-    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    text-align: left;
   }
 
-  .sublink {
+  .metaRow {
+    justify-content: center;
+  }
+
+  .visualCol {
+    order: 0;
+    min-height: auto;
+    padding: 0.5rem 0;
+  }
+
+  .photoFrame {
+    width: min(60%, 14rem);
+    aspect-ratio: 1;
+  }
+
+  .cta {
     align-self: center;
   }
 }
 
 @media (max-width: 30rem) {
-  .cream {
+  .panel {
     padding: 1.25rem 1rem 1.75rem;
   }
 
-  .visualOverlap {
-    gap: 0.35rem;
+  .photoFrame {
+    width: min(70%, 12rem);
   }
 
-  .portraitCircle {
-    width: min(42vw, 8.5rem);
+  .meta {
+    font-size: 0.75rem;
   }
 
-  .portraitMain {
-    width: min(48vw, 12.5rem);
+  .cta {
+    font-size: 0.75rem;
   }
 }

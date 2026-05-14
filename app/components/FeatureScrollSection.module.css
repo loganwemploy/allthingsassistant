@@ -18,7 +18,7 @@
 .feature {
   position: sticky;
   top: 0;
-  height: clamp(18rem, 50vh, 28rem);
+  height: clamp(14rem, 40vh, 28rem);
   width: 100%;
   z-index: 0;
 }
@@ -64,12 +64,20 @@
   border-radius: var(--radius-md);
   padding: 1.25rem 1.25rem 1.35rem;
   max-width: 42rem;
+  margin-inline: auto;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-mid);
+  text-transform: uppercase;
+  color: var(--accent-1);
 }
 
 .card p {
   margin: 0 0 0.9rem;
-  color: rgba(30, 29, 29, 0.92);
-  text-align: justify;
+  color: var(--ink);
 }
 
 .card p:last-child {
@@ -95,6 +103,15 @@
   }
   .card {
     padding: 1.1rem 1rem 1.15rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .content {
+    margin-top: -4rem;
+  }
+  .card {
+    padding: 0.875rem 0.75rem;
   }
 }
 

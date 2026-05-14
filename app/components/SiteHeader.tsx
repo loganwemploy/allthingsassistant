@@ -2,122 +2,203 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
-import { CTAButton } from "./CTAButton";
+import { usePathname } from "next/navigation";
+import { useCallback, useEffect, useRef, useState } from "react";
 
-const LOGO_URL =
-  "https://dl4.pushbulletusercontent2.com/VvtaaGDjfFBqb7ipDCcwVJWEaT4bskRJ/image.png";
+const LOGO_URL = "/logo.png";
 
-type NavItem = { label: string; href: string };
+const NAV: { label: string; href: string }[] = [
+  { label: "Home", href: "/#hero" },
+  { label: "Services", href: "/services" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "How It Works", href: "/how-it-works" },
+  { label: "Contact", href: "/contact" },
+  { label: "About Me", href: "/about-me" },
+];
 
 export function SiteHeader() {
-  const nav = useMemo<NavItem[]>(
-    () => [
-      { label: "Home", href: "#hero" },
-      { label: "Services", href: "#services" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "How It Works", href: "#how" },
-      { label: "Contact", href: "#contact" },
-      { label: "Blog", href: "/blog" },
-    ],
-    [],
-  );
-
   const [open, setOpen] = useState(false);
+  const [leaving, setLeaving] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
 
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
+  const closeMenu = useCallback(() => {
+    setLeaving(true);
+    setTimeout(() => {
+      setOpen(false);
+      setLeaving(false);
+    }, 280);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeMenu();
     };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [closeMenu]);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [open]);
 
   useEffect(() => {
-    if (!open) return;
-    const onScroll = () => setOpen(false);
+    if (!open || leaving) return;
+    const panel = menuRef.current;
+    if (!panel) return;
+    const focusable = panel.querySelectorAll<HTMLElement>(
+      'a[href], button, [tabindex]:not([tabindex="-1"])'
+    );
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    first?.focus();
+    const trap = (e: KeyboardEvent) => {
+      if (e.key !== "Tab") return;
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last?.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first?.focus();
+        }
+      }
+    };
+    panel.addEventListener("keydown", trap);
+    return () => panel.removeEventListener("keydown", trap);
+  }, [open, leaving]);
+
+  useEffect(() => {
+    if (!open && !leaving) {
+      triggerRef.current?.focus();
+    }
+  }, [open, leaving]);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [open]);
+  }, []);
+
+  const isActive = (href: string): boolean => {
+    if (href === "/#hero") return pathname === "/";
+    return pathname === href;
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const dx = touchStartX.current - e.changedTouches[0].clientX;
+    const dy = Math.abs(touchStartY.current - e.changedTouches[0].clientY);
+    if (dx > 80 && dy < 60) {
+      closeMenu();
+    }
+  };
+
+  const handleToggle = () => {
+    if (open) {
+      closeMenu();
+    } else {
+      setOpen(true);
+    }
+  };
 
   return (
-    <header className="headerShell">
+    <header className={`headerShell ${scrolled ? "headerScrolled" : ""}`}>
       <div className="container header">
-        <Link href="/" className="brand" onClick={() => setOpen(false)}>
+        <Link href="/" className="brand" onClick={() => closeMenu()}>
           <Image
             src={LOGO_URL}
-            alt="All Things Assistant LLC logo"
+            alt="All Things Assistant logo"
             width={44}
             height={44}
             className="brandLogo"
             priority
           />
           <div className="brandText">
-            <div className="brandName">All Things Assistant LLC</div>
-            <div className="brandTagline">FREEING YOUR TIME, GROWING YOUR BUSINESS</div>
+            <div className="brandTagline">Reclaim Your Time</div>
           </div>
         </Link>
 
         <nav className="navDesktop" aria-label="Primary">
-          {nav.map((item) => (
-            <Link key={item.href} className="navLink" href={item.href}>
+          {NAV.map((item) => (
+            <Link
+              key={item.href}
+              className={`navLink ${isActive(item.href) ? "navLinkActive" : ""}`}
+              href={item.href}
+              aria-current={isActive(item.href) ? "page" : undefined}
+            >
               {item.label}
             </Link>
           ))}
+          <Link className="btn btnPrimary navCta" href="/#booking">
+            Book a Discovery Call
+          </Link>
         </nav>
 
         <div className="headerActions">
-          <CTAButton className="hideSm">Book a Discovery Call</CTAButton>
-          <Link className="navLink hideSm" href="/cv" onClick={() => setOpen(false)}>
-            Download CV
-          </Link>
 
           <button
+            ref={triggerRef}
             className="menuBtn"
             type="button"
-            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-            aria-expanded={open}
+            aria-label={open && !leaving ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={open || leaving}
             aria-controls="mobileMenuPanel"
-            onClick={() => setOpen((v) => !v)}
+            onClick={handleToggle}
           >
             <span className="menuBtnBars" aria-hidden="true" />
           </button>
         </div>
       </div>
 
-      {open && (
-        <div
-          id="mobileMenuPanel"
-          className="mobileMenu"
+          {(open || leaving) && (
+          <div
+            ref={menuRef}
+            id="mobileMenuPanel"
+            className={`mobileMenu ${leaving ? "mobileMenuLeave" : ""}`}
           role="dialog"
           aria-label="Navigation menu"
           aria-modal="true"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
         >
           <div className="container mobileMenuInner">
             <div className="mobileMenuTop">
-              <div className="eyebrow">Navigate</div>
-              <button className="btn" type="button" onClick={() => setOpen(false)}>
-                Close
+              <Link href="/" className="mobileMenuBrand" onClick={closeMenu}>
+                <Image
+                  src={LOGO_URL}
+                  alt="All Things Assistant logo"
+                  width={36}
+                  height={36}
+                  className="mobileMenuLogo"
+                />
+              </Link>
+              <button className="menuCloseBtn" type="button" onClick={closeMenu} aria-label="Close navigation">
+                <span className="menuCloseIcon" aria-hidden="true" />
               </button>
             </div>
 
             <nav className="mobileMenuLinks" aria-label="Mobile navigation">
-              <Link className="mobileLink" href="/cv" onClick={() => setOpen(false)}>
-                Download CV
-              </Link>
-              {nav.map((item) => (
+              {NAV.map((item, i) => (
                 <Link
                   key={item.href}
-                  className="mobileLink"
+                  className={`mobileLink ${isActive(item.href) ? "mobileLinkActive" : ""}`}
                   href={item.href}
-                  onClick={() => setOpen(false)}
+                  onClick={closeMenu}
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  style={{ "--link-delay": leaving ? `${(NAV.length - 1 - i) * 0.04}s` : `${i * 0.06}s` } as React.CSSProperties}
                 >
                   {item.label}
                 </Link>
@@ -125,7 +206,13 @@ export function SiteHeader() {
             </nav>
 
             <div className="mobileMenuCta">
-              <CTAButton className="btnFull">Book a Discovery Call</CTAButton>
+              <Link
+                className="btn btnPrimary btnFull"
+                href="/#booking"
+                onClick={closeMenu}
+              >
+                Book a Discovery Call
+              </Link>
             </div>
           </div>
         </div>
